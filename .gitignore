@@ -222,3 +222,6 @@ __marimo__/
 # Search index and local environment
 index/
 .venv/
+
+# Strategy document (kept locally only)
+UK Legal Knowledge Base Strategy and Pipeline*.pdf
