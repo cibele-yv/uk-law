@@ -49,16 +49,24 @@ def _extent(raw: str | None) -> list[str]:
     return [x for x in dict.fromkeys(out) if x]
 
 
-def _is_unit(uri: str) -> bool:
+def _element_id(uri: str) -> str | None:
+    """XML id of the unit: section/172 -> 'section-172'; a lone unnumbered schedule -> 'schedule'."""
     parts = uri.split("/")
-    return len(parts) >= 5 and parts[-2] in UNIT_KINDS
+    if len(parts) >= 5 and parts[-2] in UNIT_KINDS:
+        return f"{parts[-2]}-{parts[-1]}"
+    if len(parts) == 4 and parts[-1] in UNIT_KINDS:
+        return parts[-1]
+    return None
+
+
+def _is_unit(uri: str) -> bool:
+    return _element_id(uri) is not None
 
 
 def _target(root: etree._Element, uri: str) -> etree._Element | None:
     if not _is_unit(uri):
         return root  # whole instrument
-    parts = uri.split("/")
-    wanted = f"{parts[-2]}-{parts[-1]}"
+    wanted = _element_id(uri)
     for e in root.iter():
         if isinstance(e.tag, str) and e.get("id") == wanted:
             return e
@@ -100,7 +108,7 @@ def _unapplied(root: etree._Element, uri: str) -> int:
     if not _is_unit(uri):
         return len(effects)  # whole instrument: all of them
     parts = uri.split("/")
-    key = f"{parts[-2]}/{parts[-1]}"
+    key = "/".join(parts[-2:]) if _element_id(uri) != parts[-1] else parts[-1] + "/1"
     return sum(1 for e in effects if key in _affected(e.get("AffectedProvisions", "")))
 
 

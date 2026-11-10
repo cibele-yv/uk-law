@@ -73,5 +73,6 @@ units:
   - id: uksi/1986/1078/regulation/104   # Driver's control
   - id: uksi/1986/1078/regulation/110   # Mobile telephones
 
-  # Fixed Penalty Order 2000 (whole order for now; to be split into articles)
-  - id: uksi/2000/2792
+  # Fixed Penalty Order 2000
+  - id: uksi/2000/2792/article/2     # Fixed penalties
+  - id: uksi/2000/2792/schedule      # Schedule 1: fixed penalties (the Order's only unnumbered schedule)
