@@ -1,0 +1,2 @@
+# raw/ must stay byte-exact (hashes are checked): no line-ending conversion
+raw/** -text
