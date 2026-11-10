@@ -4,6 +4,7 @@ Usage: python -m tools.fetch.run [--area road-traffic]
 """
 import argparse
 import sys
+from datetime import datetime, timezone
 
 from tools.common.areas import load_units
 from tools.common.storage import save_version, sha256
@@ -24,7 +25,8 @@ def main() -> int:
         for uri in todo:
             res = client.get(uri)
             if res.ok:
-                outcome = save_version(legislation.raw_dir(uri), res.version, res.content, legislation.canonical)
+                meta = {"url": res.url, "retrieved_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")}
+                outcome = save_version(legislation.raw_dir(uri), res.version, res.content, legislation.canonical, meta)
                 label = "SILENT EDIT (review)" if outcome == "silent-edit" else outcome
                 print(f"{label:<12} {uri}  v{res.version}  {sha256(res.content)[:12]}  {res.title}")
             else:

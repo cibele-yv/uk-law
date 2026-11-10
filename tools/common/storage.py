@@ -1,5 +1,6 @@
 """Save raw source bytes as dated versions, never overwriting anything."""
 import hashlib
+import json
 from collections.abc import Callable
 from pathlib import Path
 
@@ -12,7 +13,13 @@ def _identity(b: bytes) -> bytes:
     return b
 
 
-def save_version(directory: Path, version: str, data: bytes, canonical: Callable[[bytes], bytes] = _identity) -> str:
+def save_version(
+    directory: Path,
+    version: str,
+    data: bytes,
+    canonical: Callable[[bytes], bytes] = _identity,
+    meta: dict | None = None,
+) -> str:
     """Save data as <directory>/<version>.<ext-less name>; return the outcome.
 
     Outcomes:
@@ -32,6 +39,10 @@ def save_version(directory: Path, version: str, data: bytes, canonical: Callable
     directory.mkdir(parents=True, exist_ok=True)
     name = f"{version}.xml" if not existing else f"{version}.r{len(existing) + 1}.xml"
     (directory / name).write_bytes(data)
+    if meta is not None:  # provenance sidecar: the XML itself has no fetch time
+        record = {**meta, "sha256": sha256(data)}
+        (directory / name.replace(".xml", ".meta.json")).write_text(json.dumps(record, indent=2) + "
+", encoding="utf-8")
     return "saved" if not existing else "silent-edit"
 
 

@@ -1,0 +1,335 @@
+---
+id: uksi/2000/2792
+title: The Fixed Penalty Order 2000
+level: si
+binding: binding
+parent: null
+made_under: null
+extent:
+- E
+- W
+- S
+areas:
+- road-traffic
+version:
+  valid_from: '2021-10-31'
+  valid_to: null
+  status: in-force
+unapplied_changes: 0
+relations:
+  cites:
+  - ukla/1974/24
+  - ukpga/1872/15
+  - ukpga/1926/36
+  - ukpga/1980/66
+  - ukpga/1984/27
+  - ukpga/1988/52
+  - ukpga/1988/53
+  - ukpga/1991/40
+  - uksi/1986/1078
+  - uksi/1992/346
+  - uksi/1992/435
+  - uksi/1997/1639
+  - uksi/2009/488
+  - uksi/2010/2720
+  - uksi/2013/1569
+  - uksi/2013/1840
+  - uksi/2014/259
+  - uksi/2016/248
+  - uksi/2017/66
+  - uksi/2018/1236
+  - uksi/2019/1210
+  - uksi/2019/453
+  - uksi/2021/973
+source:
+  url: https://www.legislation.gov.uk/uksi/2000/2792/data.xml
+  publisher: legislation.gov.uk
+  format: CLML XML
+  retrieved_at: '2026-11-10T17:42:56Z'
+  sha256: f990974252db4755422d80d0251208aa53f30f1cb0f74923ebfab7e669c8e61f
+  licence: OGL-3.0
+review:
+- whole instrument, not a single unit
+- schedule
+- table
+- table with merged cells
+- 'unhandled element: ComingIntoForce'
+- 'unhandled element: Comment'
+- 'unhandled element: DateSigned'
+- 'unhandled element: DateText'
+- 'unhandled element: EnactingText'
+- 'unhandled element: ExplanatoryNotes'
+- 'unhandled element: JobTitle'
+- 'unhandled element: LaidDate'
+- 'unhandled element: MadeDate'
+- 'unhandled element: PersonName'
+- 'unhandled element: SecondaryPreamble'
+- 'unhandled element: SecondaryPrelims'
+- 'unhandled element: Signatory'
+- 'unhandled element: SignedSection'
+- 'unhandled element: Signee'
+- 'unhandled element: Subject'
+- 'unhandled element: SubjectInformation'
+---
+
+Made
+
+10th October 2000
+
+Laid before Parliament
+
+11th October 2000
+
+Coming into force
+
+1st November 2000
+
+The Secretary of State, in exercise of the power conferred on him by section 53 of the Road Traffic Offenders Act 1988, and after consultation in accordance with section 88(2) of that Act with such representative organisations as he thinks fit, hereby makes the following Order:
+
+**Citation and commencement**
+
+1 (1) This Order may be cited as the Fixed Penalty Order 2000 and shall come into force on 1st November 2000.
+
+(2) This Order applies in relation to a fixed penalty offence alleged to have been committed on or after 1st November 2000.
+
+**Interpretation**
+
+1A In Schedule 2—
+
+- “the AETR” means the European Agreement concerning the Work of Crews of Vehicles engaged in International Road Transport of 1 July 1970, as amended, as applied by article 2(3) of the EC Regulation;
+
+- “the EU Tachographs Regulation has the meaning given in section 97 of the Transport Act 1968; and
+
+- “the EC Regulation” means the Community Drivers’ Hours Regulation as defined in section 103(1) of the Transport Act 1968.
+
+**Fixed penalties**
+
+2 Save where there is more specific provision in Schedule 2 by reference to the circumstances of the offence, the fixed penalty for an offence shown in column (1) of Schedule 1 to this Order shall be the amount shown in relation to that offence in column (2) of that Schedule.
+
+**Graduated Fixed Penalties**
+
+2A The amount of the fixed penalty for an offence specified in Schedule 2 to this Order shall be the amount indicated in relation to that offence by that Schedule, by reference to the circumstances of the offence, those being the nature of the contravention, and, where specified, its seriousness.
+
+**Revocations**
+
+3 The Fixed Penalty Order 1992 and the Fixed Penalty (Increase) (Scotland) Order 1992 are hereby revoked.
+
+Charles Clarke
+
+Minister of State Home Office
+
+10th October 2000
+
+|  |  |  |
+|---|---|---|
+|  | (1) | (2) |
+| Item Number | Offence | Fixed Penalty |
+| 1 | A fixed penalty offence under section 3 of the Road Traffic Act 1988 | £100 |
+| 1A | A fixed penalty offence under section 41D(b) of the Road Traffic Act 1988 | £200 |
+| 2 | A fixed penalty offence under section 143 of the Road Traffic Act 1988 | £300 |
+| 3 | A fixed penalty offence under section 172 of the Road Traffic Act 1988 | £200 |
+| 4 | Any other fixed penalty offence involving obligatory endorsement | £100 |
+| 5 | A fixed penalty parking offence committed in Greater London on a red route | £60 |
+| 6 | Any other fixed penalty parking offence committed in Greater London | £40 |
+| 7 | A fixed penalty offence under section 14 (seat belts: adults) of the Road Traffic Act 1988 | £100 |
+| 8 | A fixed penalty offence under section 15(2) or 15(4) (restrictions on carrying children not wearing seat belts in motor vehicles) of the Road Traffic Act 1988 | £100 |
+| 9 | A fixed penalty offence under section 47 of the Road Traffic Act 1988 | £100 |
+| 10 | A fixed penalty offence under section 33 of the Vehicle Excise and Registration Act 1994 | £100 |
+| 11 | A fixed penalty offence under section 42(1) of the Vehicle Excise and Registration Act 1994 (driving or keeping a vehicle without required registration mark) | £100 |
+| 12 | A fixed penalty offence under section 43(1) of the Vehicle Excise and Registration Act 1994 (driving or keeping a vehicle with registration mark obscured etc.) | £100 |
+| 13 | A fixed penalty offence under section 59 of the Vehicle Excise and Registration Act 1994 (failure to fix prescribed registration mark to a vehicle in accordance with regulations made under section 23(4)(a) of that Act) | £100 |
+| 14 | A fixed penalty offence under section 98(4) of the Transport Act 1968 | £300 |
+| 15 | A fixed penalty offence under section 99(4) of the Transport Act 1968 | £300 |
+| 16 | A fixed penalty offence under section 99ZD(1) of the Transport Act 1968 | £300 |
+| 17 | A fixed penalty offence under section 99C of the Transport Act 1968 | £300 |
+| 18 | A fixed penalty offence under section 3(1) of the Road Traffic (Foreign Vehicles) Act 1972 | £300 |
+| 19 | A fixed penalty offence under section 12(5) of the Public Passenger Vehicles Act 1981 | £300 |
+| 20 | A fixed penalty offence under section 71(1) of the Road Traffic Act 1988 | £300 |
+| 21 | A fixed penalty offence under section 90D(6) of the Road Traffic Offenders Act 1988 | £300 |
+| 22 | A fixed penalty offence under section 2(5) of the Goods Vehicles (Licensing of Operators) Act 1995 | £300 |
+| 23 | A fixed penalty offence under regulation 3 of the Goods Vehicles (Community Authorisations) Regulations 1992 | £100 |
+| 24 | A fixed penalty offence under regulation 3 of the Public Service Vehicles (Community Licences) Regulations 1999 | £100 |
+| 25 | A fixed penalty offence under regulation 3(1) of the Road Transport (Passenger Vehicles Cabotage) Regulations 1999 | £100 |
+| 26 | A fixed penalty offence under regulation 4(1) of the Road Transport (Passenger Vehicles Cabotage) Regulations 1999 | £100 |
+| 27 | A fixed penalty offence under section 11 of the HGV Road User Levy Act 2013 | £300 |
+| 28 | A fixed penalty offence under regulation 4 of the Goods Vehicles (Community Licences) Regulations 2011 | £100 |
+| 29 | A fixed penalty offence under section 8(1) of the Haulage Permits and Trailer Registration Act 2018 | £300 |
+| 30 | A fixed penalty offence under section 8(2) of the Haulage Permits and Trailer Registration Act 2018 | £300 |
+| 31 | A fixed penalty offence under section 8(3) of the Haulage Permits and Trailer Registration Act 2018 | £300 |
+| 32 | A fixed penalty offence under section 8(4)(a) of the Haulage Permits and Trailer Registration Act 2018 | £300 |
+| 33 | A fixed penalty offence under regulation 5 of the Trailer Registration Regulations 2018 | £100 |
+| 34 | A fixed penalty offence under regulation 19(1)(a) of the Trailer Registration Regulations 2018 | £100 |
+| 35 | A fixed penalty offence under regulation 19(1)(f) of the Trailer Registration Regulations 2018 | £100 |
+| 36 | A fixed penalty offence under regulation 19(1)(g) of the Trailer Registration Regulations 2018 | £100 |
+| 37 | A fixed penalty offence under regulation 19(1)(h) of the Trailer Registration Regulations 2018 | £100 |
+| 38 | A fixed penalty offence under regulation 20 of the Trailer Registration Regulations 2018 | £100 |
+| 39 | A fixed penalty offence under regulation 21 of the Trailer Registration Regulations 2018 | £100 |
+| 40 | A fixed penalty offence under regulation 22(a) of the Trailer Registration Regulations 2018 | £300 |
+| 40A | A fixed penalty offence under article 2(6) of the Heavy Commercial Vehicles in Kent (No. 1) Order 2019 | £300 |
+| 41 | Any other fixed penalty offence except for a fixed penalty parking offence | £50 |
+| 42 | Any other fixed penalty parking offence | £30 |
+| . . . | . . . | . . . |
+| . . . | . . . | . . . |
+
+In this Schedule—
+
+- “fixed penalty parking offence” means—
+
+- an offence under the Road Traffic Regulation Act 1984 which is a fixed penalty offence, which does not involve obligatory endorsement and which is committed in respect of a stationary vehicle;
+
+- an offence under section 15(1) of the Greater London Council (General Powers) Act 1974;
+
+- an offence under section 137(1) of the Highways Act 1980;
+
+- an offence under section 19 of the Road Traffic Act 1988;
+
+- an offence under section 42 of the Road Traffic Act 1988 consisting in the causing of an unnecessary obstruction of a road in breach of regulation 103 of the Road Vehicles (Construction and Use) Regulations 1986;or
+
+- an offence under the Parks Regulation Acts 1872 and 1926 consisting in the failure to comply with, or acting in contravention of, regulation 4(30) of the Royal Parks and Other Open Spaces Regulations 1997;
+
+- “red route” means a length of road affected by either or both of the following traffic signs, namely—
+
+- a traffic sign lawfully placed on the road, being a traffic sign which bears the words “Red Route”, with or without any other word or any sign or other indication; or
+
+- a traffic sign consisting of a red line or mark is lawfully placed on the road;
+
+- “traffic sign” means a traffic sign for the purposes of section 64(1) of the Road Traffic Regulation Act 1984 which conveys any restriction or prohibition under an order made under that Act.
+
+1 Section 96(11) Transport Act 1968
+
+| (1) Nature of contravention or failure constituting the offence | (2) Seriousness of offence and applicable amount of penalty |  |  |
+|---|---|---|---|
+| £100 | £200 | £300 |  |
+| 1. Driving a vehicle or vehicles for more than 10 hours, contrary to section 96(1) | More than 10 hours but less than 11 hours driving | 11 hours or more but less than 12 hours driving | 12 hours or more driving |
+| 2. Failure to take an interval for rest and refreshment, contrary to section 96(2) | Being on duty for up to 1 hour beyond the required break | Being on duty for 1 hour or more, but less than 2 hours, beyond the required break | Being on duty for 2 hours or more beyond the required break |
+| 3. Exceeding working day of 11 hours, contrary to section 96(3)(a) | More than 11 hours but less than 12 hours working | 12 hours or more but less than 13 hours working | 13 hours or more working |
+| 4. Failing to take a daily rest period between two successive working days, contrary to section 96(4) | Less than 11 hours but more than 10 hours daily rest | 10 hours or less but more than 9 hours daily rest | 9 hours or less |
+| 5. Failing to take a weekly rest period of 24 hours, contrary to section 96(6) | Less than 24 hours but more than 23 hours rest | 23 hours or less but more than 22 hours rest | 22 hours rest or less |
+| 6. Exceeding the daily working limit of 16 hours in respect of a passenger vehicle to which the Drivers’ Hours (Passenger and Goods Vehicles) (Modifications) Order 1971 applies, contrary to section 96(3)(c), as modified by that Order in relation to such vehicles | More than 16 hours, but less than 17 hours working | 17 hours or more but less than 18 hours working | 18 hours or more working |
+| 7. Failing to take a daily rest period between two successive working days by a driver of a passenger vehicle to which the Drivers’ Hours (Passenger and Goods Vehicles) (Modifications) Order 1971 applies, contrary to section 96(4), as modified by that Order in relation to such vehicles | Less than 10 hours but more than 9 hours daily rest (or, in the case of a reduced daily rest period, less than 8.5 hours but more than 7.5 hours daily rest) | 9 hours or less but more than 8 hours daily rest (or, in the case of a reduced daily rest period, 7.5 hours or less but more than 6.5 hours daily rest) | 8 hours or less daily rest (or, in the case of a reduced daily rest period, 6.5 hours or less daily rest) |
+| 8. Failing to take a rest period of 24 hours in each successive two week period by a driver of a passenger vehicle to which the Drivers’ Hours (Passenger and Goods Vehicles) (Modifications) Order 1971) applies, contrary to section 96(6), as modified by that Order in relation to such vehicles | Less than 24 hours but more than 23 hours weekly rest | 23 hours or less but more than 22 hours weekly rest | 22 hours or less weekly rest |
+
+2 Section 96(11A) Transport Act 1968
+
+| (1) Nature of contravention or failure constituting the offence | (2) Seriousness of offence and applicable amount of penalty |  |  |
+|---|---|---|---|
+| £100 | £200 | £300 |  |
+| 1. Exceeding 9 hours daily driving, in contravention of paragraph 1 of Article 6(1) of the EC Regulation | More than 9 hours but less than 10 hours driving | 10 hours or more but less than 11 hours driving | 11 hours or more driving |
+| 2. Exceeding 10 hours daily driving, in contravention of paragraph 2 of Article 6(1) of the EC Regulation | More than 10 hours but less than 11 hours driving | 11 hours or more but less than 12 hours driving | 12 hours or more driving |
+| 3. Exceeding the weekly driving time of 56 hours, in contravention of Article 6(2) of the EC Regulation | More than 56 hours but less than 58 hours driving | 58 hours or more but less than 59 hours driving | 59 hours or more driving |
+| 4. Exceeding 90 hours accumulated driving time in any two consecutive weeks, in contravention of Article 6(3) of the EC Regulation | More than 90 hours but less than 93 hours driving | 93 hours or more but less than 94 hours driving | 94 hours or more driving |
+| 5. Exceeding 4.5 hours driving without a break, in contravention of Article 7 of the EC Regulation | More than 4.5 hours but less than 5.5 hours driving | 5.5 hours or more but less than 6.5 hours driving | 6.5 hours or more driving |
+| 6. Insufficient regular daily rest period in 24 hour period, in contravention of Articles 8(1) and 8(2) of the EC Regulation | Less than 11 hours but more than 10 hours daily rest | 10 hours or less but more than 9 hours daily rest | 9 hours or less daily rest |
+| 7. Insufficient reduced daily rest period in 24 hour period, in contravention of Articles 8(1) and 8(2) of the EC Regulation | Less than 9 hours but more than 8 hours daily rest | 8 hours or less but more than 7 hours daily rest | 7 hours or less daily rest |
+| 8. Failure to take first rest of at least 3 consecutive hours where daily rest period is split, as required by the first indent of Article 4(g) of the EC Regulation and in contravention of Articles 8(1) and 8(2) of that Regulation | Less than 3 hours but more than 2 hours rest | 2 hours or less but more than 1 hours rest | 1 hour or less rest |
+| 9. Failure to take second rest of at least 9 consecutive hours where daily rest period is split, as required by the first indent of Article 4(g) of the EC Regulation, and in contravention of Articles 8(1) and 8(2) of that Regulation | Less than 9 hours but more than 8 hours rest | 8 hours or less but more than 7 hours rest | 7 hours or less rest |
+| 10. Failure to take daily rest period of at least 12 hours in total, where regular daily rest period is split, as required by the first indent of Article 4(g) of the EC Regulation and in contravention of Articles 8(1) and 8(2) of that Regulation | Less than 12 hours but more than 11 hours rest | 11 hours or less but more than 10 hours rest | 10 hours or less rest |
+| 11. Insufficient rest in 30 hour period by a driver engaged in multi-manning, in contravention of Articles 8(1) and 8(5) of the EC Regulation | Less than 9 hours but more than 8 hours rest | 8 hours or less but more than 7 hours rest | 7 hours or less rest |
+| 12. Insufficient regular weekly rest period, in contravention of Articles 8(1) and (6) of the EC Regulation | Less than 45 hours but more than 43 hours weekly rest | 43 hours or less but more than 42 hours weekly rest | 42 hours or less weekly rest |
+| 13. Insufficient reduced weekly rest period, in contravention of Articles 8(1) and (6) of the EC Regulation | Less than 24 hours but more than 22 hours rest | 22 hours or less but more than 21 hours rest | 21 hours or less rest |
+| 14. Failure to take equivalent period of compensatory rest before the end of the third week where reduced weekly rest period has been taken, as required by the second indent of Article 8(6) of the EC Regulation | Up to 3 hours less rest than required | 3 hours or more but less than 4 hours less rest than required | 4 hours or more less rest than required |
+| 15. Exceeding 9 hours daily driving, in contravention of ... Article 6.1 of the AETR | More than 9 hours but less than 10 hours driving | 10 hours or more but less than 11 hours driving | 11 hours or more driving |
+| 16. Exceeding 10 hours daily driving (where permitted), in contravention of ... Article 6.1 of the AETR | More than 10 hours but less than 11 hours driving | 11 hours or more but less than 12 hours driving | 12 hours or more driving |
+| 16A. Exceeding the weekly driving time of 56 hours, in contravention of Article 6.2 of the AETR | More than 56 hours but less than 58 hours driving | 58 hours or more but less than 59 hours driving | 59 hours or more driving |
+| 17. Exceeding 90 hours accumulated driving time in any two consecutive weeks, in contravention of Article 6.3 of the AETR | More than 90 hours but less than 93 hours driving | 93 hours or more but less than 94 hours driving | 94 hours or more driving |
+| 18. Exceeding 4.5 hours driving without a break, in contravention of Article 7.1 of the AETR | More than 4.5 hours but less than 5.5 hours driving | 5.5 hours or more but less than 6.5 hours driving | 6.5 hours or more driving |
+| 19. Insufficient regular daily rest period in 24 hour period in contravention of Articles 8.1 and 8.2 of the AETR | Less than 11 hours but more than 10 hours rest | 10 hours or less but more than 9 hours rest | 9 hours or less rest |
+| 20. Insufficient reduced daily rest period ... in 24 hours period in contravention of Articles 8.1 and 8.2 of the AETR | Less than 9 hours but more than 8 hours rest | 8 hours or less but more than 7 hours rest | 7 hours or less rest |
+| . . . | . . . | . . . | . . . |
+| 22. Failure to take first rest of at least 3 consecutive hours where daily rest period is split, as required by Article 1(o)(i) of the AETR and in contravention of Articles 8.1 and 8.2 of the AETR | Less than 3 hours but more than 2 hours rest | 2 hours or less but more than 1 hours rest | 1 hour or less rest |
+| 22A. Failure to take second rest of at least 9 consecutive hours where daily rest period is split, as required by Article 1(o)(i) of the AETR and in contravention of Articles 8.1 and 8.2 of the AETR | Less than 9 hours but more than 8 hours rest | 8 hours or less but more than 7 hours rest | 7 hours or less rest |
+| 23. Failure to take daily rest period of at least 12 hours in total where regular daily rest period is split , as required by Article 1(o)(i) of the AETR and in contravention of Articles 8.1 and 8.2 of the AETR | Less than 12 hours but more than 11 hours rest | 11 hours or less but more than 10 hours rest | 10 hours or less rest |
+| 24. Insufficient rest in 30 hour period by a driver engaged in multi-manning, in contravention of Articles 8.1 and 8.3 of the AETR | Less than 9 hours but more than 8 hours rest | 8 hours or less but more than 7 hours rest | 7 hours or less rest |
+| 25. Insufficient regular weekly rest period, in contravention of Articles 8.1 and 8.6(a) of the AETR | Less than 45 hours but more than 43 hours rest | 43 hours or less but more than 42 hours rest | 42 hours or less rest |
+| . . . | . . . | . . . | . . . |
+| 27. Insufficient reduced weekly rest period ..., in contravention of Articles 8.1 and 8.6(a) of the AETR | Less than 24 hours but more than 22 hours rest | 22 hours rest or less but more than 21 hours rest | 21 hours or less rest |
+| 28. Failure to take equivalent period of compensatory rest before the end of the third week where reduced weekly rest period has been taken, as required by Article 8.6(a)(ii) of the AETR | Up to 3 hours less rest than required | 3 hours or more but less than 4 hours less rest than required | 4 hours or more less rest than required |
+
+3 Section 97(1) Transport Act 1968
+
+| (1) Nature of contravention or failure constituting the offence | (2) Amount of penalty |
+|---|---|
+| 1. Failure to ensure recording equipment installed in accordance with article 3(1) of the EU Tachographs Regulation | £300 |
+| 2. Failing to ensure correct functioning of recording equipment or driver card, in accordance with article 32(1) of that Regulation | £100 |
+| 3. Failing to ensure the proper use of the recording equipment, in accordance with article 32(1) of that Regulation | £200 |
+| 4. Failing to ensure the proper use of the driver card, in accordance with article 32(1) of that Regulation | £300 |
+| 5. Failing to ensure that printing can be carried out correctly in the event of an inspection (other than a failure to provide sufficient printing material), in accordance with the third paragraph of article 33(1) of that Regulation | £200 |
+| 6. Failing to ensure that printing can be carried out correctly in the event of an inspection by a failure to provide sufficient printing material, in accordance with the second paragraph of article 33(1) of that Regulation | £100 |
+| 7. Using driver card of which the driver is not the holder, contrary to article 27(2) of that Regulation | £300 |
+| 8. Using a defective driver card, contrary to article 27(2) of that Regulation | £100 |
+| 9. Failure, at the start of the journey, to print out information required, etc, in accordance with article 35(2)(a) of that Regulation | £200 |
+| 10. Failure, at the end of the journey, to print out the information required, etc, in accordance with article 35(2)(b) of that Regulation | £200 |
+| 11. Failure to use record sheets or driver card, in accordance with article 34(1) of that Regulation | £300 |
+| 12. Unauthorised withdrawal of record sheet or driver card, contrary to article 34(1) of that Regulation | £200 |
+| 13. Failure to enter legibly on the record sheet, when away from the vehicle, periods of time, in accordance with article 34(3) of that Regulation | £200 |
+| 14. Failure to amend record sheet or driver card as necessary when more than one driver on board the vehicle, in accordance with article 34(4) of that Regulation | £200 |
+
+3A Section 97ZA Transport Act 1968
+
+| (1) Nature of contravention or failure constituting the offence | (2) Amount of penalty |
+|---|---|
+| 1. Failure to ensure recording equipment installed in accordance with section 97ZA(1) of the Transport Act 1968 | £300 |
+| 2. Failure to ensure the correct functioning of recording equipment or driver card, in accordance with Article 10 of the Annex to the AETR | £100 |
+| 3. Failure to ensure the proper use of the recording equipment, in accordance with Article 10 of the Annex to the AETR | £200 |
+| 4. Failure to ensure the proper use of the driver card, in accordance with Article 10 of the Annex to the AETR | £300 |
+| 5. Failure to ensure that printing can be carried out correctly in the event of an inspection (other than a failure to provide sufficient printing material), in accordance with the second sub-paragraph of Article 11.1 of the Annex to the AETR | £200 |
+| 6. Failure to ensure that printing can be carried out correctly in the event of an inspection by a failure to provide sufficient printing material, in accordance with the first sub-paragraph of Article 11.1 of the Annex to the AETR | £100 |
+| 7. Using driver card of which the driver is not the holder, contrary to the third sub-paragraph of Article 11.4(a) of the Annex to the AETR | £300 |
+| 8. Using a defective driver card, contrary to the third sub-paragraph of Article 11.4(a) of the Annex to the AETR | £100 |
+| 9. Failure to use record sheets or driver card, in accordance with the first sub-paragraph of Article 12.2(a) of the Annex to the AETR | £300 |
+| 10. Unauthorised withdrawal of record sheet or driver card, contrary to the first sub-paragraph of Article 12.2(a) of the Annex to the AETR | £200 |
+| 11. Failure to enter legibly on the record sheet, when away from the vehicle, periods of time, in accordance with Article 12.2(b) of the Annex to the AETR | £200 |
+| 12. Failure to amend record sheet or driver card as necessary when more than one driver on board the vehicle, in accordance with paragraph (2)(c) or the second sub-paragraph of paragraph (2)(a) of Article 12 of the Annex to the AETR | £200 |
+| 13. Failure at the start of the journey, to print out information required, etc, in accordance with Article 13.2(b)(i) of the Annex to the AETR | £200 |
+| 14. Failure, at the end of the journey, to print out information required, etc, in accordance with Article 13.2(b)(ii) of the Annex to the AETR | £200 |
+
+4 Section 41A Road Traffic Act 1988
+
+| (1) Nature of contravention or the failure constituting the offence | (2) Amount of penalty |
+|---|---|
+| 1. Contravention, except in the case of a motor cycle, of regulation 27(1)(g) (failure to have a tread pattern of at least 1 millimetre) of the Road Vehicles (Construction and Use) Regulations 1986 | £200 |
+
+5 Section 41B Road Traffic Act 1988
+
+| (1) Nature of contravention or failure constituting the offence | (2) Seriousness of offence and amount of penalty |  |  |
+|---|---|---|---|
+| £100 | £200 | £300 |  |
+| 1. Exceeding maximum authorised weight of vehicle, contrary to regulation 4(1)(a) of, and Schedule 1 to, the Road Vehicles (Authorised Weight) Regulations 1998 | Exceeding weight by up to 10% | Exceeding weight by 10% or more, but less than 15% | Exceeding weight by 15% or more |
+| 2. Exceeding maximum authorised weight of vehicle combination, contrary to regulation 4(1)(b) of, and Schedule 2 to, the Road Vehicles (Authorised Weight) Regulations 1998 | Exceeding weight by up to 10% | Exceeding weight by 10% or more, but less than 15% | Exceeding weight by 15% or more |
+| 3. Exceeding maximum authorised weight of axle, contrary to Regulation 4(1)(c) of, and Schedule 3 to, the Road Vehicles (Authorised Weight) Regulations 1998 | Exceeding weight by up to 10% | Exceeding weight by 10% or more, but less than 15% | Exceeding weight by 15% or more |
+| 4. Exceeding maximum permitted laden weight of a vehicle, contrary to regulation 75(1) of, and Parts I, IA and II of Schedule 11 to, the Road Vehicles (Construction and Use) Regulations 1986 | Exceeding weight by up to 10% | Exceeding weight by 10% or more, but less than 15% | Exceeding weight by 15% or more |
+| 5. Exceeding maximum permitted laden weight of trailer, contrary to regulation 75(3) of the Road Vehicles (Construction and Use) Regulations 1986 | Exceeding weight by up to 10% | Exceeding weight by 10% or more, but less than 15% | Exceeding weight by 15% or more |
+| 6. Exceeding maximum permitted laden weight of a vehicle and trailer, other than an articulated vehicle, contrary to regulation 76(1) of the Road Vehicles (Construction and Use) Regulations 1986 | Exceeding weight by up to 10% | Exceeding weight by 10% or more, but less than 15% | Exceeding weight by 15% or more |
+| 7. Exceeding any weights shown on the plate fitted in accordance with regulation 66 of the Road Vehicles (Construction and Use) Regulations 1986, contrary to regulation 80(1)(a) of those Regulations | Exceeding weight by up to 10% | Exceeding weight by 10% or more, but less than 15% | Exceeding weight by 15% or more |
+| 8. Exceeding any weight shown in column (2) of the plating certificate, contrary to regulation 80(1)(b) of the Road Vehicles (Construction and Use) Regulations 1986 | Exceeding weight by up to 10% | Exceeding weight by 10% or more, but less than 15% | Exceeding weight by 15% or more |
+| 9. Exceeding maximum gross weight in respect of an agricultural trailed appliance, contrary to regulation 80(1)(c) of the Road Vehicles (Construction and Use) Regulations 1986 | Exceeding weight by up to 10% | Exceeding weight by 10% or more, but less than 15% | Exceeding weight by 15% or more |
+| 10. Exceeding sum of weights in respect of axles fitted with a compensating arrangement, contrary to regulation 80(2) of the Road Vehicles (Construction and Use) Regulations1986 | Exceeding weight by up to 10% | Exceeding weight by 10% or more, but less than 15% | Exceeding weight by 15% or more |
+
+6 Section 42 Road Traffic Act 1988
+
+| (1) Nature of contravention or failure constituting the offence | (2) Amount of penalty |
+|---|---|
+| 1. Failure to meet requirements regarding speed limiters, in accordance with regulation 36A(4) of the Road Vehicles (Construction and Use) Regulations 1986 | £200 |
+| 2. Failure to meet requirements regarding speed limiters, in accordance with regulation 36B(6) of those Regulations | £200 |
+|  |  |
+| 3. Failure to maintain vehicle, etc., or to carry, etc., passengers in accordance with regulation 100(1) of those Regulations, so as not to be a danger | £100 |
+| 4. Failure to carry load in a secure manner, etc., in accordance with regulation 100(2) of those Regulations, so as not to be a danger or nuisance | £100 |
+| 5. Failure to use vehicle for suitable purposes, in accordance with regulation 100(3) of those Regulations, so as not to be a danger or nuisance | £100 |
+
+7 Section 17(4) Road Traffic Regulation Act 1984
+
+| (1) Nature of contravention or failure constituting the offence | (2) Amount of penalty |
+|---|---|
+| Contravening article 2(1) or 3(2) of the Heavy Commercial Vehicles in Kent (No. 3) Order 2019 | £300 |
+
+8 Section 20(5) Road Traffic Regulation Act 1984
+
+| (1) Nature of contravention or failure constituting the offence | (2) Amount of penalty |
+|---|---|
+| Contravening article ... 3(1) or 4(1) of the Heavy Commercial Vehicles in Kent (No. 2) Order 2019 | £300 |
+
+(This note is not part of the Order)
+
+This Order prescribes fixed penalties for fixed penalty offences. The prescribed penalties replace those prescribed for England and Wales by the Fixed Penalty Order 1992 (S.I. 1992/346) and for Scotland by the Fixed Penalty (Increase) (Scotland) Order 1992 (S.I. 1992/435 (S. 50)).
+
+Fixed penalties are increased from £40 to £60 for offences involving obligatory endorsement and for parking offences committed in Greater London on a red route, from £30 to £40 for other parking offences committed in Greater London and from £20 to £30 for other fixed penalty offences.
