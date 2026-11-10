@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Legal provision",
+  "type": "object",
+  "required": ["id", "title", "level", "binding", "extent", "areas", "version", "source"],
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "level": { "enum": ["act", "si", "rule", "code", "guideline", "guidance", "explanatory-note", "caselaw"] },
+    "binding": { "enum": ["binding", "evidential", "persuasive", "guidance"] },
+    "parent": { "type": ["string", "null"] },
+    "made_under": { "type": ["string", "null"] },
+    "extent": { "type": "array", "items": { "enum": ["E", "W", "S", "NI"] }, "minItems": 1 },
+    "areas": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "version": {
+      "type": "object",
+      "required": ["valid_from", "status"],
+      "properties": {
+        "valid_from": { "type": "string", "format": "date" },
+        "valid_to": { "type": ["string", "null"], "format": "date" },
+        "status": { "enum": ["in-force", "prospective", "repealed"] }
+      }
+    },
+    "unapplied_changes": { "type": "integer", "minimum": 0 },
+    "relations": {
+      "type": "object",
+      "properties": {
+        "amended_by": { "type": "array", "items": { "type": "string" } },
+        "cites": { "type": "array", "items": { "type": "string" } },
+        "interprets": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "source": {
+      "type": "object",
+      "required": ["url", "publisher", "retrieved_at", "sha256", "licence"],
+      "properties": {
+        "url": { "type": "string", "format": "uri" },
+        "publisher": { "type": "string" },
+        "format": { "type": "string" },
+        "retrieved_at": { "type": "string", "format": "date-time" },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "licence": { "type": "string" }
+      }
+    }
+  }
+}

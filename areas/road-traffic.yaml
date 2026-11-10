@@ -1,0 +1,11 @@
+area: road-traffic
+jurisdiction_default: [E, W]
+units:
+  - id: ukpga/1984/27/section/89     # RTRA 1984: speeding offence
+  - id: ukpga/1988/53/section/1      # RTOA 1988: notice of intended prosecution
+  - id: ukpga/1988/53/section/35     # RTOA 1988: 12-point disqualification
+  - id: ukpga/1988/53/schedule/2     # RTOA 1988: offences, points, penalties
+  - id: ukpga/1988/52/section/172    # RTA 1988: duty to name the driver
+  - id: ukpga/1995/13/section/2      # New Drivers Act 1995: 6 points in 2 years
+  - id: ukpga/1980/43/section/14     # MCA 1980: statutory declaration
+  - id: uksi/2000/2792               # Fixed Penalty Order 2000

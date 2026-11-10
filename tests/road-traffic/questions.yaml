@@ -1,0 +1,5 @@
+- id: rt-001
+  question: "How many points before a new driver loses their licence?"
+  expected_answer: "6 points within 2 years of passing the test"
+  expected_sources: [ukpga/1995/13/section/2]
+  verified: false   # true once checked against the source text
