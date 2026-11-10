@@ -41,8 +41,8 @@ def save_version(
     (directory / name).write_bytes(data)
     if meta is not None:  # provenance sidecar: the XML itself has no fetch time
         record = {**meta, "sha256": sha256(data)}
-        (directory / name.replace(".xml", ".meta.json")).write_text(json.dumps(record, indent=2) + "
-", encoding="utf-8")
+        sidecar = directory / name.replace(".xml", ".meta.json")
+        sidecar.write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
     return "saved" if not existing else "silent-edit"
 
 

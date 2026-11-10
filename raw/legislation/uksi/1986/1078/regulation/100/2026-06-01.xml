@@ -1,0 +1,65 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/uksi/1986/1078" IdURI="http://www.legislation.gov.uk/id/uksi/1986/1078" NumberOfProvisions="308" RestrictStartDate="2026-06-01" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="1.0" RestrictExtent="E+W+S"><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/uksi/1986/1078/regulation/100</dc:identifier><dc:title>The Road Vehicles (Construction and Use) Regulations 1986</dc:title><dc:publisher>Westlaw</dc:publisher><dc:subject scheme="SIheading">ROAD TRAFFIC</dc:subject><dc:publisher>Statute Law Database</dc:publisher><dc:modified>2026-10-20</dc:modified><dc:contributor>Expert Participation</dc:contributor><dct:valid>2026-06-01</dct:valid>
+					<dc:description/>
+					<atom:link rel="self" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/uksi/1986/1078/resources" title="More Resources"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/impacts" href="http://www.legislation.gov.uk/uksi/1986/1078/impacts" title="Impact Assessments"/>
+					
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/uksi/1986/1078" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/uksi/1986/1078/introduction" title="introduction"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/signature" href="http://www.legislation.gov.uk/uksi/1986/1078/signature" title="signature"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/note" href="http://www.legislation.gov.uk/uksi/1986/1078/note" title="note"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/uksi/1986/1078/body" title="body"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/schedules" href="http://www.legislation.gov.uk/uksi/1986/1078/schedules" title="schedules"/>
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/data.rdf" title="RDF/XML"/><atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/data.html" title="HTML5 snippet"/>
+
+					
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/uksi/1986/1078/contents" title="Table of Contents"/>
+					
+					<atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/made" title="made"/><atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/1986-08-11" title="1986-08-11"/>
+					
+					<atom:link rel="up" href="http://www.legislation.gov.uk/uksi/1986/1078" title="Entire legislation"/><atom:link rel="prev" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/99" title="Provision; Regulation 99"/><atom:link rel="prevInForce" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/99" title="Provision; Regulation 99"/><atom:link rel="next" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100A" title="Provision; Regulation 100A"/><atom:link rel="nextInForce" href="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100A" title="Provision; Regulation 100A"/>
+					<ukm:SecondaryMetadata><ukm:DocumentClassification><ukm:DocumentCategory Value="secondary"/><ukm:DocumentMainType Value="UnitedKingdomStatutoryInstrument"/><ukm:DocumentStatus Value="revised"/><ukm:DocumentMinorType Value="regulation"/></ukm:DocumentClassification><ukm:Year Value="1986"/><ukm:Number Value="1078"/><ukm:Made Date="1986-06-25"/><ukm:Laid Class="UnitedKingdomParliament" Date="1986-07-18"/><ukm:ComingIntoForce>
+            <ukm:DateTime Date="1986-08-11"/>
+         </ukm:ComingIntoForce></ukm:SecondaryMetadata>
+					
+
+                    
+									 
+					<ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/uksi/1986/1078/pdfs/uksi_19861078_en.pdf" Date="1986-07-18"/></ukm:Alternatives>
+					<ukm:ImpactAssessments>
+									
+									<ukm:ImpactAssessment URI="http://www.legislation.gov.uk/ukia/2026/109/pdfs/ukia_20260109_en.pdf" Date="2026-06-16" Title="PIR to SI 1988/1478, SI 1986/1078 and SI 1989/1796" Stage="Post Implementation" Department="Department for Transport" Year="2026" Number="109" Size="738051"/>
+								</ukm:ImpactAssessments>
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="309"/>
+									<ukm:BodyParagraphs Value="151"/>
+									<ukm:ScheduleParagraphs Value="158"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="10"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Secondary><Body DocumentURI="http://www.legislation.gov.uk/uksi/1986/1078/body" IdURI="http://www.legislation.gov.uk/id/uksi/1986/1078/body" NumberOfProvisions="151" RestrictExtent="E+W+S" RestrictStartDate="2026-06-01"><Part DocumentURI="http://www.legislation.gov.uk/uksi/1986/1078/part/IV" IdURI="http://www.legislation.gov.uk/id/uksi/1986/1078/part/IV" NumberOfProvisions="44" id="part-IV" RestrictExtent="E+W+S" RestrictStartDate="2025-04-29"><Number>PART IV</Number><Title>CONDITIONS RELATING TO USE</Title><Chapter DocumentURI="http://www.legislation.gov.uk/uksi/1986/1078/part/IV/chapter/F" IdURI="http://www.legislation.gov.uk/id/uksi/1986/1078/part/IV/chapter/F" NumberOfProvisions="13" id="part-IV-chapter-F" RestrictExtent="E+W+S" RestrictStartDate="2024-11-25"><Number>F</Number><Title>AVOIDANCE OF DANGER</Title><P1group RestrictExtent="E+W+S" RestrictStartDate="1986-08-11"><Title>Maintenance and use of vehicle so as not to be a danger, <Abbreviation Expansion="Et cetera" xml:lang="la">etc</Abbreviation></Title><P1 DocumentURI="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100" IdURI="http://www.legislation.gov.uk/id/uksi/1986/1078/regulation/100" id="regulation-100"><Pnumber><CommentaryRef Ref="key-918c8cbb501b0ba1f6fe86149e79741e"/>100</Pnumber><P1para><P2 DocumentURI="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/1" IdURI="http://www.legislation.gov.uk/id/uksi/1986/1078/regulation/100/1" id="regulation-100-1"><Pnumber>1</Pnumber><P2para><Text>A motor
+vehicle, every trailer drawn thereby and all parts and accessories of such
+vehicle and trailer shall at all times be in such condition, and the number
+of passengers carried by such vehicle or trailer, the manner in which any
+passengers are carried in or on such vehicle or trailer, and the weight, distribution,
+packing and adjustment of the load of such vehicle or trailer shall at all
+times be such, that no danger is caused or is likely to be caused to any person
+in or on the vehicle or trailer or on a road.</Text></P2para><P2para><Text>
+                                 <Proviso Mark="Start"/>Provided that
+the provisions of this regulation with regard to the number of passengers
+carried shall not apply to a vehicle to which the Public Service Vehicles (Carrying Capacity) Regulations 1984
+ apply.<Proviso Mark="End"/>
+                              </Text></P2para></P2><P2 DocumentURI="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/2" IdURI="http://www.legislation.gov.uk/id/uksi/1986/1078/regulation/100/2" id="regulation-100-2"><Pnumber>2</Pnumber><P2para><Text>The load
+carried by a motor vehicle or trailer shall at all times be so secured, if
+necessary by physical restraint other than its own weight, and be in such
+a position, that neither danger nor nuisance is likely to be caused to any
+person or property by reason of the load or any part thereof falling or being
+blown from the vehicle or by reason of any other movement of the load or any
+part thereof in relation to the vehicle.</Text></P2para></P2><P2 DocumentURI="http://www.legislation.gov.uk/uksi/1986/1078/regulation/100/3" IdURI="http://www.legislation.gov.uk/id/uksi/1986/1078/regulation/100/3" id="regulation-100-3"><Pnumber>3</Pnumber><P2para><Text>No motor
+vehicle or trailer shall be used for any purpose for which it is so unsuitable
+as to cause or be likely to cause danger or nuisance to any person in or on
+the vehicle or trailer or on a road.</Text></P2para></P2></P1para></P1></P1group></Chapter></Part></Body></Secondary><Commentaries><Commentary id="key-918c8cbb501b0ba1f6fe86149e79741e" Type="I"><Para><Text><CitationSubRef id="c5jmzypz5-00487" SectionRef="regulation-100" URI="http://www.legislation.gov.uk/id/uksi/1986/1078/regulation/100">Reg. 100</CitationSubRef> in force at 11.8.1986, see <CitationSubRef id="c5jmzypz5-00488" CitationRef="" SectionRef="regulation-1" URI="http://www.legislation.gov.uk/id/uksi/1986/1078/regulation/1" Operative="true">reg. 1</CitationSubRef></Text></Para></Commentary></Commentaries></Legislation>

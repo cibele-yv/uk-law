@@ -1,0 +1,52 @@
+---
+id: ukpga/2020/17/section/118
+title: 'Availability of fine: magistrates'' court'
+level: act
+binding: binding
+parent: ukpga/2020/17
+made_under: null
+extent:
+- E
+- W
+areas:
+- road-traffic
+version:
+  valid_from: '2020-12-01'
+  valid_to: null
+  status: in-force
+unapplied_changes: 0
+relations:
+  cites: []
+source:
+  url: https://www.legislation.gov.uk/ukpga/2020/17/section/118/data.xml
+  publisher: legislation.gov.uk
+  format: CLML XML
+  retrieved_at: '2026-11-10T21:34:27Z'
+  sha256: 2f2ea1026674668b21fd5dde7aa15db2513afc5f49408b2a8642e15c062828c0
+  licence: OGL-3.0
+---
+
+118 (1) A fine is available to a magistrates' court dealing with an offender for an offence if under the relevant offence provision a person who is convicted of that offence is liable to a fine.
+
+(2) If under the relevant offence provision the offender is liable to—
+  (a) a fine of a specified amount,
+  (b) a fine of not more than a specified amount,
+
+the amount of the fine—
+    (i) must not be more than that amount, but
+    (ii) may be less than that amount (unless an Act passed after 31 December 1879 expressly provides to the contrary).
+
+(3) This is subject to—
+  (a) section 121 (availability: fines not to be combined with certain other orders);
+  (b) section 123 (limit on fines imposed by magistrates' courts in respect of young offenders).
+
+(4) In this section “relevant offence provision”, in relation to an offence, means—
+  (a) the enactment creating the offence or specifying the penalty to which a person convicted of the offence is liable, or
+  (b) that provision read in accordance with—
+    (i) section 85 of the Legal Aid, Sentencing and Punishment of Offenders Act 2012 (removal of limit on certain fines on conviction by magistrates' court) and regulations under that section;
+    (ii) section 86 of that Act (power to increase certain other fines on conviction by magistrates' court) and regulations under that section;
+    (iii) section 32 of the Magistrates' Courts Act 1980 (penalties on summary conviction for offences triable either way);
+    (iv) section 119 (power of magistrates' court to fine where only imprisonment etc specified);
+    (v) section 122 (standard scale of fines),
+
+and, for this purpose, “enactment” includes an enactment contained in a local Act or in any order, regulation or other instrument having effect by virtue of an Act.

@@ -1,11 +1,77 @@
+# Draft unit list. IDs are checked by the fetcher (HTTP status, title); titles
+# are still to be reviewed by a person. Legislation only: the Highway Code,
+# sentencing guidelines and GOV.UK guidance need their own fetchers.
 area: road-traffic
 jurisdiction_default: [E, W]
 units:
-  - id: ukpga/1984/27/section/89     # RTRA 1984: speeding offence
-  - id: ukpga/1988/53/section/1      # RTOA 1988: notice of intended prosecution
-  - id: ukpga/1988/53/section/35     # RTOA 1988: 12-point disqualification
-  - id: ukpga/1988/53/schedule/2     # RTOA 1988: offences, points, penalties
-  - id: ukpga/1988/52/section/172    # RTA 1988: duty to name the driver
-  - id: ukpga/1995/13/section/2      # New Drivers Act 1995: 6 points in 2 years
-  - id: ukpga/1980/43/section/14     # MCA 1980: statutory declaration
-  - id: uksi/2000/2792               # Fixed Penalty Order 2000
+  # Road Traffic Regulation Act 1984
+  - id: ukpga/1984/27/section/81        # General speed limit for restricted roads
+  - id: ukpga/1984/27/section/84        # Speed limits on roads other than restricted roads
+  - id: ukpga/1984/27/section/85        # Traffic signs for indicating speed restrictions
+  - id: ukpga/1984/27/section/86        # Speed limits for particular classes of vehicles
+  - id: ukpga/1984/27/section/87        # Exemption of fire brigade, ambulance and police vehicles from speed limits
+  - id: ukpga/1984/27/section/89        # Speeding offences generally
+
+  # Road Traffic Act 1988
+  - id: ukpga/1988/52/section/1         # Causing death by dangerous driving
+  - id: ukpga/1988/52/section/2         # Dangerous driving
+  - id: ukpga/1988/52/section/2A        # Meaning of dangerous driving
+  - id: ukpga/1988/52/section/3         # Careless, and inconsiderate, driving
+  - id: ukpga/1988/52/section/3A        # Causing death by careless driving when under influence of drink or drugs
+  - id: ukpga/1988/52/section/4         # Driving, or being in charge, when under influence of drink or drugs
+  - id: ukpga/1988/52/section/5         # Driving or being in charge of a motor vehicle with alcohol concentration above prescribed limit
+  - id: ukpga/1988/52/section/5A        # Driving or being in charge of a motor vehicle with concentration of specified controlled drug above specified limit
+  - id: ukpga/1988/52/section/6         # Power to administer preliminary tests
+  - id: ukpga/1988/52/section/7         # Provision of specimens for analysis
+  - id: ukpga/1988/52/section/35        # Drivers to comply with traffic directions
+  - id: ukpga/1988/52/section/36        # Drivers to comply with traffic signs
+  - id: ukpga/1988/52/section/38        # The Highway Code
+  - id: ukpga/1988/52/section/40A       # Using vehicle in dangerous condition etc
+  - id: ukpga/1988/52/section/41D       # Breach of requirements as to control of vehicle, mobile telephones etc
+  - id: ukpga/1988/52/section/87        # Drivers of motor vehicles to have driving licences
+  - id: ukpga/1988/52/section/143       # Users of motor vehicles to be insured
+  - id: ukpga/1988/52/section/163       # Power of police to stop vehicles
+  - id: ukpga/1988/52/section/164       # Power of constables to require production of driving licence and in certain cases statement of date of birth
+  - id: ukpga/1988/52/section/170       # Duty of driver to stop, report accident and give information or documents
+  - id: ukpga/1988/52/section/172       # Duty to give information as to identity of driver etc in certain circumstances
+
+  # Road Traffic Offenders Act 1988
+  - id: ukpga/1988/53/section/1         # Requirement of warning etc. of prosecutions for certain offences
+  - id: ukpga/1988/53/section/2         # Requirement of warning etc: supplementary
+  - id: ukpga/1988/53/section/9         # Mode of trial
+  - id: ukpga/1988/53/section/28        # Penalty points to be attributed to an offence
+  - id: ukpga/1988/53/section/29        # Penalty points to be taken into account on conviction
+  - id: ukpga/1988/53/section/34        # Disqualification for certain offences
+  - id: ukpga/1988/53/section/35        # Disqualification for repeated offences
+  - id: ukpga/1988/53/section/36        # Disqualification until test is passed
+  - id: ukpga/1988/53/section/44        # Orders for endorsement
+  - id: ukpga/1988/53/section/51        # Fixed penalty offences
+  - id: ukpga/1988/53/section/52        # Fixed penalty notices
+  - id: ukpga/1988/53/section/54        # Notices on-the-spot etc
+  - id: ukpga/1988/53/section/57        # Endorsement of counterparts without hearings
+  - id: ukpga/1988/53/section/75        # Issue of conditional offer
+  - id: ukpga/1988/53/schedule/2        # Schedule 2: Prosecution and Punishment of Offences
+
+  # Road Traffic (New Drivers) Act 1995
+  - id: ukpga/1995/13/section/1         # Probationary period for newly qualified drivers
+  - id: ukpga/1995/13/section/2         # Persons to whom section 3(1) applies
+  - id: ukpga/1995/13/section/3         # Revocation of licences
+
+  # Magistrates' Courts Act 1980
+  - id: ukpga/1980/43/section/11        # Non-appearance of accused: general provisions
+  - id: ukpga/1980/43/section/12        # Non-appearance of accused: plea of guilty
+  - id: ukpga/1980/43/section/14        # Proceedings invalid where accused did not know of them
+  - id: ukpga/1980/43/section/127       # Limitation of time
+
+  # Sentencing Act 2020 (fines)
+  - id: ukpga/2020/17/section/118       # Availability of fine: magistrates' court
+  - id: ukpga/2020/17/section/120       # General power of Crown Court to fine offender convicted on indictment
+  - id: ukpga/2020/17/section/125       # Exercise of court's powers to impose fine and fix amount
+
+  # Road Vehicles (Construction and Use) Regulations 1986
+  - id: uksi/1986/1078/regulation/100   # Maintenance and use of vehicle so as not to be a danger, etc
+  - id: uksi/1986/1078/regulation/104   # Driver's control
+  - id: uksi/1986/1078/regulation/110   # Mobile telephones
+
+  # Fixed Penalty Order 2000 (whole order for now; to be split into articles)
+  - id: uksi/2000/2792
