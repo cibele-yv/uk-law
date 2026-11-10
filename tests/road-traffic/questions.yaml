@@ -1,5 +1,43 @@
+# Expected answers are drafts from the strategy document. verified stays false
+# until a person has checked the answer against the source text.
 - id: rt-001
   question: "How many points before a new driver loses their licence?"
   expected_answer: "6 points within 2 years of passing the test"
   expected_sources: [ukpga/1995/13/section/2]
   verified: false   # true once checked against the source text
+
+- id: rt-002
+  question: "Caught at 41 mph in a 30 zone: how many points?"
+  expected_answer: "3 points with a fixed penalty; 4 to 6 points or a short ban if it goes to court"
+  expected_sources: [ukpga/1988/53/schedule/2, sentencing/magistrates/speeding]
+  verified: false
+
+- id: rt-003
+  question: "How many points lead to a ban?"
+  expected_answer: "12 within 3 years, minimum 6-month ban"
+  expected_sources: [ukpga/1988/53/section/35]
+  verified: false
+
+- id: rt-004
+  question: "What is the time limit for a notice of intended prosecution?"
+  expected_answer: "14 days"
+  expected_sources: [ukpga/1988/53/section/1]
+  verified: false
+
+- id: rt-005
+  question: "What is the penalty for not naming the driver?"
+  expected_answer: "6 points and a fine up to £1,000"
+  expected_sources: [ukpga/1988/52/section/172, ukpga/1988/53/schedule/2]
+  verified: false
+
+- id: rt-006
+  question: "I missed the fixed penalty deadline and got a summons: what are my options?"
+  expected_answer: "Respond to the court; make a statutory declaration within 21 days if unaware of the proceedings"
+  expected_sources: [ukpga/1980/43/section/14, ukpga/1988/53/part/III]
+  verified: false
+
+- id: rt-007
+  question: "What is the penalty for using a hand-held phone while driving?"
+  expected_answer: "6 points and a £200 fixed penalty"
+  expected_sources: [uksi/1986/1078/regulation/110, ukpga/1988/52/section/41D]
+  verified: false
