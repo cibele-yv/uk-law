@@ -1,0 +1,54 @@
+name: Monthly refresh
+
+# Fetch -> normalise -> validate. If anything changed, open a pull request for a
+# person to review (tables, schedules and anything flagged `review:`).
+on:
+  schedule:
+    - cron: "0 6 1 * *"   # 06:00 UTC on the 1st of each month
+  workflow_dispatch:        # run by hand after a known change in the law
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      # Contact details for the User-Agent, as legislation.gov.uk asks.
+      # Set it under Settings > Secrets and variables > Actions > Variables.
+      UKLAW_CONTACT: ${{ vars.UKLAW_CONTACT }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies from pyproject.toml
+        run: python -c "import tomllib; print(*tomllib.load(open('pyproject.toml','rb'))['project']['dependencies'])" | xargs python -m pip install
+
+      - name: Fetch
+        run: python -m tools.fetch.run
+
+      - name: Normalise
+        run: python -m tools.normalise.run
+
+      - name: Validate
+        run: python -m tools.validate.run
+
+      - name: Open pull request if anything changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: refresh/monthly
+          delete-branch: true
+          commit-message: "Monthly refresh from legislation.gov.uk"
+          title: "Monthly refresh from legislation.gov.uk"
+          body: |
+            Automated monthly refresh: fetch, normalise, validate all passed.
+
+            Review before merging:
+            - files under `raw/` with a new version date are new legal versions
+            - a `SILENT EDIT` in the fetch log means the publisher changed text without a new version date (look for `.r2.xml` files)
+            - anything flagged `review:` in a changed `data/` file (tables, schedules)
