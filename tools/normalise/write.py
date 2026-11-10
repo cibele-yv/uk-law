@@ -4,17 +4,8 @@ from pathlib import Path
 
 import yaml
 
+from tools.common.paths import data_dir
 from tools.normalise.clml import Provision
-
-DATA = Path("data/legislation")
-
-
-def data_dir(uri: str) -> Path:
-    """ukpga/1988/52/section/172 -> data/legislation/ukpga/1988/52/section-172"""
-    parts = uri.split("/")
-    if len(parts) >= 5:
-        parts = parts[:3] + [f"{parts[3]}-{parts[4]}"] + parts[5:]
-    return DATA.joinpath(*parts)
 
 
 def front_matter(p: Provision, valid_to: str | None, areas: list[str], source: dict) -> dict:

@@ -3,6 +3,10 @@
 # sentencing guidelines and GOV.UK guidance need their own fetchers.
 area: road-traffic
 jurisdiction_default: [E, W]
+# Cited by units below but deliberately not fetched (outside road traffic scope).
+external:
+  - asp/2012/8    # Police and Fire Reform (Scotland) Act 2012, cited by Road Traffic Act 1988 s.2A
+
 units:
   # Road Traffic Regulation Act 1984
   - id: ukpga/1984/27/section/81        # General speed limit for restricted roads
