@@ -220,7 +220,7 @@ __marimo__/
 .streamlit/secrets.toml
 
 # Search index and local environment
-index/
+/index/
 .venv/
 
 # Strategy document (kept locally only)

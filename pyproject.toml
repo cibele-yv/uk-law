@@ -3,3 +3,8 @@ name = "uk-law"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = ["httpx", "lxml", "pyyaml", "jsonschema"]
+
+[project.optional-dependencies]
+# Search index, evaluate and MCP server. Not needed by fetch/normalise/validate,
+# so the GitHub Actions workflows stay light. Install with: pip install -e ".[search]"
+search = ["numpy", "fastembed", "mcp>=2"]
