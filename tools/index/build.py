@@ -22,7 +22,8 @@ from tools.index.embed import MODEL, embed_documents
 from tools.index.links import same_act_refs
 from tools.validate.model import load_docs
 
-INDEX = Path("index") / "kb.sqlite"
+REPO = Path(__file__).resolve().parents[2]
+INDEX = REPO / "index" / "kb.sqlite"  # absolute: the MCP server may start in any folder
 
 SCHEMA = """
 CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT);
@@ -38,7 +39,7 @@ CREATE TABLE links (from_id TEXT, to_id TEXT, kind TEXT);
 
 
 def build(path: Path = INDEX) -> tuple[int, int, int]:
-    docs, problems = load_docs()
+    docs, problems = load_docs(REPO / "data")
     if problems:
         raise SystemExit(f"cannot build index: {len(problems)} unreadable files (run the validator)")
     current = [d for d in docs if d.path.name == "current.md"]
@@ -80,7 +81,7 @@ def build(path: Path = INDEX) -> tuple[int, int, int]:
 
 def main() -> int:
     units, n_chunks, links = build()
-    print(f"{INDEX.as_posix()}: {units} units, {n_chunks} chunks, {links} links")
+    print(f"{INDEX}: {units} units, {n_chunks} chunks, {links} links")
     return 0
 
 
