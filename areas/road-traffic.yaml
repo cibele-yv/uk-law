@@ -1,6 +1,6 @@
 # Draft unit list. IDs are checked by the fetcher (HTTP status, title); titles
-# are still to be reviewed by a person. Legislation and GOV.UK guidance; the Highway Code
-# and sentencing guidelines need their own fetchers.
+# are still to be reviewed by a person. Sources: legislation.gov.uk (Acts, SIs, Criminal
+# Procedure Rules), GOV.UK (guidance and the Highway Code), Sentencing Council (guidelines).
 area: road-traffic
 jurisdiction_default: [E, W]
 # Cited by units below but deliberately not fetched (outside road traffic scope).
@@ -81,6 +81,31 @@ units:
   - id: uksi/2000/2792/article/2     # Fixed penalties
   - id: uksi/2000/2792/schedule      # Schedule 1: fixed penalties (the Order's only unnumbered schedule)
 
+  # Fixed penalties not paid: registration as a fine (Road Traffic Offenders Act 1988)
+  - id: ukpga/1988/53/section/69        # Payment of penalty
+  - id: ukpga/1988/53/section/70        # Registration certificates
+  - id: ukpga/1988/53/section/71        # Registration of sums payable in default
+  - id: ukpga/1988/53/section/72        # Notices on-the-spot etc.: when registration and endorsement invalid
+  - id: ukpga/1988/53/section/73        # Notices fixed to vehicles: when registration invalid
+
+  # Enforcement of fines (Magistrates' Courts Act 1980, Courts Act 2003)
+  - id: ukpga/1980/43/section/75        # Power to dispense with immediate payment
+  - id: ukpga/1980/43/section/76        # Enforcement of sums adjudged to be paid
+  - id: ukpga/1980/43/section/77        # Postponement of issue of warrant
+  - id: ukpga/1980/43/section/82        # Restriction on power to impose imprisonment for default
+  - id: ukpga/1980/43/section/85        # Power to remit fine
+  - id: ukpga/2003/39/schedule/5        # Schedule 5: Collection of fines and other sums imposed on conviction
+
+  # Criminal Procedure Rules 2025 (court procedure; binding on courts and parties)
+  - id: uksi/2025/909/rule/24.8         # Written guilty plea: special rules
+  - id: uksi/2025/909/rule/24.9         # Single justice procedure: special rules
+  - id: uksi/2025/909/rule/24.12        # Procedure where a party is absent
+  - id: uksi/2025/909/rule/29.4         # Statutory declaration to avoid fine after fixed penalty notice
+  - id: uksi/2025/909/rule/30.5         # Application to reduce a fine, vary payment terms or remit a courts charge
+  - id: uksi/2025/909/rule/30.6         # Claim to avoid fine after penalty notice
+  - id: uksi/2025/909/rule/44.2         # Statutory declaration of ignorance of proceedings
+  - id: uksi/2025/909/rule/44.3         # Setting aside a conviction or varying a costs, etc. order
+
   # GOV.UK guidance (plain English; links lead to the legislation above).
   # IDs are page paths on www.gov.uk. Guidance, not binding law.
   - id: govuk/speeding-penalties                          # Speeding penalties
@@ -94,3 +119,33 @@ units:
   - id: govuk/pay-court-fine-online                       # Pay a court fine (incl. registered fixed penalties)
   - id: govuk/courts                                      # Criminal courts (magistrates' and Crown Court)
   - id: govuk/your-rights-bailiffs                        # Bailiff powers (unpaid fines enforcement)
+
+  # The Highway Code (GOV.UK). A code: not law itself, but courts may rely on it (RTA 1988 s.38(7)).
+  - id: govuk/guidance/the-highway-code/introduction
+  - id: govuk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102
+  - id: govuk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158
+  - id: govuk/guidance/the-highway-code/using-the-road-159-to-203
+  - id: govuk/guidance/the-highway-code/motorways-253-to-273
+  - id: govuk/guidance/the-highway-code/annex-3-motor-vehicle-documentation-and-learner-driver-requirements
+  - id: govuk/guidance/the-highway-code/annex-4-the-road-user-and-the-law
+  - id: govuk/guidance/the-highway-code/annex-5-penalties
+  - id: govuk/guidance/the-highway-code/annex-8-safety-code-for-new-drivers
+
+  # Sentencing Council (magistrates' court guidelines; courts must follow them, Sentencing Code s.59)
+  - id: sentencing/guidelines/speeding-revised-2017                                        # RTRA 1984 s.89(1)
+  - id: sentencing/guidelines/careless-driving-drive-without-due-care-and-attention       # RTA 1988 s.3
+  - id: sentencing/guidelines/dangerous-driving                                            # RTA 1988 s.2
+  - id: sentencing/guidelines/excess-alcohol-driveattempt-to-drive-revised-2017            # RTA 1988 s.5(1)(a)
+  - id: sentencing/guidelines/unfit-through-drink-or-drugs-drive-attempt-to-drive-revised-2017  # RTA 1988 s.4(1)
+  - id: sentencing/guidelines/driving-or-attempting-to-drive-with-a-specified-drug-above-the-specified-limit  # RTA 1988 s.5A
+  - id: sentencing/guidelines/fail-to-provide-specimen-for-analysis-driveattempt-to-drive-revised-2017  # RTA 1988 s.7(6)
+  - id: sentencing/guidelines/use-of-mobile-telephone-while-driving                        # RTA 1988 s.41D
+  - id: sentencing/guidelines/fail-to-give-information-of-driver-s-identity-as-required    # RTA 1988 s.172
+  - id: sentencing/guidelines/no-insurance-revised-2017                                    # RTA 1988 s.143
+  - id: sentencing/guidelines/fail-to-stopreport-road-accident-revised-2017                # RTA 1988 s.170(4)
+  - id: sentencing/guidelines/fail-to-stop-when-required-by-police-constable               # RTA 1988 s.163
+  - id: sentencing/guidelines/fail-to-comply-with-traffic-sign-endorsable                  # RTA 1988 s.36
+  - id: sentencing/guidelines/drive-otherwise-than-in-accordance-with-licence              # RTA 1988 s.87(1)
+  - id: sentencing/guidelines/driving-disqualification                                     # disqualification in the magistrates' court
+  - id: sentencing/supplementary-information/approach-to-fines                             # fine bands A-F, means
+  - id: sentencing/supplementary-information/road-traffic-offences-disqualification       # totting up, exceptional hardship

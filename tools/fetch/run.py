@@ -9,11 +9,15 @@ from datetime import datetime, timezone
 from tools.common.areas import load_units
 from tools.common.paths import raw_dir
 from tools.common.storage import save_version, sha256
-from tools.fetch import govuk, legislation
+from tools.fetch import govuk, legislation, sentencing
 
 # One entry per source: (module, client class). A module provides
 # handles(uri), canonical(bytes), EXT and SOURCE (publisher, format, licence).
-SOURCES = [(legislation, legislation.LegislationClient), (govuk, govuk.GovukClient)]
+SOURCES = [
+    (legislation, legislation.LegislationClient),
+    (govuk, govuk.GovukClient),
+    (sentencing, sentencing.SentencingClient),
+]
 
 
 def source_of(uri: str):

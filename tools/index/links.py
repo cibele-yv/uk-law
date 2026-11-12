@@ -11,14 +11,14 @@ import re
 
 _KIND = {"section": "section", "sections": "section", "regulation": "regulation",
          "regulations": "regulation", "article": "article", "articles": "article",
-         "schedule": "schedule"}
-_NUM = r"\d+[A-Z]*"
+         "schedule": "schedule", "rule": "rule", "rules": "rule"}
+_NUM = r"\d+(?:\.\d+)?[A-Z]*"  # 54, 3ZB, and Criminal Procedure Rules style 29.4
 _ITEM = rf"{_NUM}(?:\(\w+\))*"  # 51 or 51(2)(a)
 # The list is matched atomically (?>...) so the engine cannot drop the last items
 # to dodge the "of the ..." check: "section 28 or 29 of the Road Traffic Act 1988"
 # must be skipped whole, not linked as "section 28".
 _REF = re.compile(
-    rf"\b(sections?|regulations?|articles?|Schedule)\s+(?>({_ITEM}(?:(?:\s*,\s*|\s+(?:and|or|to)\s+){_ITEM})*))"
+    rf"\b(sections?|regulations?|articles?|rules?|Schedule)\s+(?>({_ITEM}(?:(?:\s*,\s*|\s+(?:and|or|to)\s+){_ITEM})*))"
     r"(?!\s+(?:of|to)\s+(?:the|that)\b)",
     re.IGNORECASE,
 )

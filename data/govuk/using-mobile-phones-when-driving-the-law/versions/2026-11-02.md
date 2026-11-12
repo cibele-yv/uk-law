@@ -17,6 +17,7 @@ version:
 unapplied_changes: 0
 relations:
   cites:
+  - govuk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158
   - govuk/penalty-points-endorsements
 source:
   url: https://www.gov.uk/api/content/using-mobile-phones-when-driving-the-law

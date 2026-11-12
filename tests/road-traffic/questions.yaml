@@ -9,7 +9,7 @@
 - id: rt-002
   question: "Caught at 41 mph in a 30 zone: how many points?"
   expected_answer: "3 points with a fixed penalty; 4 to 6 points or a short ban if it goes to court"
-  expected_sources: [ukpga/1988/53/schedule/2, sentencing/magistrates/speeding]
+  expected_sources: [ukpga/1988/53/schedule/2, sentencing/guidelines/speeding-revised-2017]
   verified: false
 
 - id: rt-003
@@ -33,11 +33,18 @@
 - id: rt-006
   question: "I missed the fixed penalty deadline and got a summons: what are my options?"
   expected_answer: "Respond to the court; make a statutory declaration within 21 days if unaware of the proceedings"
-  expected_sources: [ukpga/1980/43/section/14, ukpga/1988/53/part/III]
+  expected_sources: [ukpga/1980/43/section/14, ukpga/1988/53/section/71]
   verified: false
 
 - id: rt-007
   question: "What is the penalty for using a hand-held phone while driving?"
   expected_answer: "6 points and a £200 fixed penalty"
   expected_sources: [uksi/1986/1078/regulation/110, ukpga/1988/52/section/41D]
+  verified: false
+
+- id: rt-008
+  question: "I'm receiving a fine of 800 pounds and have been summoned to court for missing the payment deadline of a speeding fine"
+  # Draft, not legal advice: written from the sources below, to be checked by a solicitor.
+  expected_answer: "Respond to the court by the date on the summons. An unpaid fixed penalty can be registered as a fine increased by half; a statutory declaration may apply if you did not receive the notice. Court fines are set by income (fine bands), and you can ask the court for time to pay or to reduce the fine."
+  expected_sources: [ukpga/1988/53/section/71, uksi/2025/909/rule/29.4, sentencing/supplementary-information/approach-to-fines, uksi/2025/909/rule/30.5, govuk/pay-court-fine-online]
   verified: false

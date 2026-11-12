@@ -18,6 +18,13 @@ RRF_K = 60  # standard reciprocal-rank-fusion constant
 CANDIDATES = 50  # chunks taken from each search before fusing
 
 
+# Source types searched separately so one type never crowds out another:
+LAW = frozenset({"act", "si"})              # legislation: decides the answer
+GUIDELINES = frozenset({"guideline"})      # Sentencing Council: how courts sentence
+CODE = frozenset({"code"})                  # Highway Code: long general rules, kept in its own pool
+GUIDANCE = frozenset({"guidance"})          # plain-English GOV.UK pages: explain the answer
+
+
 def web_url(source_url: str) -> str:
     """The page a person can open, from the URL we fetched (data API)."""
     return source_url.removesuffix("/data.xml").replace("www.gov.uk/api/content/", "www.gov.uk/")
@@ -53,7 +60,7 @@ class Index:
         self.chunk_ids = [r["rowid"] for r in rows]
         self.chunk_doc = {r["rowid"]: r["doc_id"] for r in rows}
         self.vectors = np.vstack([np.frombuffer(r["vector"], dtype=np.float32) for r in rows])
-        self.binding = {r[0]: r[1] != "guidance" for r in self.db.execute("SELECT id, level FROM docs")}
+        self.level = {r[0]: r[1] for r in self.db.execute("SELECT id, level FROM docs")}
 
     # --- the two searches -------------------------------------------------
     def _keyword(self, question: str) -> list[int]:
@@ -70,10 +77,10 @@ class Index:
         return [self.chunk_ids[i] for i in order]
 
     # --- public API -------------------------------------------------------
-    def search(self, question: str, k: int = 8, binding: bool | None = None) -> list[Hit]:
+    def search(self, question: str, k: int = 8, levels: frozenset[str] | None = None) -> list[Hit]:
         """Fuse both rankings (reciprocal rank fusion), best chunk per unit.
 
-        binding=True keeps only law (Acts, SIs, ...), False only guidance, None both.
+        `levels` keeps only units of those levels (see LAW, GUIDELINES, CODE, GUIDANCE); None keeps all.
         """
         scores: dict[int, float] = {}
         for ranking in (self._keyword(question), self._meaning(question)):
@@ -82,7 +89,7 @@ class Index:
         best: dict[str, tuple[float, int]] = {}
         for rowid, score in sorted(scores.items(), key=lambda kv: (-kv[1], kv[0])):
             doc = self.chunk_doc[rowid]
-            if binding is not None and self.binding[doc] != binding:
+            if levels is not None and self.level[doc] not in levels:
                 continue
             if doc not in best:
                 best[doc] = (score, rowid)
@@ -106,11 +113,18 @@ class Index:
         """
         return sorted(r[0] for r in self.db.execute(sql, (doc_id, doc_id)))
 
-    def evidence(self, question: str, k: int = 5, k_guidance: int = 3) -> list[Hit]:
-        """Top k law units and top k_guidance guidance pages, searched separately so
-        plain-English guidance (which matches lay wording best) never crowds out the
-        binding law; then units linked to them (one step), without duplicates."""
-        hits = self.search(question, k, binding=True) + self.search(question, k_guidance, binding=False)
+    def evidence(self, question: str, k: int = 5, k_guidance: int = 3, k_guidelines: int = 3, k_code: int = 2) -> list[Hit]:
+        """Top k law units, k_guidelines Sentencing Council guidelines, k_code Highway Code
+        sections and k_guidance GOV.UK pages, each type searched separately: the guidance
+        matches lay wording best and the guidelines and Highway Code are long, so mixed
+        together they would crowd out the statute. Then units linked to them (one step),
+        without duplicates."""
+        hits = (
+            self.search(question, k, LAW)
+            + self.search(question, k_guidelines, GUIDELINES)
+            + self.search(question, k_code, CODE)
+            + self.search(question, k_guidance, GUIDANCE)
+        )
         seen = {h.id for h in hits}
         for h in list(hits):
             for other in self.related(h.id):

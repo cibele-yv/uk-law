@@ -16,8 +16,10 @@ from tools.retrieve.search import Index
 INSTRUCTIONS = """\
 UK law knowledge base (England and Wales unless stated). Every result is verbatim
 text from an official source with its URL and the date the version took effect:
-legislation (binding law, legislation.gov.uk) or GOV.UK guidance (binding: guidance,
-plain-English explanation, not law). Both under the Open Government Licence v3.
+legislation (binding law, legislation.gov.uk), Sentencing Council guidelines (courts
+must follow them unless unjust), the Highway Code (level "code": not an offence to
+break in itself, but courts may rely on it) or GOV.UK guidance (plain-English
+explanation, not law). All under the Open Government Licence v3.
 
 When answering a user's legal question:
 1. Call get_evidence with the user's question (rephrase in legal terms and call
@@ -41,11 +43,13 @@ def _index() -> Index:
 
 
 @server.tool()
-def get_evidence(question: str, k: int = 5, k_guidance: int = 3) -> dict:
+def get_evidence(question: str, k: int = 5, k_guidance: int = 3, k_guidelines: int = 3, k_code: int = 2) -> dict:
     """Best sources for a plain-English legal question: the top k law provisions
-    (binding) and the top k_guidance GOV.UK guidance pages, plus what they refer to
-    (one step). Use this first. Law decides the answer; guidance explains it."""
-    hits = _index().evidence(question, k, k_guidance)
+    (Acts, SIs, Criminal Procedure Rules), the top k_guidelines Sentencing Council guidelines,
+    the top k_code Highway Code sections and the top k_guidance GOV.UK guidance pages, plus what they
+    refer to (one step). Use this first. Law decides the answer; guidelines and the
+    Highway Code show how courts apply it; guidance explains it."""
+    hits = _index().evidence(question, k, k_guidance, k_guidelines, k_code)
     return {"question": question, "count": len(hits), "sources": [h.to_dict() for h in hits]}
 
 

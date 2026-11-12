@@ -9,20 +9,23 @@ from collections.abc import Callable
 from tools.common.areas import load_units
 from tools.common.paths import raw_dir
 from tools.common.storage import raw_files
-from tools.fetch import govuk, legislation
+from tools.fetch import govuk, legislation, sentencing
 from tools.normalise import clml, write
 from tools.normalise import govuk as govuk_parser
+from tools.normalise import sentencing as sentencing_parser
 from tools.normalise.clml import Provision
 
 LEVELS = {"ukpga": "act", "asp": "act", "anaw": "act", "ukla": "act", "uksi": "si", "nisi": "si"}
 
 
-def parser_for(uri: str, known: set[str]) -> Callable[[bytes], Provision] | None:
-    """The parse function for a unit's source, or None if no source handles it."""
+def parser_for(uri: str, known: set[str]) -> Callable[[bytes, str], Provision] | None:
+    """The parse function (raw bytes, version date from the file name) for a unit's source, or None."""
     if legislation.handles(uri):
-        return lambda raw: clml.parse(raw, uri, LEVELS[uri.split("/")[0]])
+        return lambda raw, _version: clml.parse(raw, uri, LEVELS[uri.split("/")[0]])
     if govuk.handles(uri):
-        return lambda raw: govuk_parser.parse(raw, uri, known=known)
+        return lambda raw, _version: govuk_parser.parse(raw, uri, known=known)
+    if sentencing.handles(uri):
+        return lambda raw, version: sentencing_parser.parse(raw, uri, known=known, file_version=version)
     return None
 
 
@@ -43,7 +46,7 @@ def main() -> int:
             failed += 1
             continue
         try:
-            versions = [(parse(f.read_bytes()), write.source_of(f)) for f in files]
+            versions = [(parse(f.read_bytes(), f.name.split(".")[0]), write.source_of(f)) for f in files]
             review = write.write_unit(uri, versions, areas)
         except Exception as e:  # a wrong parse is worse than a missing one
             print(f"{'FAILED':<8} {uri}  {type(e).__name__}: {e}")
