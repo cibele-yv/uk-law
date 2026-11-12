@@ -52,9 +52,9 @@ python -m tools.mcp.server        # MCP server over stdio
    {
      "mcpServers": {
        "uk-law": {
-         "command": "C:\Python313\python.exe",
+         "command": "C:\\Python313\\python.exe",
          "args": ["-m", "tools.mcp.server"],
-         "env": { "PYTHONPATH": "C:\path\to\uk-law" }
+         "env": { "PYTHONPATH": "C:\\path\\to\\uk-law" }
        }
      }
    }
