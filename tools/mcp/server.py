@@ -15,13 +15,15 @@ from tools.retrieve.search import Index
 
 INSTRUCTIONS = """\
 UK law knowledge base (England and Wales unless stated). Every result is verbatim
-text from an official source (legislation.gov.uk, OGL v3) with its URL and the date
-the version took effect.
+text from an official source with its URL and the date the version took effect:
+legislation (binding law, legislation.gov.uk) or GOV.UK guidance (binding: guidance,
+plain-English explanation, not law). Both under the Open Government Licence v3.
 
 When answering a user's legal question:
 1. Call get_evidence with the user's question (rephrase in legal terms and call
    search again if the first results look off-topic).
-2. Answer ONLY from the returned text. Do not add law from memory.
+2. Answer ONLY from the returned text. Do not add law from memory. Where guidance
+   and legislation differ, the legislation wins; say so.
 3. Cite the url of every source you rely on, and quote the words you rely on.
 4. State the "as at" date (valid_from) and say if unapplied_changes > 0: the text
    may not yet show recent amendments.
@@ -39,10 +41,11 @@ def _index() -> Index:
 
 
 @server.tool()
-def get_evidence(question: str, k: int = 5) -> dict:
-    """Best sources for a plain-English legal question: the top k search hits plus
-    the provisions they refer to (one step). Use this first."""
-    hits = _index().evidence(question, k)
+def get_evidence(question: str, k: int = 5, k_guidance: int = 3) -> dict:
+    """Best sources for a plain-English legal question: the top k law provisions
+    (binding) and the top k_guidance GOV.UK guidance pages, plus what they refer to
+    (one step). Use this first. Law decides the answer; guidance explains it."""
+    hits = _index().evidence(question, k, k_guidance)
     return {"question": question, "count": len(hits), "sources": [h.to_dict() for h in hits]}
 
 

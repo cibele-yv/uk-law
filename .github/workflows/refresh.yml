@@ -43,8 +43,8 @@ jobs:
         with:
           branch: refresh/monthly
           delete-branch: true
-          commit-message: "Monthly refresh from legislation.gov.uk"
-          title: "Monthly refresh from legislation.gov.uk"
+          commit-message: "Monthly refresh from legislation.gov.uk and GOV.UK"
+          title: "Monthly refresh from legislation.gov.uk and GOV.UK"
           body: |
             Automated monthly refresh: fetch, normalise, validate all passed.
 

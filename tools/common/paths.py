@@ -1,8 +1,18 @@
-"""Where a unit's files live. Shared by every pipeline step."""
+"""Where a unit's files live. Shared by every pipeline step.
+
+Folders are organised by source; the first segment of a unit ID says which:
+  ukpga/1988/52/section/172  -> raw/legislation/ukpga/1988/52/section/172/
+                                data/legislation/ukpga/1988/52/section-172/
+  govuk/speeding-penalties   -> raw/govuk/speeding-penalties/
+                                data/govuk/speeding-penalties/
+"""
 from pathlib import Path
 
-RAW = Path("raw/legislation")
-DATA = Path("data/legislation")
+RAW_ROOT = Path("raw")
+DATA_ROOT = Path("data")
+RAW = RAW_ROOT / "legislation"
+DATA = DATA_ROOT / "legislation"
+OWN_FOLDER = {"govuk"}  # sources whose ID prefix is already the folder name
 
 
 def _segments(uri: str) -> list[str]:
@@ -14,8 +24,12 @@ def _segments(uri: str) -> list[str]:
 
 
 def raw_dir(uri: str) -> Path:
+    if uri.split("/")[0] in OWN_FOLDER:
+        return RAW_ROOT.joinpath(*uri.split("/"))
     return RAW.joinpath(*uri.split("/"))
 
 
 def data_dir(uri: str) -> Path:
+    if uri.split("/")[0] in OWN_FOLDER:
+        return DATA_ROOT.joinpath(*uri.split("/"))
     return DATA.joinpath(*_segments(uri))

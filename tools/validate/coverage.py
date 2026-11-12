@@ -1,14 +1,14 @@
 """Check 5: every unit listed in an area file exists in data/, and nothing is unlisted."""
 from tools.common.areas import load_units
 from tools.common.paths import data_dir
-from tools.fetch import legislation
+from tools.fetch.run import source_of
 from tools.validate.model import Doc, Problem
 
 
 def check(docs: list[Doc]) -> list[Problem]:
     problems = []
     held = {d.front.get("id"): d for d in docs}
-    listed = {uri: areas for uri, areas in load_units().items() if legislation.handles(uri)}
+    listed = {uri: areas for uri, areas in load_units().items() if source_of(uri)}
     for uri, areas in listed.items():
         current = data_dir(uri) / "current.md"
         if not current.exists():

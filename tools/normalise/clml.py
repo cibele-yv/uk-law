@@ -30,6 +30,7 @@ class Provision:
     snapshot: str  # dct:valid of the raw file this came from
     text: str
     review: list[str] = field(default_factory=list)
+    binding: str = "binding"  # legislation binds; guidance does not
 
 
 def _nearest(e: etree._Element, attr: str) -> str | None:

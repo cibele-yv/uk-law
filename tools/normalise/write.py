@@ -5,6 +5,7 @@ from pathlib import Path
 import yaml
 
 from tools.common.paths import data_dir
+from tools.common.storage import sidecar
 from tools.normalise.clml import Provision
 
 
@@ -13,7 +14,7 @@ def front_matter(p: Provision, valid_to: str | None, areas: list[str], source: d
         "id": p.id,
         "title": p.title,
         "level": p.level,
-        "binding": "binding",
+        "binding": p.binding,
         "parent": p.parent,
         "made_under": None,
         "extent": p.extent,
@@ -23,11 +24,11 @@ def front_matter(p: Provision, valid_to: str | None, areas: list[str], source: d
         "relations": {"cites": p.cites},
         "source": {
             "url": source["url"],
-            "publisher": "legislation.gov.uk",
-            "format": "CLML XML",
+            "publisher": source["publisher"],
+            "format": source["format"],
             "retrieved_at": source["retrieved_at"],
             "sha256": source["sha256"],
-            "licence": "OGL-3.0",
+            "licence": source["licence"],
         },
     }
     if p.review:
@@ -40,9 +41,13 @@ def render_file(fm: dict, text: str) -> str:
     return f"---\n{head}\n---\n\n{text}\n"
 
 
+# Sidecars written before the fetcher recorded publisher/format/licence are all legislation.gov.uk.
+_LEGACY = {"publisher": "legislation.gov.uk", "format": "CLML XML", "licence": "OGL-3.0"}
+
+
 def source_of(raw_file: Path) -> dict:
-    meta = json.loads(raw_file.with_suffix(".meta.json").read_text(encoding="utf-8"))
-    return {"url": meta["url"], "retrieved_at": meta["retrieved_at"], "sha256": meta["sha256"]}
+    meta = json.loads(sidecar(raw_file).read_text(encoding="utf-8"))
+    return {**_LEGACY, **{k: meta[k] for k in ("url", "retrieved_at", "sha256", "publisher", "format", "licence") if k in meta}}
 
 
 def write_unit(uri: str, versions: list[tuple[Provision, dict]], areas: list[str]) -> list[str]:

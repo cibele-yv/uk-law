@@ -7,9 +7,13 @@ from pathlib import Path
 import httpx
 from lxml import etree
 
+from tools.common import paths
+
 BASE = "https://www.legislation.gov.uk"
 PREFIXES = {"ukpga", "uksi", "asp", "anaw", "nisi", "ukla"}
 DELAY = 5  # seconds between requests, per legislation.gov.uk robots.txt
+EXT = ".xml"
+SOURCE = {"publisher": "legislation.gov.uk", "format": "CLML XML", "licence": "OGL-3.0"}
 DC_TITLE = "{http://purl.org/dc/elements/1.1/}title"
 DCT_VALID = "{http://purl.org/dc/terms/}valid"
 
@@ -39,7 +43,7 @@ def canonical(content: bytes) -> bytes:
 
 
 def raw_dir(uri: str) -> Path:
-    return Path("raw/legislation") / uri
+    return paths.raw_dir(uri)
 
 
 def version_date(content: bytes) -> str | None:
@@ -47,14 +51,14 @@ def version_date(content: bytes) -> str | None:
     return etree.fromstring(content).findtext(f".//{DCT_VALID}")
 
 
-def _user_agent() -> str:
+def user_agent() -> str:
     contact = os.environ.get("UKLAW_CONTACT")
     return f"uk-law-kb (contact: {contact})" if contact else "uk-law-kb"
 
 
 class LegislationClient:
     def __init__(self) -> None:
-        self._http = httpx.Client(headers={"User-Agent": _user_agent()}, timeout=90, follow_redirects=True)
+        self._http = httpx.Client(headers={"User-Agent": user_agent()}, timeout=90, follow_redirects=True)
         self._last = 0.0
 
     def __enter__(self):

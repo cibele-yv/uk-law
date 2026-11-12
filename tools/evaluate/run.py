@@ -27,7 +27,7 @@ def load_questions(area: str | None) -> list[tuple[str, dict]]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--area")
-    ap.add_argument("-k", type=int, default=8, help="search hits per question before following links")
+    ap.add_argument("-k", type=int, default=5, help="law search hits per question (plus 3 guidance pages), before following links")
     args = ap.parse_args()
 
     index = Index()

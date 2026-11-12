@@ -18,6 +18,11 @@ RRF_K = 60  # standard reciprocal-rank-fusion constant
 CANDIDATES = 50  # chunks taken from each search before fusing
 
 
+def web_url(source_url: str) -> str:
+    """The page a person can open, from the URL we fetched (data API)."""
+    return source_url.removesuffix("/data.xml").replace("www.gov.uk/api/content/", "www.gov.uk/")
+
+
 @dataclass
 class Hit:
     id: str
@@ -48,6 +53,7 @@ class Index:
         self.chunk_ids = [r["rowid"] for r in rows]
         self.chunk_doc = {r["rowid"]: r["doc_id"] for r in rows}
         self.vectors = np.vstack([np.frombuffer(r["vector"], dtype=np.float32) for r in rows])
+        self.binding = {r[0]: r[1] != "guidance" for r in self.db.execute("SELECT id, level FROM docs")}
 
     # --- the two searches -------------------------------------------------
     def _keyword(self, question: str) -> list[int]:
@@ -64,8 +70,11 @@ class Index:
         return [self.chunk_ids[i] for i in order]
 
     # --- public API -------------------------------------------------------
-    def search(self, question: str, k: int = 8) -> list[Hit]:
-        """Fuse both rankings (reciprocal rank fusion), best chunk per unit."""
+    def search(self, question: str, k: int = 8, binding: bool | None = None) -> list[Hit]:
+        """Fuse both rankings (reciprocal rank fusion), best chunk per unit.
+
+        binding=True keeps only law (Acts, SIs, ...), False only guidance, None both.
+        """
         scores: dict[int, float] = {}
         for ranking in (self._keyword(question), self._meaning(question)):
             for rank, rowid in enumerate(ranking):
@@ -73,6 +82,8 @@ class Index:
         best: dict[str, tuple[float, int]] = {}
         for rowid, score in sorted(scores.items(), key=lambda kv: (-kv[1], kv[0])):
             doc = self.chunk_doc[rowid]
+            if binding is not None and self.binding[doc] != binding:
+                continue
             if doc not in best:
                 best[doc] = (score, rowid)
         top = sorted(best.items(), key=lambda kv: (-kv[1][0], kv[0]))[:k]
@@ -95,9 +106,11 @@ class Index:
         """
         return sorted(r[0] for r in self.db.execute(sql, (doc_id, doc_id)))
 
-    def evidence(self, question: str, k: int = 8) -> list[Hit]:
-        """Search hits, then units linked to them (one step), without duplicates."""
-        hits = self.search(question, k)
+    def evidence(self, question: str, k: int = 5, k_guidance: int = 3) -> list[Hit]:
+        """Top k law units and top k_guidance guidance pages, searched separately so
+        plain-English guidance (which matches lay wording best) never crowds out the
+        binding law; then units linked to them (one step), without duplicates."""
+        hits = self.search(question, k, binding=True) + self.search(question, k_guidance, binding=False)
         seen = {h.id for h in hits}
         for h in list(hits):
             for other in self.related(h.id):
@@ -115,7 +128,7 @@ class Index:
             excerpt = f"{d['title']}\n\n{d['text']}"
         return Hit(
             id=doc_id, title=d["title"], score=round(score, 4), excerpt=excerpt[:1500],
-            url=d["url"].removesuffix("/data.xml"), retrieved_at=d["retrieved_at"], sha256=d["sha256"], valid_from=d["valid_from"],
+            url=web_url(d["url"]), retrieved_at=d["retrieved_at"], sha256=d["sha256"], valid_from=d["valid_from"],
             status=d["status"], unapplied_changes=d["unapplied_changes"], extent=d["extent"],
             via=via, review=d["review"] or [],
         )

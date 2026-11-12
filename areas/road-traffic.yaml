@@ -1,6 +1,6 @@
 # Draft unit list. IDs are checked by the fetcher (HTTP status, title); titles
-# are still to be reviewed by a person. Legislation only: the Highway Code,
-# sentencing guidelines and GOV.UK guidance need their own fetchers.
+# are still to be reviewed by a person. Legislation and GOV.UK guidance; the Highway Code
+# and sentencing guidelines need their own fetchers.
 area: road-traffic
 jurisdiction_default: [E, W]
 # Cited by units below but deliberately not fetched (outside road traffic scope).
@@ -80,3 +80,17 @@ units:
   # Fixed Penalty Order 2000
   - id: uksi/2000/2792/article/2     # Fixed penalties
   - id: uksi/2000/2792/schedule      # Schedule 1: fixed penalties (the Order's only unnumbered schedule)
+
+  # GOV.UK guidance (plain English; links lead to the legislation above).
+  # IDs are page paths on www.gov.uk. Guidance, not binding law.
+  - id: govuk/speeding-penalties                          # Speeding penalties
+  - id: govuk/speed-limits                                # Speed limits
+  - id: govuk/penalty-points-endorsements                 # Penalty points (endorsements), incl. new drivers
+  - id: govuk/driving-disqualifications                   # Driving disqualifications
+  - id: govuk/using-mobile-phones-when-driving-the-law    # Using a phone, sat nav or other device when driving
+  - id: govuk/drink-driving-penalties                     # Drink-driving penalties
+  - id: govuk/drug-driving-law                            # Drugs and driving: the law
+  - id: govuk/vehicle-insurance                           # Vehicle insurance, incl. driving without insurance
+  - id: govuk/pay-court-fine-online                       # Pay a court fine (incl. registered fixed penalties)
+  - id: govuk/courts                                      # Criminal courts (magistrates' and Crown Court)
+  - id: govuk/your-rights-bailiffs                        # Bailiff powers (unpaid fines enforcement)
