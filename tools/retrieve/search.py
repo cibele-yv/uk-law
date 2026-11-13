@@ -25,6 +25,28 @@ CODE = frozenset({"code"})                  # Highway Code: long general rules, 
 GUIDANCE = frozenset({"guidance"})          # plain-English GOV.UK pages: explain the answer
 
 
+# Where a rule applies is recorded per unit as extent codes (E, W, S, NI). A person
+# says where they are by nation; no nation means "England and Wales", the scope of
+# this knowledge base, so a Wales-only rule still shows (its extent says W).
+NATIONS = {
+    "england": {"E"}, "wales": {"W"}, "scotland": {"S"},
+    "northern ireland": {"NI"}, "england and wales": {"E", "W"},
+}
+ALIASES = {"ni": "northern ireland", "n ireland": "northern ireland", "uk": "england and wales"}
+DEFAULT_NATIONS = {"E", "W"}
+
+
+def nation_codes(nation: str | None) -> frozenset[str]:
+    """Extent codes for a nation name (case-insensitive); None means England and Wales."""
+    if nation is None or not nation.strip():
+        return frozenset(DEFAULT_NATIONS)
+    key = re.sub(r"\s+", " ", nation.strip().lower().replace("-", " "))
+    key = ALIASES.get(key, key)
+    if key not in NATIONS:
+        raise ValueError(f"unknown nation {nation!r}: use one of {', '.join(sorted(NATIONS))}")
+    return frozenset(NATIONS[key])
+
+
 def web_url(source_url: str) -> str:
     """The page a person can open, from the URL we fetched (data API)."""
     return source_url.removesuffix("/data.xml").replace("www.gov.uk/api/content/", "www.gov.uk/")
@@ -54,13 +76,24 @@ class Index:
     def __init__(self, path: Path = INDEX):
         if not path.exists():
             raise FileNotFoundError(f"{path} not found: run python -m tools.index.build")
-        self.db = sqlite3.connect(path, check_same_thread=False)
+        # Load the whole index into memory and release the file (it is a few MB), so the
+        # index can be rebuilt while a server is running; the server keeps serving the
+        # version it loaded until it is restarted.
+        disk = sqlite3.connect(path)
+        self.db = sqlite3.connect(":memory:", check_same_thread=False)
+        disk.backup(self.db)
+        disk.close()
         self.db.row_factory = sqlite3.Row
         rows = self.db.execute("SELECT rowid, doc_id, vector FROM chunks ORDER BY rowid").fetchall()
         self.chunk_ids = [r["rowid"] for r in rows]
         self.chunk_doc = {r["rowid"]: r["doc_id"] for r in rows}
         self.vectors = np.vstack([np.frombuffer(r["vector"], dtype=np.float32) for r in rows])
         self.level = {r[0]: r[1] for r in self.db.execute("SELECT id, level FROM docs")}
+        self.extent = {r[0]: set(json.loads(r[1] or "[]")) for r in self.db.execute("SELECT id, extent FROM docs")}
+
+    def applies(self, doc_id: str, codes: frozenset[str] | None) -> bool:
+        """True if the unit applies in any of the given places (None: anywhere)."""
+        return codes is None or bool(self.extent.get(doc_id, set()) & codes)
 
     # --- the two searches -------------------------------------------------
     def _keyword(self, question: str) -> list[int]:
@@ -77,10 +110,12 @@ class Index:
         return [self.chunk_ids[i] for i in order]
 
     # --- public API -------------------------------------------------------
-    def search(self, question: str, k: int = 8, levels: frozenset[str] | None = None) -> list[Hit]:
+    def search(self, question: str, k: int = 8, levels: frozenset[str] | None = None,
+               codes: frozenset[str] | None = None) -> list[Hit]:
         """Fuse both rankings (reciprocal rank fusion), best chunk per unit.
 
-        `levels` keeps only units of those levels (see LAW, GUIDELINES, CODE, GUIDANCE); None keeps all.
+        `levels` keeps only units of those levels (see LAW, GUIDELINES, CODE, GUIDANCE);
+        `codes` only units that apply in one of those places (see nation_codes). None keeps all.
         """
         scores: dict[int, float] = {}
         for ranking in (self._keyword(question), self._meaning(question)):
@@ -90,6 +125,8 @@ class Index:
         for rowid, score in sorted(scores.items(), key=lambda kv: (-kv[1], kv[0])):
             doc = self.chunk_doc[rowid]
             if levels is not None and self.level[doc] not in levels:
+                continue
+            if not self.applies(doc, codes):
                 continue
             if doc not in best:
                 best[doc] = (score, rowid)
@@ -113,22 +150,23 @@ class Index:
         """
         return sorted(r[0] for r in self.db.execute(sql, (doc_id, doc_id)))
 
-    def evidence(self, question: str, k: int = 5, k_guidance: int = 3, k_guidelines: int = 3, k_code: int = 2) -> list[Hit]:
+    def evidence(self, question: str, k: int = 6, k_guidance: int = 3, k_guidelines: int = 3, k_code: int = 2,
+                 codes: frozenset[str] | None = None) -> list[Hit]:
         """Top k law units, k_guidelines Sentencing Council guidelines, k_code Highway Code
         sections and k_guidance GOV.UK pages, each type searched separately: the guidance
         matches lay wording best and the guidelines and Highway Code are long, so mixed
         together they would crowd out the statute. Then units linked to them (one step),
-        without duplicates."""
+        without duplicates. `codes` limits everything to units that apply in those places."""
         hits = (
-            self.search(question, k, LAW)
-            + self.search(question, k_guidelines, GUIDELINES)
-            + self.search(question, k_code, CODE)
-            + self.search(question, k_guidance, GUIDANCE)
+            self.search(question, k, LAW, codes)
+            + self.search(question, k_guidelines, GUIDELINES, codes)
+            + self.search(question, k_code, CODE, codes)
+            + self.search(question, k_guidance, GUIDANCE, codes)
         )
         seen = {h.id for h in hits}
         for h in list(hits):
             for other in self.related(h.id):
-                if other not in seen:
+                if other not in seen and self.applies(other, codes):
                     seen.add(other)
                     hits.append(self._hit(other, 0.0, None, via=f"linked from {h.id}"))
         return hits

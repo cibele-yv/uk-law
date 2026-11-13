@@ -81,6 +81,10 @@ units:
   - id: uksi/2000/2792/article/2     # Fixed penalties
   - id: uksi/2000/2792/schedule      # Schedule 1: fixed penalties (the Order's only unnumbered schedule)
 
+  # Wales: Welsh Ministers lowered the default limit on restricted roads to 20 mph (in force 17 Sept 2023)
+  - id: wsi/2022/800/article/1          # Title, application and commencement
+  - id: wsi/2022/800/article/2          # Lowering of the general speed limit for restricted roads
+
   # Fixed penalties not paid: registration as a fine (Road Traffic Offenders Act 1988)
   - id: ukpga/1988/53/section/69        # Payment of penalty
   - id: ukpga/1988/53/section/70        # Registration certificates

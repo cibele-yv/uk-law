@@ -48,3 +48,18 @@
   expected_answer: "Respond to the court by the date on the summons. An unpaid fixed penalty can be registered as a fine increased by half; a statutory declaration may apply if you did not receive the notice. Court fines are set by income (fine bands), and you can ask the court for time to pay or to reduce the fine."
   expected_sources: [ukpga/1988/53/section/71, uksi/2025/909/rule/29.4, sentencing/supplementary-information/approach-to-fines, uksi/2025/909/rule/30.5, govuk/pay-court-fine-online]
   verified: false
+
+- id: rt-009
+  question: "What is the speed limit on a road with street lights?"
+  nation: Wales
+  # Draft: in Wales the default on restricted roads became 20 mph on 17 Sept 2023; in England it stays 30 mph.
+  expected_answer: "20 mph on restricted roads in Wales (30 mph in England)"
+  expected_sources: [wsi/2022/800/article/2, ukpga/1984/27/section/81]
+  verified: false
+
+- id: rt-010
+  question: "What is the speed limit on a road with street lights?"
+  nation: England
+  expected_answer: "30 mph on restricted roads in England"
+  expected_sources: [ukpga/1984/27/section/81]
+  verified: false

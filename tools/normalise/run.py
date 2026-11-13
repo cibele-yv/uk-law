@@ -15,7 +15,10 @@ from tools.normalise import govuk as govuk_parser
 from tools.normalise import sentencing as sentencing_parser
 from tools.normalise.clml import Provision
 
-LEVELS = {"ukpga": "act", "asp": "act", "anaw": "act", "ukla": "act", "uksi": "si", "nisi": "si"}
+LEVELS = {
+    "ukpga": "act", "asp": "act", "anaw": "act", "asc": "act", "nia": "act", "ukla": "act",
+    "uksi": "si", "ssi": "si", "wsi": "si", "nisr": "si", "nisi": "si",
+}
 
 
 def parser_for(uri: str, known: set[str]) -> Callable[[bytes, str], Provision] | None:

@@ -14,6 +14,9 @@ DC = "{http://purl.org/dc/elements/1.1/}"
 UKM = "{http://www.legislation.gov.uk/namespaces/metadata}"
 EXTENT = {"E": "E", "W": "W", "S": "S", "N.I.": "NI", "N.I": "NI", "NI": "NI"}
 UNIT_KINDS = {"section", "regulation", "article", "rule", "schedule", "paragraph"}
+# Instruments served as made carry no RestrictExtent; their territory follows from the
+# legislature that made them (inferred, so flagged for review).
+INFERRED_EXTENT = {"wsi": ["W"], "asc": ["W"], "anaw": ["W"], "ssi": ["S"], "asp": ["S"], "nisr": ["NI"], "nia": ["NI"], "nisi": ["NI"]}
 
 
 @dataclass
@@ -142,9 +145,24 @@ def parse(xml: bytes, uri: str, level: str) -> Provision:
         text = renderer.render(target)
 
     extent = _extent(_nearest(target, "RestrictExtent"))
-    if not extent:
+    if not extent and (inferred := INFERRED_EXTENT.get(uri.split("/")[0])):
+        extent = inferred
+        review.append(f"extent inferred from instrument type ({'+'.join(inferred)}): not stated in the XML")
+    elif not extent:
         review.append("extent missing")
-    valid_from = _nearest(target, "RestrictStartDate") or root.findtext(f".//{DCT}valid")
+    as_made = root.findtext(f".//{DCT}valid") is None
+    snapshot = root.findtext(f".//{DCT}valid") or root.findtext(f".//{DC}modified")
+    in_force = root.find(f".//{UKM}ComingIntoForce/{UKM}DateTime")
+    made = root.find(f".//{UKM}Made")
+    valid_from = (
+        _nearest(target, "RestrictStartDate")
+        or root.findtext(f".//{DCT}valid")
+        or (in_force.get("Date") if in_force is not None else None)
+        or (made.get("Date") if made is not None else None)
+        or snapshot
+    )
+    if as_made:
+        review.append("as-made text only: no revised version is published, so later amendments are not shown; check commencement")
     status = "prospective" if (_nearest(target, "Status") or "").lower() == "prospective" else "in-force"
     if not text.strip():
         status = "repealed"
@@ -162,7 +180,7 @@ def parse(xml: bytes, uri: str, level: str) -> Provision:
         status=status,
         unapplied_changes=_unapplied(root, uri),
         cites=_cites(target, uri),
-        snapshot=root.findtext(f".//{DCT}valid"),
+        snapshot=snapshot,
         text=text,
         review=review,
     )

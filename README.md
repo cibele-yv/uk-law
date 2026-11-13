@@ -66,5 +66,7 @@ python -m tools.mcp.server        # MCP server over stdio
    speeding payment deadline. What are my options?"* and check that the answer cites the URLs the
    tool returned.
 
-Tools: `get_evidence(question)`, `search(query)`, `get_provision(id)`, `get_related(id)`.
+Tools: `get_evidence(question, nation)`, `search(query, nation)`, `get_provision(id)`, `get_related(id)`. `nation` (England, Wales, Scotland or Northern Ireland) keeps only sources that apply there; without it England and Wales are assumed and the answer should say so.
+
+If you rebuild the index while an MCP client is running, restart the client afterwards to load the new index.
 This is legal information, not legal advice.

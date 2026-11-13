@@ -1,6 +1,6 @@
 """Fetch every unit in the area files into raw/.
 
-Usage: python -m tools.fetch.run [--area road-traffic] [--source govuk]
+Usage: python -m tools.fetch.run [--area road-traffic] [--source govuk] [--unit wsi/2022/800]
 """
 import argparse
 import sys
@@ -28,9 +28,10 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--area", help="only this area (default: all areas)")
     parser.add_argument("--source", help="only this source module, e.g. govuk or legislation")
+    parser.add_argument("--unit", help="only units whose ID starts with this, e.g. wsi/2022/800")
     args = parser.parse_args()
 
-    units = load_units(only=args.area)
+    units = {u: a for u, a in load_units(only=args.area).items() if not args.unit or u.startswith(args.unit)}
     skipped = [u for u in units if source_of(u) is None]
     fetched = failures = 0
 

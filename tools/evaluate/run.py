@@ -12,7 +12,7 @@ from pathlib import Path
 
 import yaml
 
-from tools.retrieve.search import Index
+from tools.retrieve.search import Index, nation_codes
 
 
 def load_questions(area: str | None) -> list[tuple[str, dict]]:
@@ -27,13 +27,15 @@ def load_questions(area: str | None) -> list[tuple[str, dict]]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--area")
-    ap.add_argument("-k", type=int, default=5, help="law search hits per question (plus 3 guidance pages), before following links")
+    ap.add_argument("-k", type=int, default=6, help="law search hits per question (plus 3 guidance pages), before following links")
+    ap.add_argument("--index", type=Path, help="index file to test (default: index/kb.sqlite)")
     args = ap.parse_args()
 
-    index = Index()
+    index = Index(args.index) if args.index else Index()
     found = expected_total = 0
     for area, q in load_questions(args.area):
-        hits = index.evidence(q["question"], args.k)
+        # a question may name the person's nation; otherwise England and Wales, as the server assumes
+        hits = index.evidence(q["question"], args.k, codes=nation_codes(q.get("nation")))
         ranks = {h.id: i + 1 for i, h in enumerate(hits)}
         indexed = [s for s in q["expected_sources"] if index.get(s)]
         missing_data = [s for s in q["expected_sources"] if s not in indexed]

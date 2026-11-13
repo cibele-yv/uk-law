@@ -11,7 +11,7 @@ from functools import lru_cache
 
 from mcp.server.mcpserver import MCPServer
 
-from tools.retrieve.search import Index
+from tools.retrieve.search import Index, nation_codes
 
 INSTRUCTIONS = """\
 UK law knowledge base (England and Wales unless stated). Every result is verbatim
@@ -30,11 +30,28 @@ When answering a user's legal question:
 4. State the "as at" date (valid_from) and say if unapplied_changes > 0: the text
    may not yet show recent amendments.
 5. If no returned source answers the question, say so plainly; do not guess.
+   Where a person lives matters: England, Wales, Scotland and Northern Ireland differ.
+   Pass `nation` when you know it; if you do not and it could change the answer, ask,
+   or state that you are assuming England and Wales. Never apply England and Wales
+   rules to Scotland or Northern Ireland.
 6. Say this is legal information, not legal advice, and suggest a solicitor or
    Citizens Advice for their specific situation.
 """
 
 server = MCPServer(name="uk-law", instructions=INSTRUCTIONS)
+
+
+def _note(nation: str | None, count: int) -> str:
+    """A caution for the calling model about where the sources apply."""
+    if nation is None or not nation.strip():
+        return ("No nation was given, so England and Wales are assumed. Some rules differ in Wales "
+                "(see each source's extent). If the person's location could change the answer, ask "
+                "which nation they are in.")
+    if nation_codes(nation) & {"S", "NI"}:
+        return ("This knowledge base is built for England and Wales. Scotland and Northern Ireland have "
+                "separate courts and rules and are only partly covered: say so, and do not apply "
+                "England and Wales rules to them.")
+    return "" if count else "Nothing found for this nation: say so."
 
 
 @lru_cache(maxsize=1)
@@ -43,20 +60,39 @@ def _index() -> Index:
 
 
 @server.tool()
-def get_evidence(question: str, k: int = 5, k_guidance: int = 3, k_guidelines: int = 3, k_code: int = 2) -> dict:
+def get_evidence(question: str, nation: str | None = None, k: int = 6, k_guidance: int = 3,
+                 k_guidelines: int = 3, k_code: int = 2) -> dict:
     """Best sources for a plain-English legal question: the top k law provisions
     (Acts, SIs, Criminal Procedure Rules), the top k_guidelines Sentencing Council guidelines,
     the top k_code Highway Code sections and the top k_guidance GOV.UK guidance pages, plus what they
     refer to (one step). Use this first. Law decides the answer; guidelines and the
-    Highway Code show how courts apply it; guidance explains it."""
-    hits = _index().evidence(question, k, k_guidance, k_guidelines, k_code)
-    return {"question": question, "count": len(hits), "sources": [h.to_dict() for h in hits]}
+    Highway Code show how courts apply it; guidance explains it.
+
+    `nation` (England, Wales, Scotland or Northern Ireland) keeps only sources that apply
+    there; leave it out if unknown (England and Wales are then assumed)."""
+    try:
+        codes = nation_codes(nation)
+    except ValueError as e:
+        return {"error": str(e)}
+    hits = _index().evidence(question, k, k_guidance, k_guidelines, k_code, codes)
+    return {
+        "question": question,
+        "nation": nation or "not given: England and Wales assumed",
+        "count": len(hits),
+        "note": _note(nation, len(hits)),
+        "sources": [h.to_dict() for h in hits],
+    }
 
 
 @server.tool()
-def search(query: str, k: int = 8) -> dict:
-    """Keyword + meaning search over all provisions. Returns the best excerpt of each."""
-    hits = _index().search(query, k)
+def search(query: str, nation: str | None = None, k: int = 8) -> dict:
+    """Keyword + meaning search over all provisions that apply in `nation` (default England
+    and Wales). Returns the best excerpt of each."""
+    try:
+        codes = nation_codes(nation)
+    except ValueError as e:
+        return {"error": str(e)}
+    hits = _index().search(query, k, codes=codes)
     return {"query": query, "count": len(hits), "sources": [h.to_dict() for h in hits]}
 
 

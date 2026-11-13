@@ -12,7 +12,7 @@ the longest known prefix, so it still links to the unit.
 """
 import re
 
-LEGISLATION = re.compile(r"legislation\.gov\.uk/(?:id/)?((?:ukpga|uksi|asp|anaw|nisi|ukla)/\d{4}/\d+(?:/[a-z]+(?:/[0-9A-Za-z.]+)?)*)")
+LEGISLATION = re.compile(r"legislation\.gov\.uk/(?:id/)?((?:ukpga|uksi|ukla|asp|ssi|anaw|asc|wsi|nia|nisr|nisi)/\d{4}/\d+(?:/[a-z]+(?:/[0-9A-Za-z.]+)?)*)")
 GOVUK = re.compile(r"^(?:https?://www\.gov\.uk)?/(?!/)([^?#]+)")
 SENTENCING = re.compile(r"sentencingcouncil\.org\.uk/([^?#]+)")
 

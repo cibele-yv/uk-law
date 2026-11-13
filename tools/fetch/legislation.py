@@ -10,12 +10,13 @@ from lxml import etree
 from tools.common import paths
 
 BASE = "https://www.legislation.gov.uk"
-PREFIXES = {"ukpga", "uksi", "asp", "anaw", "nisi", "ukla"}
+PREFIXES = {"ukpga", "uksi", "ukla", "asp", "ssi", "anaw", "asc", "wsi", "nia", "nisr", "nisi"}  # UK, Scottish, Welsh, NI
 DELAY = 5  # seconds between requests, per legislation.gov.uk robots.txt
 EXT = ".xml"
 SOURCE = {"publisher": "legislation.gov.uk", "format": "CLML XML", "licence": "OGL-3.0"}
 DC_TITLE = "{http://purl.org/dc/elements/1.1/}title"
 DCT_VALID = "{http://purl.org/dc/terms/}valid"
+DC_MODIFIED = "{http://purl.org/dc/elements/1.1/}modified"
 
 
 @dataclass
@@ -47,8 +48,13 @@ def raw_dir(uri: str) -> Path:
 
 
 def version_date(content: bytes) -> str | None:
-    """The snapshot's effective date (dct:valid), used to name the saved version."""
-    return etree.fromstring(content).findtext(f".//{DCT_VALID}")
+    """The snapshot's effective date (dct:valid), used to name the saved version.
+
+    Instruments with no revised text (some Welsh and older instruments) are served
+    'as made' with no dct:valid; their publication date (dc:modified) names the version.
+    """
+    root = etree.fromstring(content)
+    return root.findtext(f".//{DCT_VALID}") or root.findtext(f".//{DC_MODIFIED}")
 
 
 def user_agent() -> str:
@@ -93,7 +99,7 @@ class LegislationClient:
                 res.title = etree.fromstring(res.content).findtext(f".//{DC_TITLE}")
                 res.version = version_date(res.content)
                 if not res.version:
-                    res.error = "no dct:valid version date in XML"
+                    res.error = "no dct:valid or dc:modified version date in XML"
             except etree.XMLSyntaxError as e:
                 res.error = f"invalid XML: {e}"
         return res
