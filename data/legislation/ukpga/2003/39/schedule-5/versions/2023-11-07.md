@@ -9,6 +9,7 @@ extent:
 - E
 - W
 - NI
+extent_basis: stated
 areas:
 - road-traffic
 version:

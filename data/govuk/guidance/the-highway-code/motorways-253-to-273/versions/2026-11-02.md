@@ -8,6 +8,8 @@ made_under: null
 extent:
 - E
 - W
+- S
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -32,6 +34,7 @@ source:
   retrieved_at: '2026-11-12T20:51:18Z'
   sha256: 035fa7565b76b1c6e9cea07fcc9e546172d4236808b891ba9f31ac51b14a3bcd
   licence: OGL-3.0
+extent_evidence: 'The Highway Code, Introduction: "This Highway Code applies to England, Scotland and Wales."'
 ---
 
 Rules for motorways, including rules for signals, joining the motorway, driving on the motorway, lane discipline, overtaking, stopping and leaving the motorway. A number of the rules for motorways also apply to other high-speed roads.

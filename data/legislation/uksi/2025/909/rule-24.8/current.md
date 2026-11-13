@@ -8,6 +8,7 @@ made_under: null
 extent:
 - E
 - W
+extent_basis: stated
 areas:
 - road-traffic
 version:

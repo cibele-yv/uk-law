@@ -8,6 +8,8 @@ made_under: null
 extent:
 - E
 - W
+- S
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -28,6 +30,7 @@ source:
   retrieved_at: '2026-11-12T20:51:21Z'
   sha256: 8ddd544089e535ed6f25fa1bd22c73de3e4ac9a5381a4cb74a2da11e0f1ab529
   licence: OGL-3.0
+extent_evidence: 'The Highway Code, Introduction: "This Highway Code applies to England, Scotland and Wales."'
 ---
 
 Information and rules about penalties, including points and disqualification, a penalty table, new drivers and other consequences of offending.

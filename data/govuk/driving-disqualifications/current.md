@@ -8,6 +8,7 @@ made_under: null
 extent:
 - E
 - W
+extent_basis: assumed
 areas:
 - road-traffic
 version:
@@ -26,6 +27,8 @@ source:
   retrieved_at: '2026-11-12T16:53:40Z'
   sha256: 882293d41af6008b7fe75dfb0a6f4c225737a63127283f950b402f44fab27cd7
   licence: OGL-3.0
+review:
+- 'territory not stated; assumed England and Wales, but the text mentions Northern Ireland: check whether it covers them (add an entry to curation/extent.yaml with the quoted sentence)'
 ---
 
 When you can be banned from driving, check when your driving ban ends, reduce your disqualification period, disqualified until you've passed your test, drink-driving offences

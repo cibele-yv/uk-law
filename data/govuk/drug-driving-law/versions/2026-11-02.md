@@ -8,6 +8,8 @@ made_under: null
 extent:
 - E
 - W
+- S
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -24,6 +26,7 @@ source:
   retrieved_at: '2026-11-12T16:53:43Z'
   sha256: 890aa672e00b60a7ee96e8c5d3c27ca3008f296ef70e0f600b2ac93c987f9d70
   licence: OGL-3.0
+extent_evidence: 'GOV.UK, Drugs and driving: the law: "It''s illegal in England, Scotland and Wales to drive with legal drugs in your body if it impairs your driving." and "The law does not cover Northern Ireland"'
 ---
 
 It's illegal to drive if you're unfit to do so because you're on legal or illegal drugs, or you have certain levels of drugs or medicine in your blood

@@ -1,0 +1,37 @@
+# Where a non-legislation source applies, where the source itself says so.
+#
+# Legislation carries a territorial tag from legislation.gov.uk. GOV.UK pages, the
+# Highway Code and Sentencing Council pages do not, and a mention of a nation in the
+# text can mean either "covers it" or "does not" ("different in Northern Ireland",
+# "pay the fine in Scotland"), so extent is NOT guessed from the text. A unit gets a
+# territory here only if the source states it; the sentence is quoted so that a
+# person can check it. Everything else is `extent_basis: assumed` (England and Wales)
+# and is flagged for review if its text mentions Scotland or Northern Ireland.
+#
+# Entry: `id` (one unit) or `prefix` (every unit whose ID starts with it);
+# `extent` (E, W, S, NI); `evidence` (the quoted sentence and where it appears).
+# An `id` entry wins over a `prefix` entry.
+
+- prefix: govuk/guidance/the-highway-code
+  extent: [E, W, S]
+  evidence: 'The Highway Code, Introduction: "This Highway Code applies to England, Scotland and Wales."'
+
+- id: govuk/guidance/the-highway-code/annex-4-the-road-user-and-the-law
+  extent: [E, W, S]
+  evidence: 'Annex 4: "Most of the provisions apply on all roads throughout Great Britain, although there are some exceptions."'
+
+- id: govuk/drug-driving-law
+  extent: [E, W, S]
+  evidence: 'GOV.UK, Drugs and driving: the law: "It''s illegal in England, Scotland and Wales to drive with legal drugs in your body if it impairs your driving." and "The law does not cover Northern Ireland"'
+
+- id: govuk/speed-limits
+  extent: [E, W, S, NI]
+  evidence: 'GOV.UK, Speed limits: "30 miles per hour in England, Scotland or Northern Ireland" and "20 miles per hour in Wales" (the limits differ by nation)'
+
+- id: govuk/pay-court-fine-online
+  extent: [E, W]
+  evidence: 'GOV.UK, Pay a court fine: "You can use this service to pay the following in England and Wales" (Northern Ireland and Scotland have different ways to pay)'
+
+- prefix: sentencing/
+  extent: [E, W]
+  evidence: 'Issued by the Sentencing Council for England and Wales (the publisher''s own name and remit); the guidelines are for sentencing in courts in England and Wales'

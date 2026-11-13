@@ -1,6 +1,7 @@
 """Check 5: every unit listed in an area file exists in data/, and nothing is unlisted."""
 from tools.common.areas import load_units
 from tools.common.paths import data_dir
+from tools.normalise.extent import unused_entries
 from tools.fetch.run import source_of
 from tools.validate.model import Doc, Problem
 
@@ -18,4 +19,6 @@ def check(docs: list[Doc]) -> list[Problem]:
     for uri in held:
         if uri not in listed:
             problems.append(Problem("warning", "coverage", uri, "in data/ but not listed in any area file (stale?)"))
+    for stale in unused_entries(set(listed)):
+        problems.append(Problem("warning", "coverage", "curation/extent.yaml", f"entry {stale} matches no listed unit (renamed or removed?)"))
     return problems

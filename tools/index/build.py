@@ -28,7 +28,7 @@ INDEX = REPO / "index" / "kb.sqlite"  # absolute: the MCP server may start in an
 SCHEMA = """
 CREATE TABLE meta (key TEXT PRIMARY KEY, value TEXT);
 CREATE TABLE docs (
-  id TEXT PRIMARY KEY, title TEXT, level TEXT, extent TEXT, areas TEXT,
+  id TEXT PRIMARY KEY, title TEXT, level TEXT, extent TEXT, extent_basis TEXT, extent_evidence TEXT, areas TEXT,
   valid_from TEXT, status TEXT, unapplied_changes INTEGER, review TEXT,
   url TEXT, retrieved_at TEXT, sha256 TEXT, licence TEXT, path TEXT, text TEXT
 );
@@ -55,9 +55,10 @@ def build(path: Path = INDEX) -> tuple[int, int, int]:
     for d in current:
         f, v, s = d.front, d.front.get("version", {}), d.front.get("source", {})
         db.execute(
-            "INSERT INTO docs VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            "INSERT INTO docs VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
             (
-                f["id"], f.get("title"), f.get("level"), json.dumps(f.get("extent")), json.dumps(f.get("areas")),
+                f["id"], f.get("title"), f.get("level"), json.dumps(f.get("extent")), f.get("extent_basis"), f.get("extent_evidence"),
+                json.dumps(f.get("areas")),
                 v.get("valid_from"), v.get("status"), f.get("unapplied_changes", 0), json.dumps(f.get("review", [])),
                 s.get("url"), s.get("retrieved_at"), s.get("sha256"), s.get("licence"), d.path.as_posix(), d.body,
             ),

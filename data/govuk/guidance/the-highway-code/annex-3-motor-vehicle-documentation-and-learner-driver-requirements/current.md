@@ -8,6 +8,8 @@ made_under: null
 extent:
 - E
 - W
+- S
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -28,6 +30,7 @@ source:
   retrieved_at: '2026-11-12T20:51:19Z'
   sha256: cca5334726a3fd4b24bacc6d0193ede31cdbe8e3fef4605bff274be2928da459
   licence: OGL-3.0
+extent_evidence: 'The Highway Code, Introduction: "This Highway Code applies to England, Scotland and Wales."'
 ---
 
 Information and rules about motor vehicle documentation and learner driver requirements.

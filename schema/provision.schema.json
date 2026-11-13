@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Legal provision",
   "type": "object",
-  "required": ["id", "title", "level", "binding", "extent", "areas", "version", "source"],
+  "required": ["id", "title", "level", "binding", "extent", "extent_basis", "areas", "version", "source"],
   "properties": {
     "id": { "type": "string" },
     "title": { "type": "string" },
@@ -11,6 +11,8 @@
     "parent": { "type": ["string", "null"] },
     "made_under": { "type": ["string", "null"] },
     "extent": { "type": "array", "items": { "enum": ["E", "W", "S", "NI"] }, "minItems": 1 },
+    "extent_basis": { "enum": ["stated", "assumed"] },
+    "extent_evidence": { "type": "string" },
     "areas": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
     "version": {
       "type": "object",

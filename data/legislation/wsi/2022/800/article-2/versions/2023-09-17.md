@@ -7,6 +7,7 @@ parent: wsi/2022/800
 made_under: null
 extent:
 - W
+extent_basis: assumed
 areas:
 - road-traffic
 version:
@@ -23,6 +24,7 @@ source:
   retrieved_at: '2026-11-13T15:40:33Z'
   sha256: a2187d1d8813eed02f8bd9b82e36b9870ab922a4cce99dc8eb0a056e48521ab6
   licence: OGL-3.0
+extent_evidence: inferred from the instrument type (made by that legislature); the XML has no territorial tag
 review:
 - 'extent inferred from instrument type (W): not stated in the XML'
 - 'as-made text only: no revised version is published, so later amendments are not shown; check commencement'

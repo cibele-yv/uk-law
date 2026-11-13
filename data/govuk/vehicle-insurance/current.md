@@ -8,6 +8,7 @@ made_under: null
 extent:
 - E
 - W
+extent_basis: assumed
 areas:
 - road-traffic
 version:
@@ -24,6 +25,8 @@ source:
   retrieved_at: '2026-11-12T16:53:44Z'
   sha256: 23bb6159e5b55ca2f19d31828327f4d31a101feb795192792e7ae44e4b45583f
   licence: OGL-3.0
+review:
+- 'territory not stated; assumed England and Wales, but the text mentions Northern Ireland: check whether it covers them (add an entry to curation/extent.yaml with the quoted sentence)'
 ---
 
 Rules on what motor insurance you need, what to do if you're in an accident, insurance for driving abroad, penalties for uninsured vehicles and drivers.

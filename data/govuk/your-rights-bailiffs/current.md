@@ -8,6 +8,7 @@ made_under: null
 extent:
 - E
 - W
+extent_basis: assumed
 areas:
 - road-traffic
 version:
@@ -24,6 +25,8 @@ source:
   retrieved_at: '2026-11-12T16:53:47Z'
   sha256: 88524a506e87a18cc540d0c9ee0e9691a56dfa90d0f2b125941e8be7b76c0cd7
   licence: OGL-3.0
+review:
+- 'territory not stated; assumed England and Wales, but the text mentions Scotland: check whether it covers them (add an entry to curation/extent.yaml with the quoted sentence)'
 ---
 
 Your rights when bailiffs visit your home - entering your home, debts, complaining about private bailiffs, court bailiffs, civilian enforcement officers, certificated enforcement agents. Includes information from the withdrawn EX345 guidance.

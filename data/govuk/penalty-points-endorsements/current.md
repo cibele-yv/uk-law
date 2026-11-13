@@ -8,6 +8,7 @@ made_under: null
 extent:
 - E
 - W
+extent_basis: assumed
 areas:
 - road-traffic
 version:
@@ -25,6 +26,8 @@ source:
   retrieved_at: '2026-11-12T16:53:39Z'
   sha256: 29e28d12585ec5a06d15f2b509eb609f6812fa33f39f1a1d1db4a0fc7e2f817a
   licence: OGL-3.0
+review:
+- 'territory not stated; assumed England and Wales, but the text mentions Northern Ireland: check whether it covers them (add an entry to curation/extent.yaml with the quoted sentence)'
 ---
 
 You could get penalty points (endorsements) on your driving record if you're convicted of a motoring offence

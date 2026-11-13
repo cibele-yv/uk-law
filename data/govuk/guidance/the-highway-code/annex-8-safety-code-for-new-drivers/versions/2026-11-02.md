@@ -8,6 +8,8 @@ made_under: null
 extent:
 - E
 - W
+- S
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -24,6 +26,7 @@ source:
   retrieved_at: '2026-11-12T20:51:22Z'
   sha256: ba704bf45827f683a4637aa3eb680c7f092441f8088ac08dee7e9afa03d2c1de
   licence: OGL-3.0
+extent_evidence: 'The Highway Code, Introduction: "This Highway Code applies to England, Scotland and Wales."'
 ---
 
 Information about the safety code for new drivers, including the New Drivers Act and further training.

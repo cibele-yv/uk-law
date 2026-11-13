@@ -34,6 +34,8 @@ class Provision:
     text: str
     review: list[str] = field(default_factory=list)
     binding: str = "binding"  # legislation binds; guidance does not
+    extent_basis: str = "stated"  # "stated" (the source says so) or "assumed"
+    extent_evidence: str | None = None  # the quoted statement, or why it is assumed
 
 
 def _nearest(e: etree._Element, attr: str) -> str | None:
@@ -145,8 +147,10 @@ def parse(xml: bytes, uri: str, level: str) -> Provision:
         text = renderer.render(target)
 
     extent = _extent(_nearest(target, "RestrictExtent"))
+    extent_basis, extent_evidence = "stated", None
     if not extent and (inferred := INFERRED_EXTENT.get(uri.split("/")[0])):
         extent = inferred
+        extent_basis, extent_evidence = "assumed", "inferred from the instrument type (made by that legislature); the XML has no territorial tag"
         review.append(f"extent inferred from instrument type ({'+'.join(inferred)}): not stated in the XML")
     elif not extent:
         review.append("extent missing")
@@ -176,6 +180,8 @@ def parse(xml: bytes, uri: str, level: str) -> Provision:
         level=level,
         parent="/".join(parts[:3]) if _is_unit(uri) else None,
         extent=extent,
+        extent_basis=extent_basis,
+        extent_evidence=extent_evidence,
         valid_from=valid_from,
         status=status,
         unapplied_changes=_unapplied(root, uri),

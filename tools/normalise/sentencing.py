@@ -13,10 +13,9 @@ from lxml import html
 
 from tools.fetch.sentencing import main_content, version_date
 from tools.normalise.clml import Provision
+from tools.normalise.extent import resolve
 from tools.normalise.htmlmd import Markdown, clean
 from tools.normalise.linkmap import unit_for
-
-EXTENT = ["E", "W"]  # the Sentencing Council's guidelines apply in England and Wales
 
 # Acts named in a guideline's header line, mapped to legislation IDs, so a guideline
 # links to the section that creates the offence ('Road Traffic Act 1988, s.172').
@@ -78,7 +77,8 @@ def parse(raw: bytes, uri: str, known: set[str] | None = None, file_version: str
     cites = {t for href in md.links if (t := unit_for(href, known, relative_to="sentencing")) and t != uri}
     cites |= {s for s in offence_sections(header) if known is None or s in known}
 
-    review = []
+    where = resolve(uri, text)
+    review = list(where.review)
     if md.unhandled:
         review.append(f"unhandled HTML elements: {', '.join(sorted(md.unhandled))}")
     if "<table" in html.tostring(main, encoding="unicode"):
@@ -92,7 +92,7 @@ def parse(raw: bytes, uri: str, known: set[str] | None = None, file_version: str
         title=f"Sentencing Council guideline: {title}" if "/guidelines/" in uri else f"Sentencing Council: {title}",
         level="guideline",
         parent=None,
-        extent=EXTENT,
+        extent=where.extent,
         valid_from=version,
         status="in-force",
         unapplied_changes=0,
@@ -103,4 +103,6 @@ def parse(raw: bytes, uri: str, known: set[str] | None = None, file_version: str
         # Courts must follow sentencing guidelines unless that would be contrary to
         # the interests of justice (Sentencing Code s.59).
         binding="binding",
+        extent_basis=where.basis,
+        extent_evidence=where.evidence,
     )

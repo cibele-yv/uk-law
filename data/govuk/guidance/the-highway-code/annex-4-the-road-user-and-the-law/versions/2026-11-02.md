@@ -8,6 +8,8 @@ made_under: null
 extent:
 - E
 - W
+- S
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -24,6 +26,7 @@ source:
   retrieved_at: '2026-11-12T20:51:20Z'
   sha256: f5c44ae04dfd3ccaccd4b4fdad7a264baa8b97d63bea531155c44026f11446cb
   licence: OGL-3.0
+extent_evidence: 'Annex 4: "Most of the provisions apply on all roads throughout Great Britain, although there are some exceptions."'
 ---
 
 Information about the road user and the law, including acts and regulations.

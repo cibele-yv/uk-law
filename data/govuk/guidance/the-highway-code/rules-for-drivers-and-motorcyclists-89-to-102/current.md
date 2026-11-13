@@ -8,6 +8,8 @@ made_under: null
 extent:
 - E
 - W
+- S
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -30,6 +32,7 @@ source:
   retrieved_at: '2026-11-12T20:51:15Z'
   sha256: a0ffb17b0d33e98d8ceb656dd93e5db4334fd07ef1bf5fd8f42db5d2ff5e6a43
   licence: OGL-3.0
+extent_evidence: 'The Highway Code, Introduction: "This Highway Code applies to England, Scotland and Wales."'
 ---
 
 Rules for drivers and motorcyclists, including vehicle condition, fitness to drive, alcohol and drugs, what to do before setting off, vehicle towing and loading, and seat belts and child restraints.

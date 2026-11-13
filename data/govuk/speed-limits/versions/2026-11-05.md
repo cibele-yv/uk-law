@@ -8,6 +8,9 @@ made_under: null
 extent:
 - E
 - W
+- S
+- NI
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -24,6 +27,7 @@ source:
   retrieved_at: '2026-11-12T16:53:38Z'
   sha256: 282f4f3a8fa89c64b39a13c8e3e6f016b9a61ae9de7017ec2ab9b1674ffbb32a
   licence: OGL-3.0
+extent_evidence: 'GOV.UK, Speed limits: "30 miles per hour in England, Scotland or Northern Ireland" and "20 miles per hour in Wales" (the limits differ by nation)'
 ---
 
 A limit of 30 miles per hour or 48 kilometres per hour usually applies to all traffic on all roads with street lighting

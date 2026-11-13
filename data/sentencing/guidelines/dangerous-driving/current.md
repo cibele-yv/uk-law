@@ -8,6 +8,7 @@ made_under: null
 extent:
 - E
 - W
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -25,6 +26,7 @@ source:
   retrieved_at: '2026-11-12T20:51:26Z'
   sha256: 458b29a1f4bc85d020cf6fad28e8d05edb3e97779054d0db8da86e45b82a7df8
   licence: OGL-3.0
+extent_evidence: Issued by the Sentencing Council for England and Wales (the publisher's own name and remit); the guidelines are for sentencing in courts in England and Wales
 review:
 - table
 ---

@@ -63,3 +63,11 @@
   expected_answer: "30 mph on restricted roads in England"
   expected_sources: [ukpga/1984/27/section/81]
   verified: false
+
+- id: rt-011
+  question: "Is it illegal to drive with drugs in my body?"
+  nation: Scotland
+  # Draft: GOV.UK states the drug-driving law covers England, Scotland and Wales.
+  expected_answer: "Yes: it is illegal in England, Scotland and Wales to drive with certain drugs above the limits, or while impaired"
+  expected_sources: [govuk/drug-driving-law]
+  verified: false

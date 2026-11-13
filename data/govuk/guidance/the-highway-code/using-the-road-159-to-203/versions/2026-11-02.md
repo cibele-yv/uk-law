@@ -8,6 +8,8 @@ made_under: null
 extent:
 - E
 - W
+- S
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -25,6 +27,7 @@ source:
   retrieved_at: '2026-11-12T20:51:17Z'
   sha256: af813605ebc391f1beea09516a881d23d2d63a6b9ff3049bf444e8ca6afe2cbf
   licence: OGL-3.0
+extent_evidence: 'The Highway Code, Introduction: "This Highway Code applies to England, Scotland and Wales."'
 ---
 
 Rules for using the road, including general rules, overtaking, road junctions, roundabouts, pedestrian crossings and reversing.

@@ -9,6 +9,7 @@ extent:
 - E
 - W
 - S
+extent_basis: stated
 areas:
 - road-traffic
 version:

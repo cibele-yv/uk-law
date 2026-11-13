@@ -8,6 +8,8 @@ made_under: null
 extent:
 - E
 - W
+- S
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -29,6 +31,7 @@ source:
   retrieved_at: '2026-11-12T20:51:16Z'
   sha256: 3c3531091447e602189fb28a464a5d738021eba3bcafe13b4f028c631312ade2
   licence: OGL-3.0
+extent_evidence: 'The Highway Code, Introduction: "This Highway Code applies to England, Scotland and Wales."'
 ---
 
 Signals, stopping procedures, lighting, control of the vehicle, speed limits, stopping distances, lines and lane markings and multi-lane carriageways, smoking, mobile phones and sat nav.

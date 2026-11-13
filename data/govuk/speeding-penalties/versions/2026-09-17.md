@@ -8,6 +8,7 @@ made_under: null
 extent:
 - E
 - W
+extent_basis: assumed
 areas:
 - road-traffic
 version:
@@ -25,6 +26,8 @@ source:
   retrieved_at: '2026-11-12T16:53:37Z'
   sha256: f62cb04a321ab4fccfb08c8a5676b2fc72a17bfa9f30ae288e4d3f97122c3893
   licence: OGL-3.0
+review:
+- 'territory not stated; assumed England and Wales, but the text mentions Scotland and Northern Ireland: check whether it covers them (add an entry to curation/extent.yaml with the quoted sentence)'
 ---
 
 You could get a fine and penalty points if you're caught speeding, or could even lose your licence

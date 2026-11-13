@@ -33,7 +33,9 @@ When answering a user's legal question:
    Where a person lives matters: England, Wales, Scotland and Northern Ireland differ.
    Pass `nation` when you know it; if you do not and it could change the answer, ask,
    or state that you are assuming England and Wales. Never apply England and Wales
-   rules to Scotland or Northern Ireland.
+   rules to Scotland or Northern Ireland. A source whose extent_basis is "assumed" does
+   not say where it applies (its extent_evidence is empty): say that, do not present
+   its territory as certain.
 6. Say this is legal information, not legal advice, and suggest a solicitor or
    Citizens Advice for their specific situation.
 """
@@ -41,17 +43,24 @@ When answering a user's legal question:
 server = MCPServer(name="uk-law", instructions=INSTRUCTIONS)
 
 
-def _note(nation: str | None, count: int) -> str:
+def _note(nation: str | None, hits: list) -> str:
     """A caution for the calling model about where the sources apply."""
+    count = len(hits)
+    assumed = [h.id for h in hits if h.extent_basis == "assumed"]
+    caution = (
+        f" Territory is only ASSUMED (England and Wales) for {len(assumed)} of these sources "
+        "(extent_basis \"assumed\"): they do not state where they apply, so say so rather than treat them as certain."
+        if assumed else ""
+    )
     if nation is None or not nation.strip():
         return ("No nation was given, so England and Wales are assumed. Some rules differ in Wales "
                 "(see each source's extent). If the person's location could change the answer, ask "
-                "which nation they are in.")
+                "which nation they are in." + caution)
     if nation_codes(nation) & {"S", "NI"}:
         return ("This knowledge base is built for England and Wales. Scotland and Northern Ireland have "
                 "separate courts and rules and are only partly covered: say so, and do not apply "
-                "England and Wales rules to them.")
-    return "" if count else "Nothing found for this nation: say so."
+                "England and Wales rules to them." + caution)
+    return ("" if count else "Nothing found for this nation: say so.") + caution
 
 
 @lru_cache(maxsize=1)
@@ -79,7 +88,7 @@ def get_evidence(question: str, nation: str | None = None, k: int = 6, k_guidanc
         "question": question,
         "nation": nation or "not given: England and Wales assumed",
         "count": len(hits),
-        "note": _note(nation, len(hits)),
+        "note": _note(nation, hits),
         "sources": [h.to_dict() for h in hits],
     }
 

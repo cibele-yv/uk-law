@@ -65,6 +65,8 @@ class Hit:
     status: str
     unapplied_changes: int
     extent: list
+    extent_basis: str = "stated"  # "assumed" when the source does not state where it applies
+    extent_evidence: str | None = None
     via: str = "search"  # "search", or "cited by <id>" when reached through a link
     review: list = field(default_factory=list)
 
@@ -182,5 +184,6 @@ class Index:
             id=doc_id, title=d["title"], score=round(score, 4), excerpt=excerpt[:1500],
             url=web_url(d["url"]), retrieved_at=d["retrieved_at"], sha256=d["sha256"], valid_from=d["valid_from"],
             status=d["status"], unapplied_changes=d["unapplied_changes"], extent=d["extent"],
+            extent_basis=d["extent_basis"], extent_evidence=d["extent_evidence"],
             via=via, review=d["review"] or [],
         )

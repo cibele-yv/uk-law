@@ -8,6 +8,8 @@ made_under: null
 extent:
 - E
 - W
+- S
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -34,6 +36,7 @@ source:
   retrieved_at: '2026-11-12T20:51:14Z'
   sha256: 68ec05ffae008597ca2c52084736892185315e9315d51d49dbdcc4919e3e97af
   licence: OGL-3.0
+extent_evidence: 'The Highway Code, Introduction: "This Highway Code applies to England, Scotland and Wales."'
 ---
 
 Who The Highway Code is for, how it's worded, the consequences of not following the rules, self-driving vehicles, and the hierarchy of road users (Rules H1 to H3).

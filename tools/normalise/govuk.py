@@ -7,13 +7,9 @@ emphasis. Links become `relations.cites` when they point at a unit we hold
 import json
 
 from tools.normalise.clml import Provision
+from tools.normalise.extent import resolve
 from tools.normalise.htmlmd import Markdown, clean
 from tools.normalise.linkmap import unit_for
-
-# GOV.UK's Content API has no territorial extent field. Our scope is England
-# and Wales; pages that differ elsewhere usually say so in the text.
-EXTENT = ["E", "W"]
-
 
 # The Highway Code is a code, not guidance: breaking it is not an offence in itself,
 # but courts may rely on it to establish liability (Road Traffic Act 1988 s.38(7)).
@@ -46,7 +42,8 @@ def parse(raw: bytes, uri: str, known: set[str] | None = None) -> Provision:
     if prefix and not title.startswith(prefix):
         title = f"{prefix}: {title}"
 
-    review = []
+    where = resolve(uri, text)
+    review = list(where.review)
     if md.unhandled:
         review.append(f"unhandled HTML elements: {', '.join(sorted(md.unhandled))}")
     version = (doc.get("updated_at") or "")[:10]
@@ -55,7 +52,7 @@ def parse(raw: bytes, uri: str, known: set[str] | None = None) -> Provision:
         title=title,
         level=level,
         parent=None,
-        extent=EXTENT,
+        extent=where.extent,
         valid_from=version,
         status="in-force",
         unapplied_changes=0,
@@ -64,4 +61,6 @@ def parse(raw: bytes, uri: str, known: set[str] | None = None) -> Provision:
         text=text,
         review=review,
         binding=binding,
+        extent_basis=where.basis,
+        extent_evidence=where.evidence,
     )

@@ -8,6 +8,7 @@ made_under: null
 extent:
 - E
 - W
+extent_basis: stated
 areas:
 - road-traffic
 version:
@@ -25,6 +26,7 @@ source:
   retrieved_at: '2026-11-12T16:53:45Z'
   sha256: 0757c5ba80812cc0723570faeb9b5b753c316ac29e9e6d8330ad5c09e0430e9a
   licence: OGL-3.0
+extent_evidence: 'GOV.UK, Pay a court fine: "You can use this service to pay the following in England and Wales" (Northern Ireland and Scotland have different ways to pay)'
 ---
 
 The only service you can use to pay your court fine online, or by telephone using a credit or debit card.

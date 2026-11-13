@@ -18,6 +18,7 @@ def front_matter(p: Provision, valid_to: str | None, areas: list[str], source: d
         "parent": p.parent,
         "made_under": None,
         "extent": p.extent,
+        "extent_basis": p.extent_basis,
         "areas": areas,
         "version": {"valid_from": p.valid_from, "valid_to": valid_to, "status": p.status},
         "unapplied_changes": p.unapplied_changes,
@@ -31,6 +32,8 @@ def front_matter(p: Provision, valid_to: str | None, areas: list[str], source: d
             "licence": source["licence"],
         },
     }
+    if p.extent_evidence:
+        fm["extent_evidence"] = p.extent_evidence
     if p.review:
         fm["review"] = p.review
     return fm
