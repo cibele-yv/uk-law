@@ -1,11 +1,15 @@
-"""Find plain-text references to other provisions of the same Act or instrument.
+"""Find plain-text references to other provisions: of the same Act or instrument, and of
+another Act named by its title ("section 14 of the Magistrates' Courts Act 1980").
 
 legislation.gov.uk marks up references to *other* legislation (Citation elements,
 already in front matter `relations.cites`), but references inside the same Act are
 plain text: "section 75 of this Act", "sections 51 to 54", "Schedule 2".
 
-A reference followed by "of the ..." or "to the ..." names another Act, so it is
-skipped. Only targets that exist in the index become links.
+A reference followed by "of the ..." or "to the ..." names another Act, so
+same_act_refs skips it; named_act_refs links it when that Act is in the index. Notes
+to the Criminal Procedure Rules cite Acts this way with no Citation markup, so without
+this a rule and the sections it implements are not linked. Shorthand such as "the
+1988 Act" is not resolved. Only targets that exist in the index become links.
 """
 import re
 
@@ -44,4 +48,34 @@ def same_act_refs(doc_id: str, text: str, known: set[str]) -> set[str]:
             target = f"{act}/{kind}/{n}"
             if target in known and target != doc_id:
                 found.add(target)
+    return found
+
+
+_KIND_WORDS = r"sections?|regulations?|articles?|rules?|Schedule"
+# The words just before "of the <Act title>": "sections 72(1), ... (6A), 73(1) and 74(2)",
+# "section 14 or section 16E". Anchored at the end of the text before the title.
+_BEFORE_TITLE = re.compile(
+    rf"\b({_KIND_WORDS})\s+((?:{_ITEM}|\(\w+\)|\.\.\.|…|,|\s|\b(?:and|or|to|{_KIND_WORDS})\b)+?)\s*$",
+    re.IGNORECASE,
+)
+
+
+def _plain(text: str) -> str:
+    return text.replace("’", "'")
+
+
+def named_act_refs(doc_id: str, text: str, act_titles: dict[str, str], known: set[str]) -> set[str]:
+    """Targets of "section N of the <Act title>", for Acts in `act_titles` (act id -> title)."""
+    found: set[str] = set()
+    prose = _plain("\n".join(line for line in text.splitlines() if not line.lstrip().startswith("|")))
+    for act, title in act_titles.items():
+        for m in re.finditer(rf"\s+(?:of|to)\s+the\s+{re.escape(_plain(title))}", prose):
+            before = _BEFORE_TITLE.search(prose[max(0, m.start() - 200):m.start()])
+            if not before:
+                continue
+            kind = _KIND[before.group(1).lower()]
+            for n in re.findall(_NUM, re.sub(r"\(\w+\)", "", before.group(2))):
+                target = f"{act}/{kind}/{n}"
+                if target in known and target != doc_id:
+                    found.add(target)
     return found

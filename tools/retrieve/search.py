@@ -17,6 +17,11 @@ from tools.index.embed import embed_query
 RRF_K = 60  # standard reciprocal-rank-fusion constant
 CANDIDATES = 50  # chunks taken from each search before fusing
 
+# Function words carry no legal meaning; left in the OR query they add noise to the BM25 ranking.
+STOPWORDS = frozenset("""a about am an and any are as at be been being but by can could did do does for from
+had has have he her his how i if in into is it its me my of on or our she so some that the their them then
+there these they this to up was we were what when where which who whom why will with would you your""".split())
+
 
 # Source types searched separately so one type never crowds out another:
 LAW = frozenset({"act", "si"})              # legislation: decides the answer
@@ -99,7 +104,7 @@ class Index:
 
     # --- the two searches -------------------------------------------------
     def _keyword(self, question: str) -> list[int]:
-        words = re.findall(r"[a-z0-9]+", question.lower())
+        words = [w for w in re.findall(r"[a-z0-9]+", question.lower()) if w not in STOPWORDS]
         if not words:
             return []
         query = " OR ".join(f'"{w}"' for w in words)
