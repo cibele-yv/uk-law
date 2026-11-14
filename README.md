@@ -45,7 +45,7 @@ the calling application's LLM writes the answer, so the server costs nothing to 
 
 ```
 pip install -e ".[search]"
-python -m tools.index.build       # data/ -> index/kb.sqlite (rebuilt from scratch, not committed)
+python -m tools.index.build       # data/ -> index/kb.sqlite (rebuilt from scratch, not committed; Act titles for cross-Act links come from raw/)
 python -m tools.evaluate.run      # do test questions find their expected sources? (recall at k=6; questions may name a nation)
 python -m tools.mcp.server        # MCP server over stdio
 ```

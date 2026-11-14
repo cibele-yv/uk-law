@@ -11,15 +11,18 @@ Tables:
   chunks_fts  SQLite full-text index over chunks (keyword search)
   links       from_id -> to_id: 'cites' from front matter relations.cites (other
               legislation), 'refers_to' from plain-text references in the same Act
+              or to another indexed Act named by its title
 """
 import json
+import re
 import sqlite3
 import sys
 from pathlib import Path
 
 from tools.index.chunk import chunks
 from tools.index.embed import MODEL, embed_documents
-from tools.index.links import same_act_refs
+from tools.common.storage import raw_files
+from tools.index.links import act_of, named_act_refs, same_act_refs
 from tools.validate.model import load_docs
 
 REPO = Path(__file__).resolve().parents[2]
@@ -38,12 +41,27 @@ CREATE TABLE links (from_id TEXT, to_id TEXT, kind TEXT);
 """
 
 
+def act_titles(unit_ids: set[str]) -> dict[str, str]:
+    """Act id -> title ("ukpga/1988/53" -> "Road Traffic Offenders Act 1988"), read from the
+    dc:title of one raw file per Act: data/ records each unit's title but not its Act's."""
+    titles: dict[str, str] = {}
+    for unit in sorted(unit_ids):
+        act = act_of(unit)
+        if act in titles or not (files := raw_files(REPO / "raw" / "legislation" / unit)):
+            continue
+        m = re.search(r"<dc:title>([^<]+)</dc:title>", files[-1].read_text(encoding="utf-8"))
+        if m:
+            titles[act] = re.sub(r"^The\s+", "", m.group(1).strip())
+    return titles
+
+
 def build(path: Path = INDEX) -> tuple[int, int, int]:
     docs, problems = load_docs(REPO / "data")
     if problems:
         raise SystemExit(f"cannot build index: {len(problems)} unreadable files (run the validator)")
     current = [d for d in docs if d.path.name == "current.md"]
     known = {d.front["id"] for d in current}
+    titles = act_titles(known)
 
     path.parent.mkdir(exist_ok=True)
     path.unlink(missing_ok=True)
@@ -65,7 +83,7 @@ def build(path: Path = INDEX) -> tuple[int, int, int]:
         )
         for target in (f.get("relations") or {}).get("cites") or []:
             db.execute("INSERT INTO links VALUES (?,?,'cites')", (f["id"], target))
-        for target in sorted(same_act_refs(f["id"], d.body, known)):
+        for target in sorted(same_act_refs(f["id"], d.body, known) | named_act_refs(f["id"], d.body, titles, known)):
             db.execute("INSERT INTO links VALUES (?,?,'refers_to')", (f["id"], target))
         for n, text in enumerate(chunks(f.get("title") or f["id"], d.body)):
             rows.append((f["id"], n, text))
