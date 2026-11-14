@@ -12,7 +12,21 @@ Verified, versioned UK law for AI retrieval. Every unit is verbatim text from an
 
 ## Scope
 
-Only **road traffic** is covered for now. See `areas/road-traffic.yaml` for the units, `schema/provision.schema.json` for the metadata schema and `SOURCES.md` for sources and licences.
+Only the **road traffic** area exists so far (`areas/road-traffic.yaml`, 115 units), but the design is not tied to one area or one nation: every unit records where it applies (`extent`: E, W, S, NI) and how we know (`extent_basis`: `stated` by the source, or `assumed`). Without a nation, England and Wales is assumed and the answer says so. The corpus is mostly England and Wales, plus the Highway Code and drug-driving law (Great Britain), speed limits (UK) and one Welsh instrument (20 mph order). **Scotland and Northern Ireland road traffic law is not yet included**, so answers for those nations carry a warning that coverage is partial.
+
+Not yet included: case law (level 5), explanatory notes, DVLA guidance, other areas of law.
+
+Schema: `schema/provision.schema.json`. Sources and licences: `SOURCES.md`.
+
+### What each unit records
+
+`id`, `title`, `level`, `binding` (`binding` = legislation and Sentencing Council guidelines; `evidential` = Highway Code; `guidance` = GOV.UK), `extent`, `extent_basis`, `extent_evidence` (quoted sentence), `areas`, `version` (valid from, retrieved), `unapplied_changes` (amendments not yet applied to the text), `parent`, `made_under`, `relations` (`amended_by`, `cites`, `interprets`) and `source` (URL, publisher, retrieval time, SHA-256, licence).
+
+Territory of GOV.UK, Highway Code and Sentencing Council pages is never guessed from the text; it is recorded in `curation/extent.yaml` only where the source states it. Instruments served "as made" (e.g. Welsh `wsi`) take their version date from the coming-into-force date and their extent from the legislature that made them (`assumed`, flagged for review). The fetcher and normaliser recognise `ukpga`, `uksi`, `wsi`, `asc`, `ssi`, `nia` and `nisr`.
+
+## Review status
+
+Nothing is legal advice and not everything is human-checked. `python -m tools.validate.run` flags units for review (tables, schedules, pages with no publication date). All test questions in `tests/road-traffic/questions.yaml` are still `verified: false` drafts. The monthly refresh opens a pull request for a person to review.
 
 ## Pipeline
 
@@ -32,7 +46,7 @@ the calling application's LLM writes the answer, so the server costs nothing to 
 ```
 pip install -e ".[search]"
 python -m tools.index.build       # data/ -> index/kb.sqlite (rebuilt from scratch, not committed)
-python -m tools.evaluate.run      # do test questions find their expected sources?
+python -m tools.evaluate.run      # do test questions find their expected sources? (recall at k=6; questions may name a nation)
 python -m tools.mcp.server        # MCP server over stdio
 ```
 
@@ -68,5 +82,5 @@ python -m tools.mcp.server        # MCP server over stdio
 
 Tools: `get_evidence(question, nation)`, `search(query, nation)`, `get_provision(id)`, `get_related(id)`. `nation` (England, Wales, Scotland or Northern Ireland) keeps only sources that apply there; without it England and Wales are assumed and the answer should say so.
 
-If you rebuild the index while an MCP client is running, restart the client afterwards to load the new index.
+Results include `extent_basis` and `extent_evidence`, and the server tells the calling model to say when a territory is only assumed. The server loads the index into memory and finds it regardless of working directory. Rebuild the index after any schema change (an old index fails with `KeyError: extent_basis`), then restart the MCP client to load it.
 This is legal information, not legal advice.
