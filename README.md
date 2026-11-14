@@ -2,6 +2,8 @@
 
 Verified, versioned UK law for AI retrieval. Every unit is verbatim text from an official source, with its source URL, fetch time, version dates and SHA-256 hash, so any answer can be traced back to the publisher.
 
+**Coverage: England and Wales, road traffic law only. Scotland and Northern Ireland are not supported.** They have their own courts, procedure, penalties and sentencing rules, and those are not in the data. A question for either nation gets a "not supported" warning first, then only the sources recorded as applying there, which are not the whole law for that nation.
+
 ## Source levels
 
 1. Acts (primary legislation)
@@ -12,7 +14,7 @@ Verified, versioned UK law for AI retrieval. Every unit is verbatim text from an
 
 ## Scope
 
-Only the **road traffic** area exists so far (`areas/road-traffic.yaml`, 115 units), but the design is not tied to one area or one nation: every unit records where it applies (`extent`: E, W, S, NI) and how we know (`extent_basis`: `stated` by the source, or `assumed`). Without a nation, England and Wales is assumed and the answer says so. The corpus is mostly England and Wales, plus the Highway Code and drug-driving law (Great Britain), speed limits (UK) and one Welsh instrument (20 mph order). **Scotland and Northern Ireland road traffic law is not yet included**, so answers for those nations carry a warning that coverage is partial.
+Only the **road traffic** area exists so far (`areas/road-traffic.yaml`, 115 units), but the design is not tied to one area or one nation: every unit records where it applies (`extent`: E, W, S, NI) and how we know (`extent_basis`: `stated` by the source, or `assumed`). Without a nation, England and Wales is assumed and the answer says so. The corpus is mostly England and Wales, plus the Highway Code and drug-driving law (Great Britain), speed limits (UK) and one Welsh instrument (20 mph order). **Scotland and Northern Ireland are not supported**: some units extend there (the Road Traffic Act 1988 covers Great Britain), but their court procedure, penalties and sentencing rules are not in the data. The extent fields and the nation filter are kept so those nations can be added later without a redesign.
 
 Not yet included: case law (level 5), explanatory notes, DVLA guidance, other areas of law.
 
@@ -80,7 +82,7 @@ python -m tools.mcp.server        # MCP server over stdio
    speeding payment deadline. What are my options?"* and check that the answer cites the URLs the
    tool returned.
 
-Tools: `get_evidence(question, nation)`, `search(query, nation)`, `get_provision(id)`, `get_related(id)`. `nation` (England, Wales, Scotland or Northern Ireland) keeps only sources that apply there; without it England and Wales are assumed and the answer should say so.
+Tools: `get_evidence(question, nation)`, `search(query, nation)`, `get_provision(id)`, `get_related(id)`. `nation` (England, Wales, Scotland or Northern Ireland) keeps only sources that apply there; without it England and Wales are assumed and the answer should say so. For Scotland or Northern Ireland the response starts with `"supported": false` and a warning that the calling model must give the person first.
 
 Results include `extent_basis` and `extent_evidence`, and the server tells the calling model to say when a territory is only assumed. The server loads the index into memory and finds it regardless of working directory. Rebuild the index after any schema change (an old index fails with `KeyError: extent_basis`), then restart the MCP client to load it.
 This is legal information, not legal advice.

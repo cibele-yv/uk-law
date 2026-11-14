@@ -35,7 +35,8 @@ When answering a user's legal question:
    or state that you are assuming England and Wales. Never apply England and Wales
    rules to Scotland or Northern Ireland. A source whose extent_basis is "assumed" does
    not say where it applies (its extent_evidence is empty): say that, do not present
-   its territory as certain.
+   its territory as certain. Scotland and Northern Ireland are NOT supported: when a
+   response has "supported": false, begin your answer with its warning.
 6. Say this is legal information, not legal advice, and suggest a solicitor or
    Citizens Advice for their specific situation.
 """
@@ -56,11 +57,23 @@ def _note(nation: str | None, hits: list) -> str:
         return ("No nation was given, so England and Wales are assumed. Some rules differ in Wales "
                 "(see each source's extent). If the person's location could change the answer, ask "
                 "which nation they are in." + caution)
-    if nation_codes(nation) & {"S", "NI"}:
-        return ("This knowledge base is built for England and Wales. Scotland and Northern Ireland have "
-                "separate courts and rules and are only partly covered: say so, and do not apply "
-                "England and Wales rules to them." + caution)
-    return ("" if count else "Nothing found for this nation: say so.") + caution
+    return (("" if count else "Nothing found for this nation: say so.") + caution).strip()
+
+
+NOT_SUPPORTED = (
+    "NOT SUPPORTED: this knowledge base answers for England and Wales only. Scotland and Northern "
+    "Ireland have their own courts, procedure, penalties and sentencing rules, and those are not in it. "
+    "Begin your answer by telling the person this. The sources returned are only those recorded as "
+    "applying in that nation; they are not the whole law there. Do not present the answer as complete, "
+    "do not apply England and Wales rules, and suggest a solicitor or advice service in that nation."
+)
+
+
+def _coverage(nation: str | None) -> dict:
+    """The first fields of a response: whether the person's nation is supported."""
+    if nation and nation.strip() and nation_codes(nation) & {"S", "NI"}:
+        return {"supported": False, "warning": NOT_SUPPORTED}
+    return {"supported": True}
 
 
 @lru_cache(maxsize=1)
@@ -78,13 +91,16 @@ def get_evidence(question: str, nation: str | None = None, k: int = 6, k_guidanc
     Highway Code show how courts apply it; guidance explains it.
 
     `nation` (England, Wales, Scotland or Northern Ireland) keeps only sources that apply
-    there; leave it out if unknown (England and Wales are then assumed)."""
+    there; leave it out if unknown (England and Wales are then assumed). Scotland and
+    Northern Ireland are not supported: the response then starts with "supported": false
+    and a warning to give the person first."""
     try:
         codes = nation_codes(nation)
     except ValueError as e:
         return {"error": str(e)}
     hits = _index().evidence(question, k, k_guidance, k_guidelines, k_code, codes)
     return {
+        **_coverage(nation),
         "question": question,
         "nation": nation or "not given: England and Wales assumed",
         "count": len(hits),
@@ -102,7 +118,7 @@ def search(query: str, nation: str | None = None, k: int = 8) -> dict:
     except ValueError as e:
         return {"error": str(e)}
     hits = _index().search(query, k, codes=codes)
-    return {"query": query, "count": len(hits), "sources": [h.to_dict() for h in hits]}
+    return {**_coverage(nation), "query": query, "count": len(hits), "sources": [h.to_dict() for h in hits]}
 
 
 @server.tool()
