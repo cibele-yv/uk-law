@@ -74,10 +74,10 @@
 
 - id: rt-012
   question: "I was caught doing 41 mph in a 30 zone and I've been told I'll be prosecuted. How many points will I get, what fine should I expect, and what happens if I ignore the letter?"
-  # Draft. Known miss (15 Nov 2026): the Fixed Penalty Order 2000 is not returned. The question
-  # says "fine", the Order says "fixed penalty", and no unit the search returns links to the Order.
-  expected_answer: "3 points and a £100 fixed penalty, or 3 to 6 points and a fine up to level 3 if it goes to court"
-  expected_sources: [ukpga/1988/53/schedule/2, uksi/2000/2792/schedule]
+  # Draft. A question in three parts. The person is being prosecuted, so the court fine applies
+  # (Schedule 2), not the fixed penalty: the Fixed Penalty Order 2000 is not expected here.
+  expected_answer: "3 to 6 points and a fine up to level 3 on the standard scale if convicted"
+  expected_sources: [ukpga/1988/53/schedule/2]
   verified: false
 
 - id: rt-013
@@ -85,4 +85,15 @@
   # Draft: the fixed penalty amount is in the Fixed Penalty Order 2000, reached through its link to section 143.
   expected_answer: "£300 fixed penalty"
   expected_sources: [ukpga/1988/52/section/143, uksi/2000/2792/schedule]
+  verified: false
+
+- id: rt-014
+  question: "How much is a speeding fine?"
+  # Draft. Known miss (15 Nov 2026), kept failing on purpose as a record: the Fixed Penalty Order
+  # 2000 is not returned. Speeding has no row of its own in the Order (it falls under item 4,
+  # "any other fixed penalty offence involving obligatory endorsement"), so neither wording nor
+  # links reach it. The GOV.UK speeding page is returned and gives the £100 figure.
+  # Schedule 2 (the court fine) is also not returned: section 89 is found but does not link to it.
+  expected_answer: "£100 fixed penalty; a fine up to level 3 on the standard scale if it goes to court"
+  expected_sources: [ukpga/1984/27/section/89, ukpga/1988/53/schedule/2, uksi/2000/2792/schedule]
   verified: false
