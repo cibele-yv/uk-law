@@ -12,7 +12,7 @@ Verified, versioned UK law for AI retrieval. Every unit is verbatim text from an
 
 ## Scope
 
-Only the **road traffic** area exists so far (`areas/road-traffic.yaml`, 115 units), but the design is not tied to one area or one nation: every unit records where it applies (`extent`: E, W, S, NI) and how we know (`extent_basis`: `stated` by the source, or `assumed`). Without a nation, England and Wales is assumed and the answer says so. The corpus is mostly England and Wales, plus the Highway Code and drug-driving law (Great Britain), speed limits (UK) and one Welsh instrument (20 mph order). **Scotland and Northern Ireland road traffic law is not yet included**, so answers for those nations carry a warning that coverage is partial.
+Only the **road traffic** area exists so far (`areas/road-traffic.yaml`, 116 units), but the design is not tied to one area or one nation: every unit records where it applies (`extent`: E, W, S, NI) and how we know (`extent_basis`: `stated` by the source, or `assumed`). Without a nation, England and Wales is assumed and the answer says so. The corpus is mostly England and Wales, plus the Highway Code and drug-driving law (Great Britain), speed limits (UK) and one Welsh instrument (20 mph order). **Scotland and Northern Ireland road traffic law is not yet included**, so answers for those nations carry a warning that coverage is partial.
 
 Not yet included: case law (level 5), explanatory notes, DVLA guidance, other areas of law.
 
