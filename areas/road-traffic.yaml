@@ -51,6 +51,7 @@ units:
   - id: ukpga/1988/53/section/44        # Orders for endorsement
   - id: ukpga/1988/53/section/51        # Fixed penalty offences
   - id: ukpga/1988/53/section/52        # Fixed penalty notices
+  - id: ukpga/1988/53/section/53        # Amount of fixed penalty (the power the Fixed Penalty Order 2000 is made under)
   - id: ukpga/1988/53/section/54        # Notices on-the-spot etc
   - id: ukpga/1988/53/section/57        # Endorsement of counterparts without hearings
   - id: ukpga/1988/53/section/75        # Issue of conditional offer
