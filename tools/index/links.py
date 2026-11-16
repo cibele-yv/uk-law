@@ -10,6 +10,11 @@ same_act_refs skips it; named_act_refs links it when that Act is in the index. N
 to the Criminal Procedure Rules cite Acts this way with no Citation markup, so without
 this a rule and the sections it implements are not linked. Shorthand such as "the
 1988 Act" is not resolved. Only targets that exist in the index become links.
+
+same_act_refs skips table rows, because a row seldom names its Act. named_act_refs
+reads them: it only links a reference whose Act is named right after it, as in the
+Fixed Penalty Order 2000 ("A fixed penalty offence under section 143 of the Road
+Traffic Act 1988 | £300"), which would otherwise be linked to nothing.
 """
 import re
 
@@ -67,7 +72,7 @@ def _plain(text: str) -> str:
 def named_act_refs(doc_id: str, text: str, act_titles: dict[str, str], known: set[str]) -> set[str]:
     """Targets of "section N of the <Act title>", for Acts in `act_titles` (act id -> title)."""
     found: set[str] = set()
-    prose = _plain("\n".join(line for line in text.splitlines() if not line.lstrip().startswith("|")))
+    prose = _plain(text)  # table rows included: the Act's title must follow the reference
     for act, title in act_titles.items():
         for m in re.finditer(rf"\s+(?:of|to)\s+the\s+{re.escape(_plain(title))}", prose):
             before = _BEFORE_TITLE.search(prose[max(0, m.start() - 200):m.start()])
