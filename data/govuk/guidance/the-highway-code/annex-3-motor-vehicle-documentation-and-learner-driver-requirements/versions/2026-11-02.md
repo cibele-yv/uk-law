@@ -22,7 +22,10 @@ relations:
   - govuk/guidance/the-highway-code/annex-5-penalties
   - ukpga/1988/52/section/143
   - ukpga/1988/52/section/164
+  - ukpga/1988/52/section/165A
+  - ukpga/1988/52/section/47
   - ukpga/1988/52/section/87
+  - ukpga/1994/22/section/29
 source:
   url: https://www.gov.uk/api/content/guidance/the-highway-code/annex-3-motor-vehicle-documentation-and-learner-driver-requirements
   publisher: GOV.UK

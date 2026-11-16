@@ -97,3 +97,60 @@
   expected_answer: "£100 fixed penalty; a fine up to level 3 on the standard scale if it goes to court"
   expected_sources: [ukpga/1984/27/section/89, ukpga/1988/53/schedule/2, uksi/2000/2792/schedule]
   verified: false
+
+# --- Coverage round, November 2026. Drafts written from the fetched text; all unverified. ---
+- id: rt-015
+  question: "What is the drink drive limit?"
+  nation: England
+  expected_answer: "35 microgrammes of alcohol in 100 millilitres of breath, 80 milligrammes in 100 millilitres of blood, or 107 milligrammes in 100 millilitres of urine"
+  expected_sources: [ukpga/1988/52/section/11, govuk/drink-drive-limit]
+  verified: false
+
+- id: rt-016
+  question: "What happens if I drive while I'm banned?"
+  expected_answer: "Driving a motor vehicle on a road while disqualified is an offence; the court sentences under the Sentencing Council guideline"
+  expected_sources: [ukpga/1988/52/section/103, sentencing/guidelines/drive-whilst-disqualified-revised-2017]
+  verified: false
+
+- id: rt-017
+  question: "Do I have to wear a seat belt?"
+  expected_answer: "Yes, if one is fitted in the seat, with only a few exceptions; you can be fined up to £500"
+  expected_sources: [ukpga/1988/52/section/14, govuk/seat-belts-law]
+  verified: false
+
+- id: rt-018
+  question: "Can I drive my car without an MOT?"
+  expected_answer: "Using a vehicle on a road with no test certificate issued within the appropriate period is an offence"
+  expected_sources: [ukpga/1988/52/section/47, govuk/getting-an-mot]
+  verified: false
+
+- id: rt-019
+  question: "How do I appeal against a conviction in the magistrates' court?"
+  expected_answer: "Appeal to the Crown Court: against conviction or sentence, or against sentence only if you pleaded guilty"
+  expected_sources: [ukpga/1980/43/section/108, govuk/appeal-magistrates-court-decision]
+  verified: false
+
+- id: rt-020
+  question: "Can I get my driving ban shortened?"
+  expected_answer: "You can apply to the court to remove the disqualification, but not before 2 years if the ban is under 4 years; a drink-drive ban can be reduced by completing an approved course if the court ordered that"
+  expected_sources: [ukpga/1988/53/section/42, ukpga/1988/53/section/34A]
+  verified: false
+
+- id: rt-021
+  question: "What is the penalty for driving a car that isn't taxed?"
+  expected_answer: "Using or keeping an unlicensed vehicle is an offence"
+  expected_sources: [ukpga/1994/22/section/29]
+  verified: false
+
+- id: rt-022
+  question: "What are the legal limits for drugs when driving?"
+  nation: England
+  expected_answer: "The limits for each specified controlled drug are set out in the Drug Driving (Specified Limits) (England and Wales) Regulations 2014"
+  expected_sources: [uksi/2014/2868/regulation/2, ukpga/1988/52/section/5A]
+  verified: false
+
+- id: rt-023
+  question: "The magistrates' court made a mistake in my case. Can it be reopened?"
+  expected_answer: "A magistrates' court may vary or rescind a sentence or order, or direct a rehearing, if it is in the interests of justice"
+  expected_sources: [ukpga/1980/43/section/142]
+  verified: false

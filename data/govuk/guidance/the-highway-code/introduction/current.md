@@ -22,6 +22,8 @@ relations:
   - govuk/guidance/the-highway-code/annex-4-the-road-user-and-the-law
   - govuk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158
   - govuk/guidance/the-highway-code/using-the-road-159-to-203
+  - ukpga/1988/52/section/14
+  - ukpga/1988/52/section/15
   - ukpga/1988/52/section/2
   - ukpga/1988/52/section/3
   - ukpga/1988/52/section/4

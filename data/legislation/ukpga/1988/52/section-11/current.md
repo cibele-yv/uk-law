@@ -1,0 +1,77 @@
+---
+id: ukpga/1988/52/section/11
+title: Interpretation of sections 4 to 10.
+level: act
+binding: binding
+parent: ukpga/1988/52
+made_under: null
+extent:
+- E
+- W
+- S
+extent_basis: stated
+areas:
+- road-traffic
+version:
+  valid_from: '2018-03-01'
+  valid_to: null
+  status: in-force
+unapplied_changes: 0
+relations:
+  cites: []
+source:
+  url: https://www.legislation.gov.uk/ukpga/1988/52/section/11/data.xml
+  publisher: legislation.gov.uk
+  format: CLML XML
+  retrieved_at: '2026-11-16T17:19:09Z'
+  sha256: 384f0da81823e434dd9e66e43320dfbd8579c556c56ec63aaa4f1ecc9d01efc1
+  licence: OGL-3.0
+---
+
+11 (1) The following provisions apply for the interpretation of sections 3A to 10 of this Act.
+
+(2) In those sections—
+
+- . . .
+
+- “controlled drug” has the meaning given by section 2 of the Misuse of Drugs Act 1971,
+
+- “drug” includes any intoxicant other than alcohol,
+
+- “fail” includes refuse,
+
+- “hospital” means an institution which provides medical or surgical treatment for in-patients or out-patients,
+
+- “the prescribed limit” means, as the case may require—
+
+- 35 microgrammes of alcohol in 100 millilitres of breath,
+
+- 80 milligrammes of alcohol in 100 millilitres of blood, or
+
+- 107 milligrammes of alcohol in 100 millilitres of urine,
+
+or such other proportion as may be prescribed by regulations ....
+
+- “registered health care professional” means a person (other than a medical practitioner) who is—
+
+- a registered nurse; or
+
+- a registered member of a health care profession which is designated for the purposes of this paragraph by an order made by the Secretary of State.
+
+- “specified”, in relation to a controlled drug, has the meaning given by section 5A(8)
+
+(2ZA) Regulations under subsection (2) may be made—
+  (a) by the Secretary of State, in relation to driving or attempting to drive, or being in charge of a vehicle, in England and Wales;
+  (b) by the Scottish Ministers, in relation to driving or attempting to drive, or being in charge of a vehicle, in Scotland.
+
+(2A) A health care profession is any profession mentioned in section 60(2) of the Health Act 1999 (c. 8) other than the profession of practising medicine and the profession of nursing.
+
+(2B) An order under subsection (2) shall be made by statutory instrument; and any such statutory instrument shall be subject to annulment in pursuance of a resolution of either House of Parliament.
+
+(3) A person does not co-operate with a preliminary test or provide a specimen of breath for analysis unless his co-operation or the specimen—
+  (a) is sufficient to enable the test or the analysis to be carried out, and
+  (b) is provided in such a way as to enable the objective of the test or analysis to be satisfactorily achieved.
+
+(4) A person provides a specimen of blood if and only if—
+  (a) he consents to the taking of such a specimen from him; and
+  (b) the specimen is taken from him ... either by a medical practitioner or by a registered health care professional.

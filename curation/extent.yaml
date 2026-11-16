@@ -35,3 +35,7 @@
 - prefix: sentencing/
   extent: [E, W]
   evidence: 'Issued by the Sentencing Council for England and Wales (the publisher''s own name and remit); the guidelines are for sentencing in courts in England and Wales'
+
+- id: govuk/drink-drive-limit
+  extent: [E, W, S, NI]
+  evidence: 'GOV.UK, The drink drive limit: "The legal alcohol limits for drivers in the UK" and "The limits in Scotland are different to the rest of the UK", with a table giving the limits for "England, Wales and Northern Ireland" and for "Scotland"'

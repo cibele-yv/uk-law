@@ -22,6 +22,7 @@ relations:
   - govuk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158
   - govuk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102
   - govuk/guidance/the-highway-code/using-the-road-159-to-203
+  - ukpga/1984/27/schedule/6
   - ukpga/1984/27/section/86
   - ukpga/1984/27/section/89
   - ukpga/1988/52/section/163

@@ -154,3 +154,36 @@ units:
   - id: sentencing/guidelines/driving-disqualification                                     # disqualification in the magistrates' court
   - id: sentencing/supplementary-information/approach-to-fines                             # fine bands A-F, means
   - id: sentencing/supplementary-information/road-traffic-offences-disqualification       # totting up, exceptional hardship
+
+  # --- Coverage round, November 2026: common topics that had no unit ---
+  # Road Traffic Act 1988
+  - id: ukpga/1988/52/section/2B        # Causing death by careless, or inconsiderate, driving
+  - id: ukpga/1988/52/section/3ZA       # Meaning of careless, or inconsiderate, driving
+  - id: ukpga/1988/52/section/3ZB       # Causing death by driving: unlicensed or uninsured drivers
+  - id: ukpga/1988/52/section/11        # Interpretation of sections 4 to 10 (the prescribed alcohol limit)
+  - id: ukpga/1988/52/section/14        # Seat belts: adults
+  - id: ukpga/1988/52/section/15        # Restriction on carrying children not wearing seat belts
+  - id: ukpga/1988/52/section/47        # Obligatory test certificates (MOT)
+  - id: ukpga/1988/52/section/103       # Obtaining licence, or driving, while disqualified
+  - id: ukpga/1988/52/section/144A      # Offence of keeping vehicle which does not meet insurance requirements
+  - id: ukpga/1988/52/section/165A      # Power to seize vehicles driven without licence or insurance
+  # Road Traffic Offenders Act 1988
+  - id: ukpga/1988/53/section/34A       # Reduced disqualification for attendance on courses
+  - id: ukpga/1988/53/section/42        # Removal of disqualification
+  # Vehicle Excise and Registration Act 1994
+  - id: ukpga/1994/22/section/29        # Penalty for using or keeping unlicensed vehicle
+  # Magistrates' Courts Act 1980
+  - id: ukpga/1980/43/section/16A       # Trial by single justice on the papers
+  - id: ukpga/1980/43/section/108       # Right of appeal to the Crown Court
+  - id: ukpga/1980/43/section/142       # Power of magistrates' court to re-open cases to rectify mistakes etc
+  # Drug Driving (Specified Limits) (England and Wales) Regulations 2014
+  - id: uksi/2014/2868/regulation/2     # Specified controlled drugs and specified limits
+  # Road Traffic Regulation Act 1984
+  - id: ukpga/1984/27/schedule/6        # Speed limits for vehicles of certain classes
+  # Sentencing Council
+  - id: sentencing/guidelines/drive-whilst-disqualified-revised-2017
+  # GOV.UK guidance
+  - id: govuk/seat-belts-law
+  - id: govuk/drink-drive-limit
+  - id: govuk/getting-an-mot
+  - id: govuk/appeal-magistrates-court-decision

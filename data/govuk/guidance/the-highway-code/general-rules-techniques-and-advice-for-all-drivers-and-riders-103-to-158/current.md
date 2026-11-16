@@ -20,9 +20,12 @@ unapplied_changes: 0
 relations:
   cites:
   - govuk/guidance/the-highway-code/introduction
+  - ukpga/1984/27/schedule/6
   - ukpga/1988/52/section/163
   - ukpga/1988/52/section/35
   - ukpga/1988/52/section/36
+  - ukpga/1988/52/section/47
+  - ukpga/1994/22/section/29
   - uksi/1986/1078/regulation/104
 source:
   url: https://www.gov.uk/api/content/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158
