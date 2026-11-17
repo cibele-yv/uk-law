@@ -204,3 +204,32 @@
   expected_answer: "Article 36 sets the general speed limit on restricted roads in Northern Ireland"
   expected_sources: [nisi/1997/276/article/36]
   verified: false
+
+# --- Scotland (legislation only), November 2026. Drafts from the fetched text; all unverified. ---
+- id: rt-031
+  question: "What is the drink drive limit?"
+  nation: Scotland
+  expected_answer: "22 microgrammes of alcohol in 100 millilitres of breath, 50 milligrammes in 100 millilitres of blood, or 67 milligrammes in 100 millilitres of urine"
+  expected_sources: [ssi/2014/328/regulation/2]
+  verified: false
+
+- id: rt-032
+  question: "How long do I have to pay a fine and can I pay in instalments?"
+  nation: Scotland
+  expected_answer: "The court must allow at least seven days to pay the fine or the first instalment"
+  expected_sources: [ukpga/1995/46/section/214]
+  verified: false
+
+- id: rt-033
+  question: "How do I appeal a conviction in a Scottish summary case?"
+  nation: Scotland
+  expected_answer: "By application for a stated case, made within one week of the final determination of the proceedings"
+  expected_sources: [ukpga/1995/46/section/176]
+  verified: false
+
+- id: rt-034
+  question: "How long after an offence can the prosecution start?"
+  nation: Scotland
+  expected_answer: "Proceedings for offences to which section 136 applies must start within six months after the contravention"
+  expected_sources: [ukpga/1995/46/section/136]
+  verified: false

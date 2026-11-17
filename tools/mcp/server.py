@@ -35,8 +35,8 @@ When answering a user's legal question:
    or state that you are assuming England and Wales. Never apply England and Wales
    rules to Scotland or Northern Ireland. A source whose extent_basis is "assumed" does
    not say where it applies (its extent_evidence is empty): say that, do not present
-   its territory as certain. Scotland and Northern Ireland are NOT supported: when a
-   response has "supported": false, begin your answer with its warning.
+   its territory as certain. Scotland and Northern Ireland are only partly covered: when
+   a response has "coverage": "partial", begin your answer with its warning.
 6. Say this is legal information, not legal advice, and suggest a solicitor or
    Citizens Advice for their specific situation.
 """
@@ -60,20 +60,36 @@ def _note(nation: str | None, hits: list) -> str:
     return (("" if count else "Nothing found for this nation: say so.") + caution).strip()
 
 
-NOT_SUPPORTED = (
-    "NOT SUPPORTED: this knowledge base answers for England and Wales only. Scotland and Northern "
-    "Ireland have their own courts, procedure, penalties and sentencing rules, and those are not in it. "
-    "Begin your answer by telling the person this. The sources returned are only those recorded as "
-    "applying in that nation; they are not the whole law there. Do not present the answer as complete, "
-    "do not apply England and Wales rules, and suggest a solicitor or advice service in that nation."
+PARTIAL = {
+    "S": (
+        "SCOTLAND IS ONLY PARTLY COVERED. Included: the Great Britain road traffic Acts (offences, penalty "
+        "points, disqualification, fixed penalties), the Criminal Procedure (Scotland) Act 1995 provisions on "
+        "time limits, fines and appeals, and the Scottish drink drive limit. Not included: Scottish sentencing "
+        "guidance (so no usual fine amounts), Scottish court rules, and plain-English Scottish guidance."
+    ),
+    "NI": (
+        "NORTHERN IRELAND IS ONLY PARTLY COVERED. Included: the Northern Ireland road traffic Orders "
+        "(offences, penalty points, disqualification, fixed penalties, speed limits, insurance, new drivers) "
+        "and the Magistrates' Courts (Northern Ireland) Order 1981 provisions on fines, appeals and time "
+        "limits. Not included: Northern Ireland sentencing guidance (so no usual fine amounts), court rules, "
+        "a Northern Ireland Highway Code, and plain-English Northern Ireland guidance."
+    ),
+}
+PARTIAL_ADVICE = (
+    " Begin your answer by telling the person this. Answer only from the sources returned, say what the "
+    "answer cannot tell them (for example the usual fine) instead of guessing, do not apply England and "
+    "Wales rules, and suggest a solicitor or advice service in that nation."
 )
 
 
 def _coverage(nation: str | None) -> dict:
-    """The first fields of a response: whether the person's nation is supported."""
-    if nation and nation.strip() and nation_codes(nation) & {"S", "NI"}:
-        return {"supported": False, "warning": NOT_SUPPORTED}
-    return {"supported": True}
+    """The first fields of a response: how fully the person's nation is covered."""
+    if nation and nation.strip():
+        codes = nation_codes(nation)
+        for code in ("S", "NI"):
+            if code in codes:
+                return {"coverage": "partial", "warning": PARTIAL[code] + PARTIAL_ADVICE}
+    return {"coverage": "full"}
 
 
 @lru_cache(maxsize=1)
@@ -92,8 +108,8 @@ def get_evidence(question: str, nation: str | None = None, k: int = 6, k_guidanc
 
     `nation` (England, Wales, Scotland or Northern Ireland) keeps only sources that apply
     there; leave it out if unknown (England and Wales are then assumed). Scotland and
-    Northern Ireland are not supported: the response then starts with "supported": false
-    and a warning to give the person first."""
+    Northern Ireland are only partly covered: the response then starts with "coverage":
+    "partial" and a warning to give the person first."""
     try:
         codes = nation_codes(nation)
     except ValueError as e:

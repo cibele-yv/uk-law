@@ -262,3 +262,21 @@ units:
   - id: nisi/1981/1675/article/93                  # Restrictions on power to order immediate committal in default of payment of a sum adjudged to be paid by a conviction
   - id: nisi/1981/1675/article/140                 # Appeals against conviction or sentence, etc.
   - id: nisi/1981/1675/article/158A                # Power of magistrates' court to re-open cases to rectify mistakes etc.
+
+  # --- Scotland: court procedure and fines (the road traffic Acts already cover Great Britain above). Criminal Procedure (Scotland) Act 1995 and the Scottish drink drive limit ---
+  # ukpga/1995/46
+  - id: ukpga/1995/46/section/77                   # Plea of guilty.
+  - id: ukpga/1995/46/section/136                  # Time limit for certain offences.
+  - id: ukpga/1995/46/section/136B                 # Time limits where fixed penalty offer etc. made
+  - id: ukpga/1995/46/section/176                  # Stated case: manner and time of appeal.
+  - id: ukpga/1995/46/section/211                  # Fines.
+  - id: ukpga/1995/46/section/212                  # Fines in summary proceedings.
+  - id: ukpga/1995/46/section/213                  # Remission of fines.
+  - id: ukpga/1995/46/section/214                  # Fines: time for payment and payment by instalments.
+  - id: ukpga/1995/46/section/215                  # Application for further time to pay fine.
+  - id: ukpga/1995/46/section/219                  # Fines: periods of imprisonment for non-payment.
+  - id: ukpga/1995/46/section/226A                 # Fines enforcement officers
+  - id: ukpga/1995/46/section/226C                 # Variation for further time to pay
+  # ssi/2014/328
+  - id: ssi/2014/328/regulation/2                  # Prescription of proportion of alcohol
+  - id: ssi/2014/328/regulation/3                  # Proportion of alcohol for replacement of breath specimen
