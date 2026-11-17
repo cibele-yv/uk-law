@@ -154,3 +154,53 @@
   expected_answer: "A magistrates' court may vary or rescind a sentence or order, or direct a rehearing, if it is in the interests of justice"
   expected_sources: [ukpga/1980/43/section/142]
   verified: false
+
+# --- Northern Ireland (legislation only), November 2026. Drafts from the fetched text; all unverified. ---
+- id: rt-024
+  question: "What is the drink drive limit?"
+  nation: Northern Ireland
+  expected_answer: "35 microgrammes of alcohol in 100 millilitres of breath, 80 milligrammes in 100 millilitres of blood, or 107 milligrammes in 100 millilitres of urine"
+  expected_sources: [nisi/1995/2994/article/13, nisi/1995/2994/article/16]
+  verified: false
+
+- id: rt-025
+  question: "What happens if I drive while I'm banned?"
+  nation: Northern Ireland
+  expected_answer: "Applying for or obtaining a licence, or driving a motor vehicle on a road, while disqualified is an offence"
+  expected_sources: [nisi/1981/154/article/168A]
+  verified: false
+
+- id: rt-026
+  question: "How many points before I get banned?"
+  nation: Northern Ireland
+  expected_answer: "12 or more penalty points to be taken into account leads the court to disqualify for not less than the minimum period, unless there are grounds for mitigation"
+  expected_sources: [nisi/1996/1320/article/40]
+  verified: false
+
+- id: rt-027
+  question: "Is it illegal to drive without insurance?"
+  nation: Northern Ireland
+  expected_answer: "It is not lawful to use, or cause or permit another to use, a motor vehicle on a road or public place unless insurance or security is in force"
+  expected_sources: [nisi/1981/154/article/90]
+  verified: false
+
+- id: rt-028
+  question: "How do I appeal against a conviction in the magistrates' court?"
+  nation: Northern Ireland
+  expected_answer: "Appeal to the county court: against sentence whether or not you pleaded guilty, and against conviction if you did not plead guilty"
+  expected_sources: [nisi/1981/1675/article/140]
+  verified: false
+
+- id: rt-029
+  question: "How is the amount of a fixed penalty decided?"
+  nation: Northern Ireland
+  expected_answer: "Either the amount the Department prescribes by order, or one-half of the maximum fine on summary conviction, whichever is less"
+  expected_sources: [nisi/1996/1320/article/59]
+  verified: false
+
+- id: rt-030
+  question: "What are the speed limits on restricted roads?"
+  nation: Northern Ireland
+  expected_answer: "Article 36 sets the general speed limit on restricted roads in Northern Ireland"
+  expected_sources: [nisi/1997/276/article/36]
+  verified: false
