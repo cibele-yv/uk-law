@@ -10,6 +10,7 @@ external:
 units:
   # Road Traffic Regulation Act 1984
   - id: ukpga/1984/27/section/81        # General speed limit for restricted roads
+  - id: ukpga/1984/27/section/82        # Restricted roads
   - id: ukpga/1984/27/section/84        # Speed limits on roads other than restricted roads
   - id: ukpga/1984/27/section/85        # Traffic signs for indicating speed restrictions
   - id: ukpga/1984/27/section/86        # Speed limits for particular classes of vehicles
@@ -53,6 +54,7 @@ units:
   - id: ukpga/1988/53/section/52        # Fixed penalty notices
   - id: ukpga/1988/53/section/53        # Amount of fixed penalty (the power the Fixed Penalty Order 2000 is made under)
   - id: ukpga/1988/53/section/54        # Notices on-the-spot etc
+  - id: ukpga/1988/53/section/55        # Fixed penalty: consequences of non-payment
   - id: ukpga/1988/53/section/57        # Endorsement of counterparts without hearings
   - id: ukpga/1988/53/section/75        # Issue of conditional offer
   - id: ukpga/1988/53/schedule/2        # Schedule 2: Prosecution and Punishment of Offences
@@ -268,6 +270,7 @@ units:
   - id: ukpga/1995/46/section/77                   # Plea of guilty.
   - id: ukpga/1995/46/section/136                  # Time limit for certain offences.
   - id: ukpga/1995/46/section/136B                 # Time limits where fixed penalty offer etc. made
+  - id: ukpga/1995/46/section/175                  # Right of appeal (summary proceedings)
   - id: ukpga/1995/46/section/176                  # Stated case: manner and time of appeal.
   - id: ukpga/1995/46/section/211                  # Fines.
   - id: ukpga/1995/46/section/212                  # Fines in summary proceedings.

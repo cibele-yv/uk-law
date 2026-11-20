@@ -3,7 +3,7 @@
 - id: rt-001
   question: "How many points before a new driver loses their licence?"
   expected_answer: "6 points within 2 years of passing the test"
-  expected_sources: [ukpga/1995/13/section/2, ukpga/1995/13/section/1]
+  expected_sources: [ukpga/1995/13/section/2, ukpga/1995/13/section/1, ukpga/1995/13/section/3]
   verified: false   # true once checked against the source text
 
 - id: rt-002
@@ -14,77 +14,77 @@
 
 - id: rt-003
   question: "How many points lead to a ban?"
-  expected_answer: "12 within 3 years, minimum 6-month ban"
-  expected_sources: [ukpga/1988/53/section/35]
+  expected_answer: "12 or more penalty points (offences committed more than three years apart are not added together) means the court must disqualify for at least 6 months, or 1 year / 2 years where one / more than one earlier disqualification of 56 days or more within the previous 3 years counts, unless it finds grounds for mitigating the normal consequences"
+  expected_sources: [ukpga/1988/53/section/35, ukpga/1988/53/section/29]
   verified: false
 
 - id: rt-004
   question: "What is the time limit for a notice of intended prosecution?"
-  expected_answer: "14 days"
+  expected_answer: "14 days from the commission of the offence (unless the person was warned at the time)"
   expected_sources: [ukpga/1988/53/section/1]
   verified: false
 
 - id: rt-005
   question: "What is the penalty for not naming the driver?"
-  expected_answer: "6 points and a fine up to £1,000"
-  expected_sources: [ukpga/1988/52/section/172, ukpga/1988/53/schedule/2]
+  expected_answer: "6 points and a fine up to level 3 on the standard scale (£1,000); no points where the offence is committed through s.172(5) or (11)"
+  expected_sources: [ukpga/1988/52/section/172, ukpga/1988/53/schedule/2, sentencing/guidelines/fail-to-give-information-of-driver-s-identity-as-required]
   verified: false
 
 - id: rt-006
   question: "I missed the fixed penalty deadline and got a summons: what are my options?"
-  expected_answer: "Respond to the court; make a statutory declaration within 21 days if unaware of the proceedings"
-  expected_sources: [ukpga/1980/43/section/14, ukpga/1988/53/section/71]
+  expected_answer: "An unpaid fixed penalty can be registered for enforcement as a fine (RTOA s.71). A statutory declaration served within 21 days of notice of registration voids the registration if you were not the person given the fixed penalty notice or you requested a hearing in time (RTOA s.72; Criminal Procedure Rules 29.4). If a magistrates' court began to try a summons without you knowing of it, a statutory declaration served within 21 days of when you learnt of it makes the proceedings void (MCA s.14)"
+  expected_sources: [ukpga/1988/53/section/72, ukpga/1988/53/section/71, uksi/2025/909/rule/29.4, ukpga/1980/43/section/14]
   verified: false
 
 - id: rt-007
   question: "What is the penalty for using a hand-held phone while driving?"
   expected_answer: "6 points and a £200 fixed penalty"
-  expected_sources: [uksi/1986/1078/regulation/110, ukpga/1988/52/section/41D]
+  expected_sources: [uksi/1986/1078/regulation/110, ukpga/1988/52/section/41D, ukpga/1988/53/schedule/2, uksi/2000/2792/schedule]
   verified: false
 
 - id: rt-008
   question: "I'm receiving a fine of 800 pounds and have been summoned to court for missing the payment deadline of a speeding fine"
   # Draft, not legal advice: written from the sources below, to be checked by a solicitor.
-  expected_answer: "Respond to the court by the date on the summons. An unpaid fixed penalty can be registered as a fine increased by half; a statutory declaration may apply if you did not receive the notice. Court fines are set by income (fine bands), and you can ask the court for time to pay or to reduce the fine."
-  expected_sources: [ukpga/1988/53/section/71, uksi/2025/909/rule/29.4, sentencing/supplementary-information/approach-to-fines, uksi/2025/909/rule/30.5, govuk/pay-court-fine-online]
+  expected_answer: "An unpaid fixed penalty can be registered for enforcement as a fine of the fixed penalty plus one-half (RTOA s.55(3), s.71). A statutory declaration served within 21 days of notice of registration voids the registration in the two cases in s.72(2) (Criminal Procedure Rules 29.4). Court fines are set by reference to income (fine bands), and the defendant can apply in writing to the court to vary payment terms or remit the whole or part of a fine (rule 30.5)"
+  expected_sources: [ukpga/1988/53/section/55, ukpga/1988/53/section/71, ukpga/1988/53/section/72, uksi/2025/909/rule/29.4, sentencing/supplementary-information/approach-to-fines, uksi/2025/909/rule/30.5]
   verified: false
 
 - id: rt-009
   question: "What is the speed limit on a road with street lights?"
   nation: Wales
   # Draft: in Wales the default on restricted roads became 20 mph on 17 Sept 2023; in England it stays 30 mph.
-  expected_answer: "20 mph on restricted roads in Wales (30 mph in England)"
-  expected_sources: [wsi/2022/800/article/2, ukpga/1984/27/section/81]
+  expected_answer: "20 mph on restricted roads in Wales from 17 September 2023; a road with a system of street lighting (lamps not more than 200 yards apart) is a restricted road, and the general limit in s.81(1) is 30 mph"
+  expected_sources: [wsi/2022/800/article/2, wsi/2022/800/article/1, ukpga/1984/27/section/81, ukpga/1984/27/section/82]
   verified: false
 
 - id: rt-010
   question: "What is the speed limit on a road with street lights?"
   nation: England
-  expected_answer: "30 mph on restricted roads in England"
-  expected_sources: [ukpga/1984/27/section/81]
+  expected_answer: "30 mph: a road with a system of street lighting (lamps not more than 200 yards apart) is a restricted road (RTRA s.82(1)(a)), and the limit on a restricted road is 30 mph (s.81(1)), unless the traffic authority has directed otherwise (s.82(2))"
+  expected_sources: [ukpga/1984/27/section/81, ukpga/1984/27/section/82]
   verified: false
 
 - id: rt-011
   question: "Is it illegal to drive with drugs in my body?"
   nation: Scotland
   # Draft: GOV.UK states the drug-driving law covers England, Scotland and Wales.
-  expected_answer: "Yes: it is illegal in England, Scotland and Wales to drive with certain drugs above the limits, or while impaired"
-  expected_sources: [govuk/drug-driving-law]
+  expected_answer: "Yes. Driving or attempting to drive while unfit through drink or drugs is an offence (RTA s.4). Driving with a specified controlled drug above the specified limit is also an offence (s.5A); for Scotland the limits are those specified by the Scottish Ministers, which this knowledge base does not hold. GOV.UK says the law covers England, Scotland and Wales and not Northern Ireland"
+  expected_sources: [govuk/drug-driving-law, ukpga/1988/52/section/4, ukpga/1988/52/section/5A]
   verified: false
 
 - id: rt-012
   question: "I was caught doing 41 mph in a 30 zone and I've been told I'll be prosecuted. How many points will I get, what fine should I expect, and what happens if I ignore the letter?"
   # Draft. A question in three parts. The person is being prosecuted, so the court fine applies
   # (Schedule 2), not the fixed penalty: the Fixed Penalty Order 2000 is not expected here.
-  expected_answer: "3 to 6 points and a fine up to level 3 on the standard scale if convicted"
-  expected_sources: [ukpga/1988/53/schedule/2]
+  expected_answer: "On conviction: 3 to 6 points (4 to 6 points, or disqualification of 7 to 28 days, under the guideline for 41-50 mph in a 30 limit); a fine in Band B (starting point 100% of weekly income, range 75-125%), up to level 3 on the standard scale. Ignoring a request to name the driver (s.172) is itself an offence carrying 6 points and a fine up to level 3"
+  expected_sources: [ukpga/1988/53/schedule/2, sentencing/guidelines/speeding-revised-2017, ukpga/1988/52/section/172]
   verified: false
 
 - id: rt-013
   question: "What is the fine for driving without insurance?"
   # Draft: the fixed penalty amount is in the Fixed Penalty Order 2000, reached through its link to section 143.
-  expected_answer: "£300 fixed penalty"
-  expected_sources: [ukpga/1988/52/section/143, uksi/2000/2792/schedule]
+  expected_answer: "£300 fixed penalty (and 6 points); if prosecuted, a fine up to level 5 on the standard scale (unlimited for offences after 13 March 2015), 6 to 8 points, and discretionary disqualification"
+  expected_sources: [ukpga/1988/52/section/143, uksi/2000/2792/schedule, ukpga/1988/53/schedule/2]
   verified: false
 
 - id: rt-014
@@ -95,7 +95,7 @@
   # links reach it. The GOV.UK speeding page is returned and gives the £100 figure.
   # Schedule 2 (the court fine) is also not returned: section 89 is found but does not link to it.
   expected_answer: "£100 fixed penalty; a fine up to level 3 on the standard scale if it goes to court"
-  expected_sources: [ukpga/1984/27/section/89, ukpga/1988/53/schedule/2, uksi/2000/2792/schedule]
+  expected_sources: [ukpga/1984/27/section/89, ukpga/1988/53/schedule/2, uksi/2000/2792/schedule, govuk/speeding-penalties]
   verified: false
 
 # --- Coverage round, November 2026. Drafts written from the fetched text; all unverified. ---
@@ -108,14 +108,14 @@
 
 - id: rt-016
   question: "What happens if I drive while I'm banned?"
-  expected_answer: "Driving a motor vehicle on a road while disqualified is an offence; the court sentences under the Sentencing Council guideline"
-  expected_sources: [ukpga/1988/52/section/103, sentencing/guidelines/drive-whilst-disqualified-revised-2017]
+  expected_answer: "It is an offence to drive on a road while disqualified (RTA s.103(1)(b)): up to 6 months' imprisonment and/or a fine (level 5), 6 penalty points, and discretionary further disqualification; sentencing follows the Sentencing Council guideline"
+  expected_sources: [ukpga/1988/52/section/103, ukpga/1988/53/schedule/2, sentencing/guidelines/drive-whilst-disqualified-revised-2017]
   verified: false
 
 - id: rt-017
   question: "Do I have to wear a seat belt?"
   expected_answer: "Yes, if one is fitted in the seat, with only a few exceptions; you can be fined up to £500"
-  expected_sources: [ukpga/1988/52/section/14, govuk/seat-belts-law]
+  expected_sources: [ukpga/1988/52/section/14, govuk/seat-belts-law, ukpga/1988/53/schedule/2, sentencing/supplementary-information/approach-to-fines]
   verified: false
 
 - id: rt-018
@@ -127,25 +127,25 @@
 - id: rt-019
   question: "How do I appeal against a conviction in the magistrates' court?"
   expected_answer: "Appeal to the Crown Court: against conviction or sentence, or against sentence only if you pleaded guilty"
-  expected_sources: [ukpga/1980/43/section/108, govuk/appeal-magistrates-court-decision]
+  expected_sources: [ukpga/1980/43/section/108]
   verified: false
 
 - id: rt-020
   question: "Can I get my driving ban shortened?"
-  expected_answer: "You can apply to the court to remove the disqualification, but not before 2 years if the ban is under 4 years; a drink-drive ban can be reduced by completing an approved course if the court ordered that"
+  expected_answer: "Apply to the court that made the order: not before 2 years if the ban is under 4 years, half the ban if 4 to under 10 years, 5 years otherwise (s.42(3)). Separately, a ban of 12 months or more for a drink-driving or specified offence may be reduced by 3 months up to a quarter if the court orders a course and you complete it (s.34A)"
   expected_sources: [ukpga/1988/53/section/42, ukpga/1988/53/section/34A]
   verified: false
 
 - id: rt-021
   question: "What is the penalty for driving a car that isn't taxed?"
-  expected_answer: "Using or keeping an unlicensed vehicle is an offence"
+  expected_answer: "Using or keeping an unlicensed vehicle is an offence; the penalty is the greater of level 3 on the standard scale and five times the vehicle excise duty (level 4 in the case in s.29(3A))"
   expected_sources: [ukpga/1994/22/section/29]
   verified: false
 
 - id: rt-022
   question: "What are the legal limits for drugs when driving?"
   nation: England
-  expected_answer: "The limits for each specified controlled drug are set out in the Drug Driving (Specified Limits) (England and Wales) Regulations 2014"
+  expected_answer: "Blood limits in microgrammes per litre under regulation 2 (for the s.5A offence): amphetamine 250; benzoylecgonine 50; clonazepam 50; cocaine 10; delta-9-tetrahydrocannabinol 2; diazepam 550; flunitrazepam 300; ketamine 20; lorazepam 100; LSD 1; methadone 500; methylamphetamine 10; MDMA 10; 6-monoacetylmorphine 5; morphine 80; oxazepam 300; temazepam 1000"
   expected_sources: [uksi/2014/2868/regulation/2, ukpga/1988/52/section/5A]
   verified: false
 
@@ -160,7 +160,7 @@
   question: "What is the drink drive limit?"
   nation: Northern Ireland
   expected_answer: "35 microgrammes of alcohol in 100 millilitres of breath, 80 milligrammes in 100 millilitres of blood, or 107 milligrammes in 100 millilitres of urine"
-  expected_sources: [nisi/1995/2994/article/13, nisi/1995/2994/article/16]
+  expected_sources: [nisi/1995/2994/article/13, nisi/1995/2994/article/16, govuk/drink-drive-limit]
   verified: false
 
 - id: rt-025
@@ -194,14 +194,14 @@
 - id: rt-029
   question: "How is the amount of a fixed penalty decided?"
   nation: Northern Ireland
-  expected_answer: "Either the amount the Department prescribes by order, or one-half of the maximum fine on summary conviction, whichever is less"
+  expected_answer: "Either the amount the Department prescribes by order, or one-half of the maximum fine on summary conviction, whichever is less; increased by the offender levy where art 59(3) applies"
   expected_sources: [nisi/1996/1320/article/59]
   verified: false
 
 - id: rt-030
   question: "What are the speed limits on restricted roads?"
   nation: Northern Ireland
-  expected_answer: "Article 36 sets the general speed limit on restricted roads in Northern Ireland"
+  expected_answer: "30 miles per hour on a restricted road (Art 36(1)); the Department may change the limit by order (36(2)) and may disapply it at set times or places (36(3))"
   expected_sources: [nisi/1997/276/article/36]
   verified: false
 
@@ -216,20 +216,20 @@
 - id: rt-032
   question: "How long do I have to pay a fine and can I pay in instalments?"
   nation: Scotland
-  expected_answer: "The court must allow at least seven days to pay the fine or the first instalment"
+  expected_answer: "Unless an exception in s.214(2) applies, the court must allow at least seven days to pay the fine or the first instalment; the court may order payment by instalments (s.214(8)) and may allow further time (s.214(7), (9))"
   expected_sources: [ukpga/1995/46/section/214]
   verified: false
 
 - id: rt-033
   question: "How do I appeal a conviction in a Scottish summary case?"
   nation: Scotland
-  expected_answer: "By application for a stated case, made within one week of the final determination of the proceedings"
-  expected_sources: [ukpga/1995/46/section/176]
+  expected_answer: "An appeal against conviction in summary proceedings lies to the Sheriff Appeal Court with leave (s.175(2)(a)); it is by application for a stated case made within one week of the final determination of the proceedings (s.175(7), s.176(1))"
+  expected_sources: [ukpga/1995/46/section/176, ukpga/1995/46/section/175]
   verified: false
 
 - id: rt-034
   question: "How long after an offence can the prosecution start?"
   nation: Scotland
-  expected_answer: "Proceedings for offences to which section 136 applies must start within six months after the contravention"
+  expected_answer: "Proceedings for offences to which section 136 applies must start within six months after the contravention, unless the enactment fixes a different time limit"
   expected_sources: [ukpga/1995/46/section/136]
   verified: false
