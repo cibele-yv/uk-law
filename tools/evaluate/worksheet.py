@@ -21,36 +21,45 @@ MAX_LINES = 60
 
 def split_front_matter(text: str) -> tuple[dict, str]:
     m = re.match(r"---\n(.*?)\n---\n(.*)", text, re.S)
-    return (yaml.safe_load(m.group(1)), m.group(2).strip()) if m else ({}, text)
+    if not m:
+        return {}, text
+    try:
+        meta = yaml.safe_load(m.group(1))
+    except yaml.YAMLError:
+        return {}, text
+    return (meta if isinstance(meta, dict) else {}), m.group(2).strip()
 
 
-def source_path(area_root: Path, unit_id: str) -> Path | None:
-    hits = list(area_root.glob(f"**/{unit_id.replace('/section/', '/section-').replace('/schedule/', '/schedule-').replace('/article/', '/article-').replace('/regulation/', '/regulation-').replace('/rule/', '/rule-')}/current.md"))
-    return hits[0] if hits else None
+_ID_INDEX: dict[str, Path] | None = None
 
 
 def find_current(unit_id: str) -> Path | None:
-    root = Path("data")
-    for sub in ("legislation", "govuk/guidance", "sentencing", "highway-code"):
-        p = source_path(root / sub, unit_id) if (root / sub).exists() else None
-        if p:
-            return p
-    # fall back: match on the id in the front matter
-    for p in root.rglob("current.md"):
-        if re.search(rf"^id: {re.escape(unit_id)}$", p.read_text(encoding="utf-8")[:600], re.M):
-            return p
-    return None
+    """Path of the unit's current.md, found by the `id:` line in its front matter (scanned once)."""
+    global _ID_INDEX
+    if _ID_INDEX is None:
+        _ID_INDEX = {}
+        for p in Path("data").rglob("current.md"):
+            m = re.search(r"^id: (.+)$", p.read_text(encoding="utf-8")[:600], re.M)
+            if m:
+                _ID_INDEX.setdefault(m.group(1).strip(), p)
+    return _ID_INDEX.get(unit_id)
 
 
 def render(q: dict, index: Index, k: int) -> str:
     nation = q.get("nation")
-    hits = index.evidence(q["question"], k, codes=nation_codes(nation))
+    sources = q.get("expected_sources") or []
+    if isinstance(sources, str):
+        sources = [sources]
+    try:
+        hits = index.evidence(q.get("question", ""), k, codes=nation_codes(nation))
+    except ValueError as e:
+        return f"## {q.get('id')}: {q.get('question')}\n\n**ERROR:** {e}\n\n---\n"
     ranks = {h.id: i + 1 for i, h in enumerate(hits)}
-    out = [f"## {q['id']}: {q['question']}", ""]
+    out = [f"## {q.get('id')}: {q.get('question')}", ""]
     out += [f"- **Nation:** {nation or 'not given (England and Wales assumed)'}",
-            f"- **Draft expected answer:** {q['expected_answer']}",
+            f"- **Draft expected answer:** {q.get('expected_answer', 'MISSING')}",
             f"- **Currently marked verified:** {q.get('verified', False)}", ""]
-    for sid in q.get("expected_sources") or []:
+    for sid in sources:
         path = find_current(sid)
         out.append(f"### Expected source `{sid}`")
         if not path:
@@ -60,13 +69,17 @@ def render(q: dict, index: Index, k: int) -> str:
         v = meta.get("version") or {}
         out.append(f"{meta.get('title')} | level: {meta.get('level')} | extent: {','.join(meta.get('extent') or [])} "
                    f"({meta.get('extent_basis')}) | as at {v.get('valid_from')} | unapplied changes: {meta.get('unapplied_changes')}")
+        if meta.get("extent_basis") == "assumed":
+            out.append(f"Extent is ASSUMED, not stated: {meta.get('extent_evidence') or 'no evidence recorded'}")
         out.append(f"URL: {(meta.get('source') or {}).get('url')}")
-        out.append(f"Search rank for this question: {('#%d' % ranks[sid]) if sid in ranks else 'NOT RETURNED'}")
+        out.append(f"Search rank for this question (includes linked units, not only search hits): {('#%d' % ranks[sid]) if sid in ranks else 'NOT RETURNED'}")
         lines = body.splitlines()
         shown = "\n".join(lines[:MAX_LINES]) + (f"\n[... {len(lines) - MAX_LINES} more lines in {path.as_posix()}]" if len(lines) > MAX_LINES else "")
         out += ["", "````text", shown, "````", ""]
-    extra = [h.id for h in hits if h.id not in (q.get("expected_sources") or [])][:6]
-    out += [f"**Also returned by search (not listed as expected):** {', '.join(f'`{e}`' for e in extra) or 'none'}", "",
+    all_extra = [h.id for h in hits if h.id not in sources]
+    extra = all_extra[:6]
+    more = f" (first 6 of {len(all_extra)}; run search for the rest)" if len(all_extra) > 6 else ""
+    out += [f"**Also returned by search (not listed as expected){more}:** {', '.join(f'`{e}`' for e in extra) or 'none'}", "",
             "**Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):",
             "- [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)",
             "- [ ] No expected-answer detail comes from outside the quoted sources",
@@ -86,8 +99,15 @@ def main() -> int:
     args = ap.parse_args()
 
     args.out = args.out or Path(f"docs/VERIFY-{args.area}.md")
+    if args.out.name == "questions.yaml":
+        ap.error("--out must not be a questions.yaml file")
     wanted = set(args.ids.split(",")) if args.ids else None
-    qs = [q for _, q in load_questions(args.area) if (q["id"] in wanted if wanted else not q.get("verified"))]
+    allq = [q for _, q in load_questions(args.area)]
+    if not allq:
+        ap.error(f"no questions found for area {args.area!r}")
+    if wanted and (missing := wanted - {q.get("id") for q in allq}):
+        ap.error(f"unknown question ids: {', '.join(sorted(missing))}")
+    qs = [q for q in allq if (q.get("id") in wanted if wanted else q.get("verified") is not True)]
     index = Index()
     body = [f"# Verification worksheet: {args.area}", "",
             f"{len(qs)} questions. Generated by `python -m tools.evaluate.worksheet`; do not edit by hand.",
