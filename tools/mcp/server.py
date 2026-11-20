@@ -29,7 +29,11 @@ When answering a user's legal question:
 3. Cite the url of every source you rely on, and quote the words you rely on.
 4. State the "as at" date (valid_from) and say if unapplied_changes > 0: the text
    may not yet show recent amendments.
-5. If no returned source answers the question, say so plainly; do not guess.
+5. If no returned source answers the question, or answers only part of it, say plainly
+   which part this knowledge base cannot answer; do not guess or fill the gap from
+   memory, and for that part suggest a solicitor or Citizens Advice. Check every figure,
+   time limit and amount you state against the quoted text of a returned source.
+   Where the only support is GOV.UK guidance (not law), say so.
    Where a person lives matters: England, Wales, Scotland and Northern Ireland differ.
    Pass `nation` when you know it; if you do not and it could change the answer, ask,
    or state that you are assuming England and Wales. Never apply England and Wales
@@ -59,6 +63,15 @@ def _note(nation: str | None, hits: list) -> str:
                 "which nation they are in." + caution)
     return (("" if count else "Nothing found for this nation: say so.") + caution).strip()
 
+
+ANSWER_CHECK = (
+    "Before answering, check each fact you will state (a figure, time limit, amount, number of points, or who "
+    "it applies to) against the quoted text of a returned source. If the sources do not state a fact the "
+    "question needs, or cover only part of it, say plainly which part this knowledge base cannot answer, do "
+    "not fill it from memory, and recommend a solicitor or Citizens Advice for that part. If an excerpt is cut "
+    "off or a source refers to a rule that was not returned, call get_provision or search for it first, and "
+    "say so if it is still not found. If the only support is GOV.UK guidance, not law, say that."
+)
 
 PARTIAL = {
     "S": (
@@ -121,6 +134,7 @@ def get_evidence(question: str, nation: str | None = None, k: int = 6, k_guidanc
         "nation": nation or "not given: England and Wales assumed",
         "count": len(hits),
         "note": _note(nation, hits),
+        "answer_check": ANSWER_CHECK,
         "sources": [h.to_dict() for h in hits],
     }
 

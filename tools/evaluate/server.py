@@ -24,6 +24,11 @@ def checks():
     yield "England does not get the Scottish limit", "ssi/2014/328/regulation/2" not in ids(q, "England")
     yield "Northern Ireland gets its own Order", "nisi/1995/2994/article/16" in ids(q, "Northern Ireland")
     yield "Wales does not get the Northern Ireland Order", "nisi/1995/2994/article/16" not in ids(q, "Wales")
+    for nation in (None, "Wales", "Scotland", "Northern Ireland"):
+        r = server.get_evidence("How much is a speeding fine?", nation)
+        yield f"{nation or 'no nation'}: answer_check tells the model to refer unanswered parts to a solicitor",             "solicitor" in r["answer_check"] and "cannot answer" in r["answer_check"]
+    yield "answer_check comes before the sources", list(server.get_evidence("speed limit"))[-1] == "sources"
+    yield "instructions require a solicitor referral for unanswered parts",         "solicitor" in server.INSTRUCTIONS.split("5.")[1].split("6.")[0]
     yield "unknown nation is an error", "error" in server.get_evidence("speed limit", "France")
 
 
