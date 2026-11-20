@@ -154,3 +154,129 @@ units:
   - id: sentencing/guidelines/driving-disqualification                                     # disqualification in the magistrates' court
   - id: sentencing/supplementary-information/approach-to-fines                             # fine bands A-F, means
   - id: sentencing/supplementary-information/road-traffic-offences-disqualification       # totting up, exceptional hardship
+
+  # --- Coverage round, November 2026: common topics that had no unit ---
+  # Road Traffic Act 1988
+  - id: ukpga/1988/52/section/2B        # Causing death by careless, or inconsiderate, driving
+  - id: ukpga/1988/52/section/3ZA       # Meaning of careless, or inconsiderate, driving
+  - id: ukpga/1988/52/section/3ZB       # Causing death by driving: unlicensed or uninsured drivers
+  - id: ukpga/1988/52/section/11        # Interpretation of sections 4 to 10 (the prescribed alcohol limit)
+  - id: ukpga/1988/52/section/14        # Seat belts: adults
+  - id: ukpga/1988/52/section/15        # Restriction on carrying children not wearing seat belts
+  - id: ukpga/1988/52/section/47        # Obligatory test certificates (MOT)
+  - id: ukpga/1988/52/section/103       # Obtaining licence, or driving, while disqualified
+  - id: ukpga/1988/52/section/144A      # Offence of keeping vehicle which does not meet insurance requirements
+  - id: ukpga/1988/52/section/165A      # Power to seize vehicles driven without licence or insurance
+  # Road Traffic Offenders Act 1988
+  - id: ukpga/1988/53/section/34A       # Reduced disqualification for attendance on courses
+  - id: ukpga/1988/53/section/42        # Removal of disqualification
+  # Vehicle Excise and Registration Act 1994
+  - id: ukpga/1994/22/section/29        # Penalty for using or keeping unlicensed vehicle
+  # Magistrates' Courts Act 1980
+  - id: ukpga/1980/43/section/16A       # Trial by single justice on the papers
+  - id: ukpga/1980/43/section/108       # Right of appeal to the Crown Court
+  - id: ukpga/1980/43/section/142       # Power of magistrates' court to re-open cases to rectify mistakes etc
+  # Drug Driving (Specified Limits) (England and Wales) Regulations 2014
+  - id: uksi/2014/2868/regulation/2     # Specified controlled drugs and specified limits
+  # Road Traffic Regulation Act 1984
+  - id: ukpga/1984/27/schedule/6        # Speed limits for vehicles of certain classes
+  # Sentencing Council
+  - id: sentencing/guidelines/drive-whilst-disqualified-revised-2017
+  # GOV.UK guidance
+  - id: govuk/seat-belts-law
+  - id: govuk/drink-drive-limit
+  - id: govuk/getting-an-mot
+  - id: govuk/appeal-magistrates-court-decision
+
+  # --- Northern Ireland: its own Orders in Council (extent NI). Mirrors the England and Wales list above ---
+  # nisi/1995/2994
+  - id: nisi/1995/2994/article/9                   # Causing death, or grievous bodily injury, by dangerous driving
+  - id: nisi/1995/2994/article/10                  # Dangerous driving
+  - id: nisi/1995/2994/article/11                  # Meaning of dangerous driving
+  - id: nisi/1995/2994/article/11A                 # Causing death or grievous bodily injury by careless or inconsiderate driving
+  - id: nisi/1995/2994/article/12                  # Careless, and inconsiderate, driving
+  - id: nisi/1995/2994/article/12A                 # Meaning of careless, or inconsiderate, driving
+  - id: nisi/1995/2994/article/12B                 # Causing death or grievous bodily injury by driving: unlicensed, disqualified or uninsured driver
+  - id: nisi/1995/2994/article/13                  # Interpretation of Articles 14 to 21
+  - id: nisi/1995/2994/article/14                  # Causing death, or grievous bodily injury, by careless driving when under influence of drink or drugs
+  - id: nisi/1995/2994/article/15                  # Driving, or being in charge, when under influence of drink or drugs
+  - id: nisi/1995/2994/article/16                  # Driving, or being in charge of, a motor vehicle with alcohol concentration above prescribed limit
+  - id: nisi/1995/2994/article/17                  # Power to administer preliminary tests
+  - id: nisi/1995/2994/article/18                  # Provision of specimens for analysis
+  - id: nisi/1995/2994/article/23                  # Seat belts: adults
+  - id: nisi/1995/2994/article/24                  # Restriction on carrying children not wearing seat belts in motor vehicles
+  - id: nisi/1995/2994/article/49                  # Contravention of directions
+  - id: nisi/1995/2994/article/50                  # Contravention of traffic signs
+  - id: nisi/1995/2994/article/54                  # Using vehicle in dangerous condition etc.
+  - id: nisi/1995/2994/article/56A                 # Breach of requirements as to control of vehicle, mobile telephones etc.
+  - id: nisi/1995/2994/article/63                  # Obligatory test certificates
+  # nisi/1996/1320
+  - id: nisi/1996/1320/article/3                   # Meaning of “offence involving obligatory endorsement”
+  - id: nisi/1996/1320/article/5                   # Requirement of warning etc. of prosecutions for certain offences
+  - id: nisi/1996/1320/article/6                   # Requirement of warning etc: supplementary
+  - id: nisi/1996/1320/article/13                  # Mode of trial
+  - id: nisi/1996/1320/article/30                  # Penalty points to be attributed to an offence
+  - id: nisi/1996/1320/article/31                  # Penalty points to be taken into account on conviction
+  - id: nisi/1996/1320/article/35                  # Disqualification for certain offences
+  - id: nisi/1996/1320/article/36                  # Reduced disqualification period for attendance on courses
+  - id: nisi/1996/1320/article/40                  # Disqualification for repeated offences
+  - id: nisi/1996/1320/article/41                  # Disqualification until test is passed
+  - id: nisi/1996/1320/article/47                  # Removal of disqualification
+  - id: nisi/1996/1320/article/49                  # Endorsement of licences
+  - id: nisi/1996/1320/article/57                  # Fixed penalty offences
+  - id: nisi/1996/1320/article/58                  # Fixed penalty notices
+  - id: nisi/1996/1320/article/59                  # Amount of fixed penalty
+  - id: nisi/1996/1320/article/63                  # Endorsement of counterparts without hearings
+  - id: nisi/1996/1320/article/76                  # Registration of sums payable in default
+  - id: nisi/1996/1320/article/77                  # Notices on-the-spot etc.: when registration and endorsement invalid
+  - id: nisi/1996/1320/article/80                  # Issue of conditional offer
+  - id: nisi/1996/1320/schedule/1                  # SCHEDULE 1 PROSECUTION AND PUNISHMENT OF OFFENCES
+  # nisi/1998/1074
+  - id: nisi/1998/1074/article/3                   # Probationary period for newly qualified drivers
+  - id: nisi/1998/1074/article/4                   # Surrender of licences
+  - id: nisi/1998/1074/article/5                   # Revocation of licences
+  # nisi/1997/276
+  - id: nisi/1997/276/article/36                   # General speed limit on restricted roads
+  - id: nisi/1997/276/article/37                   # Restricted roads
+  - id: nisi/1997/276/article/38                   # Speed limits on roads other than restricted roads
+  - id: nisi/1997/276/article/39                   # Speed limits for particular classes of vehicles
+  - id: nisi/1997/276/article/41                   # Traffic signs for indicating speed restrictions
+  - id: nisi/1997/276/article/42                   # Exemption for fire engines, etc.
+  - id: nisi/1997/276/article/43                   # Contravening speed limit
+  # nisi/1981/154
+  - id: nisi/1981/154/article/3                    # Drivers of motor vehicles to have driving licences
+  - id: nisi/1981/154/article/90                   # Users of motor vehicles to be insured or secured against third-party risks
+  - id: nisi/1981/154/article/91A                  # Offence of keeping vehicle which does not meet insurance requirements
+  - id: nisi/1981/154/article/167                  # Driving a motor vehicle, or causing or permitting a person to drive a motor vehicle, while disqualified
+  - id: nisi/1981/154/article/168A                 # Applying for or obtaining a driving licence, or driving, while disqualified
+  - id: nisi/1981/154/article/175                  # Duties on occurrence of an accident caused by presence of a mechanically propelled vehicle
+  - id: nisi/1981/154/article/177                  # Identification of drivers or owners of, and passengers in, vehicles
+  - id: nisi/1981/154/article/180                  # Enforcement powers of constable
+  - id: nisi/1981/154/article/180B                 # Power to seize vehicles driven without insurance
+  # nisi/1981/1675
+  - id: nisi/1981/1675/article/19                  # Time within which complaint charging offence must be made to give jurisdiction
+  - id: nisi/1981/1675/article/20                  # Issue of summons to accused or warrant for his arrest
+  - id: nisi/1981/1675/article/24                  # Non-appearance of accused: plea of guilty
+  - id: nisi/1981/1675/article/91                  # Payment of sums adjudged to be paid by a conviction
+  - id: nisi/1981/1675/article/92                  # Enforcing payment of a sum adjudged to be paid by a conviction
+  - id: nisi/1981/1675/article/93                  # Restrictions on power to order immediate committal in default of payment of a sum adjudged to be paid by a conviction
+  - id: nisi/1981/1675/article/140                 # Appeals against conviction or sentence, etc.
+  - id: nisi/1981/1675/article/158A                # Power of magistrates' court to re-open cases to rectify mistakes etc.
+
+  # --- Scotland: court procedure and fines (the road traffic Acts already cover Great Britain above). Criminal Procedure (Scotland) Act 1995 and the Scottish drink drive limit ---
+  # ukpga/1995/46
+  - id: ukpga/1995/46/section/77                   # Plea of guilty.
+  - id: ukpga/1995/46/section/136                  # Time limit for certain offences.
+  - id: ukpga/1995/46/section/136B                 # Time limits where fixed penalty offer etc. made
+  - id: ukpga/1995/46/section/176                  # Stated case: manner and time of appeal.
+  - id: ukpga/1995/46/section/211                  # Fines.
+  - id: ukpga/1995/46/section/212                  # Fines in summary proceedings.
+  - id: ukpga/1995/46/section/213                  # Remission of fines.
+  - id: ukpga/1995/46/section/214                  # Fines: time for payment and payment by instalments.
+  - id: ukpga/1995/46/section/215                  # Application for further time to pay fine.
+  - id: ukpga/1995/46/section/219                  # Fines: periods of imprisonment for non-payment.
+  - id: ukpga/1995/46/section/226A                 # Fines enforcement officers
+  - id: ukpga/1995/46/section/226C                 # Variation for further time to pay
+  # ssi/2014/328
+  - id: ssi/2014/328/regulation/2                  # Prescription of proportion of alcohol
+  - id: ssi/2014/328/regulation/3                  # Proportion of alcohol for replacement of breath specimen

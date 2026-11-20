@@ -1,0 +1,61 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/ssi/2014/328" IdURI="http://www.legislation.gov.uk/id/ssi/2014/328" NumberOfProvisions="3" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" xml:lang="en" SchemaVersion="1.0" RestrictExtent="S" RestrictStartDate="2014-12-05"><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/ssi/2014/328/regulation/2</dc:identifier><dc:title>The Road Traffic Act 1988 (Prescribed Limit) (Scotland) Regulations 2014</dc:title><dc:language>en</dc:language><dc:subject scheme="SIheading">ROAD TRAFFIC</dc:subject><dc:publisher>Statute Law Database</dc:publisher><dc:modified>2024-03-13</dc:modified><dc:contributor>Expert Participation</dc:contributor><dct:valid>2014-12-05</dct:valid>
+					<dc:description>These Regulations relate to the limits on the proportion of alcohol present in the breath, blood and urine set by the Road Traffic Act 1988. Regulation 2 prescribes new, lower limits for the purpose of the definition of “the prescribed limit” in section 11(2) as it applies in relation to driving, attempting to drive, or being in charge of a vehicle in Scotland. Regulation 3 makes a consequential amendment to section 8(2) in relation to the circumstances in which a person can elect to have a specimen of breath replaced with a specimen of blood or urine.</dc:description>
+					<atom:link rel="self" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/ssi/2014/328/resources" title="More Resources"/>
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/policy-note" href="http://www.legislation.gov.uk/ssi/2014/328/policy-note" title="Policy Note"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/policy-note/toc" href="http://www.legislation.gov.uk/ssi/2014/328/policy-note/contents" title="Policy Note Table of Contents"/>
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/ssi/2014/328" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/ssi/2014/328/introduction" title="introduction"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/signature" href="http://www.legislation.gov.uk/ssi/2014/328/signature" title="signature"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/note" href="http://www.legislation.gov.uk/ssi/2014/328/note" title="note"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/ssi/2014/328/body" title="body"/>
+					
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/data.rdf" title="RDF/XML"/><atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/data.html" title="HTML5 snippet"/>
+
+					
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/ssi/2014/328/contents" title="Table of Contents"/>
+					
+					<atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/made" title="made"/><atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/2014-12-05" title="2014-12-05"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/supersedes" href="http://www.legislation.gov.uk/id/sdsi/2014/9780111024478" title="The Road Traffic Act 1988 (Prescribed Limit) (Scotland) Regulations 2014"/>
+					<atom:link rel="up" href="http://www.legislation.gov.uk/ssi/2014/328" title="Entire legislation"/><atom:link rel="prev" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/1" title="Provision; Regulation 1"/><atom:link rel="prevInForce" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/1" title="Provision; Regulation 1"/><atom:link rel="next" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/3" title="Provision; Regulation 3"/><atom:link rel="nextInForce" href="http://www.legislation.gov.uk/ssi/2014/328/regulation/3" title="Provision; Regulation 3"/>
+					<ukm:SecondaryMetadata><ukm:DocumentClassification><ukm:DocumentCategory Value="secondary"/><ukm:DocumentMainType Value="ScottishStatutoryInstrument"/><ukm:DocumentStatus Value="revised"/><ukm:DocumentMinorType Value="regulation"/></ukm:DocumentClassification><ukm:Year Value="2014"/><ukm:Number Value="328"/><ukm:Made Date="2014-11-20"/><ukm:ComingIntoForce>
+<ukm:DateTime Date="2014-12-05"/></ukm:ComingIntoForce><ukm:ISBN Value="9780111025192"/></ukm:SecondaryMetadata>
+					<ukm:Supersedes URI="http://www.legislation.gov.uk/id/sdsi/2014/9780111024478"><dc:title>The Road Traffic Act 1988 (Prescribed Limit) (Scotland) Regulations 2014</dc:title><ukm:DocumentMainType Value="ScottishDraftStatutoryInstrument"/><ukm:Year Value="2014"/><ukm:ISBN Value="9780111024478"/></ukm:Supersedes>
+
+                    
+									<ukm:Notes><ukm:Note IdURI="http://www.legislation.gov.uk/id/ssi/2014/328/notes"/><ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/ssi/2014/328/pdfs/ssipn_20140328_en.pdf" Date="2014-11-24" Title="Policy Note" Size="42615"/></ukm:Alternatives>       
+								</ukm:Notes> 
+					<ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/ssi/2014/328/pdfs/ssi_20140328_en.pdf" Date="2014-11-24" Size="32526"/></ukm:Alternatives><ukm:OtherDocuments><ukm:OtherDocument URI="http://www.legislation.gov.uk/ssi/2014/328/pdfs/ssiod_20140328_en.pdf" Date="2014-11-24" Title="Financial Note" Size="54808"/></ukm:OtherDocuments>
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="3"/>
+									<ukm:BodyParagraphs Value="3"/>
+									<ukm:ScheduleParagraphs Value="0"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="0"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Secondary><Body DocumentURI="http://www.legislation.gov.uk/ssi/2014/328/body" IdURI="http://www.legislation.gov.uk/id/ssi/2014/328/body" NumberOfProvisions="3" RestrictExtent="S" RestrictStartDate="2014-12-05"><P1group RestrictExtent="S" RestrictStartDate="2014-12-05"><Title>Prescription of proportion of alcohol</Title><P1 DocumentURI="http://www.legislation.gov.uk/ssi/2014/328/regulation/2" IdURI="http://www.legislation.gov.uk/id/ssi/2014/328/regulation/2" id="regulation-2">
+<Pnumber><CommentaryRef Ref="key-3fe4e4970bb278baa7d8be6e8ac1ff41"/>2</Pnumber>
+<P1para>
+<Text>For the purpose of the definition of “the prescribed limit” in section 11(2) of The Road Traffic Act 1988, the prescribed proportion in relation to driving or attempting to drive, or being in charge of a vehicle, in Scotland, is—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/a" IdURI="http://www.legislation.gov.uk/id/ssi/2014/328/regulation/2/a" id="regulation-2-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>22 microgrammes of alcohol in 100 millilitres of breath;</Text>
+</P3para></P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/b" IdURI="http://www.legislation.gov.uk/id/ssi/2014/328/regulation/2/b" id="regulation-2-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>50 milligrammes of alcohol in 100 millilitres of blood; or</Text>
+</P3para></P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ssi/2014/328/regulation/2/c" IdURI="http://www.legislation.gov.uk/id/ssi/2014/328/regulation/2/c" id="regulation-2-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>67 milligrammes of alcohol in 100 millilitres of urine.</Text>
+</P3para></P3>
+</P1para>
+</P1></P1group></Body></Secondary><Commentaries><Commentary Type="I" id="key-3fe4e4970bb278baa7d8be6e8ac1ff41"><Para><Text>Reg. 2  in force at 5.12.2014, see <CitationSubRef id="nc6022a26ea7c6565" SectionRef="regulation-1" URI="http://www.legislation.gov.uk/id/ssi/2014/328/regulation/1" Operative="true">reg. 1</CitationSubRef></Text></Para></Commentary></Commentaries></Legislation>

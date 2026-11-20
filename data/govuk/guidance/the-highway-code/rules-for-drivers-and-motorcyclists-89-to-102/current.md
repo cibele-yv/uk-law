@@ -20,10 +20,15 @@ unapplied_changes: 0
 relations:
   cites:
   - govuk/guidance/the-highway-code/annex-4-the-road-user-and-the-law
+  - ukpga/1988/52/section/11
+  - ukpga/1988/52/section/14
   - ukpga/1988/52/section/143
+  - ukpga/1988/52/section/15
   - ukpga/1988/52/section/4
+  - ukpga/1988/52/section/47
   - ukpga/1988/52/section/5
   - ukpga/1988/52/section/87
+  - ukpga/1994/22/section/29
   - uksi/1986/1078/regulation/100
 source:
   url: https://www.gov.uk/api/content/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102

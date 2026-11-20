@@ -1,0 +1,58 @@
+---
+id: ukpga/1988/52/section/14
+title: 'Seat belts: adults.'
+level: act
+binding: binding
+parent: ukpga/1988/52
+made_under: null
+extent:
+- E
+- W
+- S
+extent_basis: stated
+areas:
+- road-traffic
+version:
+  valid_from: '2020-12-31'
+  valid_to: null
+  status: in-force
+unapplied_changes: 0
+relations:
+  cites: []
+source:
+  url: https://www.legislation.gov.uk/ukpga/1988/52/section/14/data.xml
+  publisher: legislation.gov.uk
+  format: CLML XML
+  retrieved_at: '2026-11-16T17:19:16Z'
+  sha256: 9c4f36f11e7e744ae8968c085c106b5529f9269f0f609f41448fa19ff3aec7d9
+  licence: OGL-3.0
+---
+
+14 (1) The Secretary of State may make regulations requiring, subject to such exceptions as may be prescribed, persons who are driving or riding in motor vehicles on a road to wear seat belts of such description as may be prescribed.
+
+(2) Regulations under this section—
+  (a) may make different provision in relation to different classes of vehicles, different descriptions of persons and different circumstances,
+  (aa) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  (b) shall include exceptions for—
+    (i) the driver of or a passenger in a motor vehicle constructed or adapted for carrying goods, while on a journey which does not exceed the prescribed distance and which is undertaken for the purpose of delivering or collecting any thing,
+    (ii) the drivers of vehicles while performing a manoeuvre which includes reversing,
+    (iii) any person holding a valid certificate signed by a medical practitioner to the effect that it is inadvisable on medical grounds for him to wear a seat belt,
+  (bb) may include an exception for any person holding a certificate to the like effect as that mentioned in paragraph (b)(iii) above which was issued in a member State ... and which, under the law of that State, is valid for purposes corresponding to those of this section,
+  (c) may make any prescribed exceptions subject to such conditions as may be prescribed, and
+  (d) may prescribe cases in which a fee of a prescribed amount may be charged on an application for any certificate required as a condition of any prescribed exception.
+
+(3) A person who drives or rides in a motor vehicle in contravention of regulations under this section is guilty of an offence; but, notwithstanding any enactment or rule of law, no person other than the person actually committing the contravention is guilty of an offence by reason of the contravention.
+
+(4) If the holder of any such certificate as is referred to in subsection (2)(b) or (bb)above is informed by a constable that he may be prosecuted for an offence under subsection (3) above, he is not in proceedings for that offence entitled to rely on the exception afforded to him by the certificate unless—
+  (a) it is produced to the constable at the time he is so informed, or
+  (b) it is produced—
+    (i) within seven days after the date on which he is so informed, or
+    (ii) as soon as is reasonably practicable,
+  at such police station as he may have specified to the constable, or
+  (c) where it is not produced at such police station, it is not reasonably practicable for it to be produced there before the day on which the proceedings are commenced.
+
+(5) For the purposes of subsection (4) above, the laying of the information or, in Scotland, the service of the complaint on the accused shall be treated as the commencement of the proceedings.
+
+(6) Regulations under this section requiring the wearing of seat belts by persons riding in motor vehicles shall not apply to children under the age of fourteen years.
+
+(7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .

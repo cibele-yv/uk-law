@@ -97,3 +97,139 @@
   expected_answer: "£100 fixed penalty; a fine up to level 3 on the standard scale if it goes to court"
   expected_sources: [ukpga/1984/27/section/89, ukpga/1988/53/schedule/2, uksi/2000/2792/schedule]
   verified: false
+
+# --- Coverage round, November 2026. Drafts written from the fetched text; all unverified. ---
+- id: rt-015
+  question: "What is the drink drive limit?"
+  nation: England
+  expected_answer: "35 microgrammes of alcohol in 100 millilitres of breath, 80 milligrammes in 100 millilitres of blood, or 107 milligrammes in 100 millilitres of urine"
+  expected_sources: [ukpga/1988/52/section/11, govuk/drink-drive-limit]
+  verified: false
+
+- id: rt-016
+  question: "What happens if I drive while I'm banned?"
+  expected_answer: "Driving a motor vehicle on a road while disqualified is an offence; the court sentences under the Sentencing Council guideline"
+  expected_sources: [ukpga/1988/52/section/103, sentencing/guidelines/drive-whilst-disqualified-revised-2017]
+  verified: false
+
+- id: rt-017
+  question: "Do I have to wear a seat belt?"
+  expected_answer: "Yes, if one is fitted in the seat, with only a few exceptions; you can be fined up to £500"
+  expected_sources: [ukpga/1988/52/section/14, govuk/seat-belts-law]
+  verified: false
+
+- id: rt-018
+  question: "Can I drive my car without an MOT?"
+  expected_answer: "Using a vehicle on a road with no test certificate issued within the appropriate period is an offence"
+  expected_sources: [ukpga/1988/52/section/47, govuk/getting-an-mot]
+  verified: false
+
+- id: rt-019
+  question: "How do I appeal against a conviction in the magistrates' court?"
+  expected_answer: "Appeal to the Crown Court: against conviction or sentence, or against sentence only if you pleaded guilty"
+  expected_sources: [ukpga/1980/43/section/108, govuk/appeal-magistrates-court-decision]
+  verified: false
+
+- id: rt-020
+  question: "Can I get my driving ban shortened?"
+  expected_answer: "You can apply to the court to remove the disqualification, but not before 2 years if the ban is under 4 years; a drink-drive ban can be reduced by completing an approved course if the court ordered that"
+  expected_sources: [ukpga/1988/53/section/42, ukpga/1988/53/section/34A]
+  verified: false
+
+- id: rt-021
+  question: "What is the penalty for driving a car that isn't taxed?"
+  expected_answer: "Using or keeping an unlicensed vehicle is an offence"
+  expected_sources: [ukpga/1994/22/section/29]
+  verified: false
+
+- id: rt-022
+  question: "What are the legal limits for drugs when driving?"
+  nation: England
+  expected_answer: "The limits for each specified controlled drug are set out in the Drug Driving (Specified Limits) (England and Wales) Regulations 2014"
+  expected_sources: [uksi/2014/2868/regulation/2, ukpga/1988/52/section/5A]
+  verified: false
+
+- id: rt-023
+  question: "The magistrates' court made a mistake in my case. Can it be reopened?"
+  expected_answer: "A magistrates' court may vary or rescind a sentence or order, or direct a rehearing, if it is in the interests of justice"
+  expected_sources: [ukpga/1980/43/section/142]
+  verified: false
+
+# --- Northern Ireland (legislation only), November 2026. Drafts from the fetched text; all unverified. ---
+- id: rt-024
+  question: "What is the drink drive limit?"
+  nation: Northern Ireland
+  expected_answer: "35 microgrammes of alcohol in 100 millilitres of breath, 80 milligrammes in 100 millilitres of blood, or 107 milligrammes in 100 millilitres of urine"
+  expected_sources: [nisi/1995/2994/article/13, nisi/1995/2994/article/16]
+  verified: false
+
+- id: rt-025
+  question: "What happens if I drive while I'm banned?"
+  nation: Northern Ireland
+  expected_answer: "Applying for or obtaining a licence, or driving a motor vehicle on a road, while disqualified is an offence"
+  expected_sources: [nisi/1981/154/article/168A]
+  verified: false
+
+- id: rt-026
+  question: "How many points before I get banned?"
+  nation: Northern Ireland
+  expected_answer: "12 or more penalty points to be taken into account leads the court to disqualify for not less than the minimum period, unless there are grounds for mitigation"
+  expected_sources: [nisi/1996/1320/article/40]
+  verified: false
+
+- id: rt-027
+  question: "Is it illegal to drive without insurance?"
+  nation: Northern Ireland
+  expected_answer: "It is not lawful to use, or cause or permit another to use, a motor vehicle on a road or public place unless insurance or security is in force"
+  expected_sources: [nisi/1981/154/article/90]
+  verified: false
+
+- id: rt-028
+  question: "How do I appeal against a conviction in the magistrates' court?"
+  nation: Northern Ireland
+  expected_answer: "Appeal to the county court: against sentence whether or not you pleaded guilty, and against conviction if you did not plead guilty"
+  expected_sources: [nisi/1981/1675/article/140]
+  verified: false
+
+- id: rt-029
+  question: "How is the amount of a fixed penalty decided?"
+  nation: Northern Ireland
+  expected_answer: "Either the amount the Department prescribes by order, or one-half of the maximum fine on summary conviction, whichever is less"
+  expected_sources: [nisi/1996/1320/article/59]
+  verified: false
+
+- id: rt-030
+  question: "What are the speed limits on restricted roads?"
+  nation: Northern Ireland
+  expected_answer: "Article 36 sets the general speed limit on restricted roads in Northern Ireland"
+  expected_sources: [nisi/1997/276/article/36]
+  verified: false
+
+# --- Scotland (legislation only), November 2026. Drafts from the fetched text; all unverified. ---
+- id: rt-031
+  question: "What is the drink drive limit?"
+  nation: Scotland
+  expected_answer: "22 microgrammes of alcohol in 100 millilitres of breath, 50 milligrammes in 100 millilitres of blood, or 67 milligrammes in 100 millilitres of urine"
+  expected_sources: [ssi/2014/328/regulation/2]
+  verified: false
+
+- id: rt-032
+  question: "How long do I have to pay a fine and can I pay in instalments?"
+  nation: Scotland
+  expected_answer: "The court must allow at least seven days to pay the fine or the first instalment"
+  expected_sources: [ukpga/1995/46/section/214]
+  verified: false
+
+- id: rt-033
+  question: "How do I appeal a conviction in a Scottish summary case?"
+  nation: Scotland
+  expected_answer: "By application for a stated case, made within one week of the final determination of the proceedings"
+  expected_sources: [ukpga/1995/46/section/176]
+  verified: false
+
+- id: rt-034
+  question: "How long after an offence can the prosecution start?"
+  nation: Scotland
+  expected_answer: "Proceedings for offences to which section 136 applies must start within six months after the contravention"
+  expected_sources: [ukpga/1995/46/section/136]
+  verified: false
