@@ -14,7 +14,7 @@ Text is verbatim from `data/`; long units are cut at 60 lines (open the file nam
 ### Expected source `ukpga/1995/13/section/2`
 Persons to whom section 3(1) applies | level: act | extent: E,W,S (stated) | as at 2022-11-30 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1995/13/section/2/data.xml
-Search rank for this question: #2
+Search rank for this question (includes linked units, not only search hits): #2
 
 ````text
 2 (A1) Section 3(1) (revocation of licences) applies to a person who—
@@ -54,7 +54,7 @@ Search rank for this question: #2
 ### Expected source `ukpga/1995/13/section/1`
 Probationary period for newly qualified drivers. | level: act | extent: E,W,S (stated) | as at 2020-12-31 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1995/13/section/1/data.xml
-Search rank for this question: NOT RETURNED
+Search rank for this question (includes linked units, not only search hits): NOT RETURNED
 
 ````text
 1 (1) For the purposes of this Act, a person’s probationary period is, subject to section 7, the period of two years beginning with the day on which he becomes a qualified driver.
@@ -72,7 +72,7 @@ Search rank for this question: NOT RETURNED
 (4) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/52/section/164`, `ukpga/1988/53/section/29`, `sentencing/guidelines/driving-disqualification`, `sentencing/supplementary-information/road-traffic-offences-disqualification`, `sentencing/guidelines/careless-driving-drive-without-due-care-and-attention`, `govuk/guidance/the-highway-code/annex-8-safety-code-for-new-drivers`
+**Also returned by search (not listed as expected) (first 6 of 25; run search for the rest):** `ukpga/1988/52/section/164`, `ukpga/1988/53/section/29`, `sentencing/guidelines/driving-disqualification`, `sentencing/supplementary-information/road-traffic-offences-disqualification`, `sentencing/guidelines/careless-driving-drive-without-due-care-and-attention`, `govuk/guidance/the-highway-code/annex-8-safety-code-for-new-drivers`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -93,7 +93,7 @@ Search rank for this question: NOT RETURNED
 ### Expected source `ukpga/1988/53/schedule/2`
 Schedule 2: Prosecution and Punishment of Offences | level: act | extent: E,W,S (stated) | as at 2026-04-29 | unapplied changes: 23
 URL: https://www.legislation.gov.uk/ukpga/1988/53/schedule/2/data.xml
-Search rank for this question: #5
+Search rank for this question (includes linked units, not only search hits): #5
 
 ````text
 ### Part I Offences under the Traffic Acts
@@ -162,7 +162,7 @@ Search rank for this question: #5
 ### Expected source `sentencing/guidelines/speeding-revised-2017`
 Sentencing Council guideline: Speeding (Revised 2017) | level: guideline | extent: E,W (stated) | as at 2026-10-05 | unapplied changes: 0
 URL: https://www.sentencingcouncil.org.uk/guidelines/speeding-revised-2017/
-Search rank for this question: #7
+Search rank for this question (includes linked units, not only search hits): #7
 
 ````text
 Road Traffic Regulation Act 1984, s.89(1)
@@ -228,7 +228,7 @@ The starting point applies to all offenders irrespective of plea or previous con
 [... 105 more lines in data/sentencing/guidelines/speeding-revised-2017/current.md]
 ````
 
-**Also returned by search (not listed as expected):** `wsi/2022/800/article/2`, `uksi/2000/2792/schedule`, `ukpga/1984/27/schedule/6`, `wsi/2022/800/article/1`, `ukpga/2003/39/schedule/5`, `sentencing/guidelines/driving-disqualification`
+**Also returned by search (not listed as expected) (first 6 of 41; run search for the rest):** `wsi/2022/800/article/2`, `uksi/2000/2792/schedule`, `ukpga/1984/27/schedule/6`, `wsi/2022/800/article/1`, `ukpga/2003/39/schedule/5`, `sentencing/guidelines/driving-disqualification`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -249,7 +249,7 @@ The starting point applies to all offenders irrespective of plea or previous con
 ### Expected source `ukpga/1988/53/section/35`
 Disqualification for repeated offences. | level: act | extent: E,W,S (stated) | as at 2020-12-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/53/section/35/data.xml
-Search rank for this question: #5
+Search rank for this question (includes linked units, not only search hits): #5
 
 ````text
 35 (1) Where—
@@ -292,7 +292,7 @@ and a previous disqualification imposed on an offender is , subject to subsectio
 (7) This section is subject to section 48 of this Act.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/53/section/28`, `ukpga/1988/53/section/54`, `ukpga/1980/43/section/142`, `ukpga/1988/53/schedule/2`, `ukpga/1988/53/section/29`, `sentencing/guidelines/excess-alcohol-driveattempt-to-drive-revised-2017`
+**Also returned by search (not listed as expected) (first 6 of 36; run search for the rest):** `ukpga/1988/53/section/28`, `ukpga/1988/53/section/54`, `ukpga/1980/43/section/142`, `ukpga/1988/53/schedule/2`, `ukpga/1988/53/section/29`, `sentencing/guidelines/excess-alcohol-driveattempt-to-drive-revised-2017`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -313,7 +313,7 @@ and a previous disqualification imposed on an offender is , subject to subsectio
 ### Expected source `ukpga/1988/53/section/1`
 Requirement of warning etc. of prosecutions for certain offences. | level: act | extent: E,W,S (stated) | as at 2022-06-28 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/53/section/1/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 1 (1) Subject to section 2 of this Act, a person shall not be convicted of an offence to which this section applies unless—
@@ -343,7 +343,7 @@ Search rank for this question: #1
 (4) Schedule 1 to this Act shows the offences to which this section applies.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1980/43/section/127`, `uksi/2025/909/rule/44.2`, `ukpga/2003/39/schedule/5`, `uksi/2025/909/rule/24.9`, `ukpga/1980/43/section/82`, `sentencing/guidelines/dangerous-driving`
+**Also returned by search (not listed as expected) (first 6 of 51; run search for the rest):** `ukpga/1980/43/section/127`, `uksi/2025/909/rule/44.2`, `ukpga/2003/39/schedule/5`, `uksi/2025/909/rule/24.9`, `ukpga/1980/43/section/82`, `sentencing/guidelines/dangerous-driving`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -364,7 +364,7 @@ Search rank for this question: #1
 ### Expected source `ukpga/1988/52/section/172`
 Duty to give information as to identity of driver etc in certain circumstances. | level: act | extent: E,W,S (stated) | as at 2022-06-28 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/52/section/172/data.xml
-Search rank for this question: #5
+Search rank for this question (includes linked units, not only search hits): #5
 
 ````text
 172 (1) This section applies—
@@ -416,7 +416,7 @@ and references to the driver of a vehicle include references to the rider of a c
 ### Expected source `ukpga/1988/53/schedule/2`
 Schedule 2: Prosecution and Punishment of Offences | level: act | extent: E,W,S (stated) | as at 2026-04-29 | unapplied changes: 23
 URL: https://www.legislation.gov.uk/ukpga/1988/53/schedule/2/data.xml
-Search rank for this question: #15
+Search rank for this question (includes linked units, not only search hits): #15
 
 ````text
 ### Part I Offences under the Traffic Acts
@@ -482,7 +482,7 @@ Search rank for this question: #15
 [... 182 more lines in data/legislation/ukpga/1988/53/schedule-2/current.md]
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/53/section/54`, `ukpga/1988/52/section/170`, `ukpga/1994/22/section/29`, `ukpga/1988/53/section/69`, `ukpga/1988/53/section/2`, `sentencing/guidelines/driving-disqualification`
+**Also returned by search (not listed as expected) (first 6 of 41; run search for the rest):** `ukpga/1988/53/section/54`, `ukpga/1988/52/section/170`, `ukpga/1994/22/section/29`, `ukpga/1988/53/section/69`, `ukpga/1988/53/section/2`, `sentencing/guidelines/driving-disqualification`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -503,7 +503,7 @@ Search rank for this question: #15
 ### Expected source `ukpga/1980/43/section/14`
 Proceedings invalid where accused did not know of them. | level: act | extent: E,W (stated) | as at 2005-04-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1980/43/section/14/data.xml
-Search rank for this question: NOT RETURNED
+Search rank for this question (includes linked units, not only search hits): NOT RETURNED
 
 ````text
 14 (1) Where a summons has been issued under section 1 above and a magistrates’ court has begun to try the information to which the summons relates, then, if—
@@ -522,7 +522,7 @@ without prejudice to the validity of the information, the summons and all subseq
 ### Expected source `ukpga/1988/53/section/71`
 Registration of sums payable in default. | level: act | extent: E,W,S (stated) | as at 2009-04-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/53/section/71/data.xml
-Search rank for this question: #13
+Search rank for this question (includes linked units, not only search hits): #13
 
 ````text
 71 (1) Where, in England and Wales, the designated officer for a local justice area receives a registration certificate issued under section 70 of this Act in respect of any sum payable in default—
@@ -568,7 +568,7 @@ the fixed penalty clerk must register the sum payable in default for enforcement
   (b) the address which, with respect to the vehicle concerned, is the address recorded in the record kept under the Vehicle Excise and Registration Act 1994 as being that body’s address.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/53/section/52`, `ukpga/1988/53/section/72`, `ukpga/1988/53/section/69`, `uksi/2025/909/rule/29.4`, `ukpga/1988/53/section/54`, `ukpga/1988/53/section/75`
+**Also returned by search (not listed as expected) (first 6 of 30; run search for the rest):** `ukpga/1988/53/section/52`, `ukpga/1988/53/section/72`, `ukpga/1988/53/section/69`, `uksi/2025/909/rule/29.4`, `ukpga/1988/53/section/54`, `ukpga/1988/53/section/75`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -589,7 +589,7 @@ the fixed penalty clerk must register the sum payable in default for enforcement
 ### Expected source `uksi/1986/1078/regulation/110`
 Mobile telephones | level: si | extent: E,W,S (stated) | as at 2024-11-25 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/uksi/1986/1078/regulation/110/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 110 (1) No person shall drive a motor vehicle on a road if he is using—
@@ -658,7 +658,7 @@ at a time when the provisional licence holder is driving a motor vehicle on a ro
 ### Expected source `ukpga/1988/52/section/41D`
 Breach of requirements as to control of vehicle, mobile telephones etc. | level: act | extent: E,W,S (stated) | as at 2007-02-27 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/52/section/41D/data.xml
-Search rank for this question: #2
+Search rank for this question (includes linked units, not only search hits): #2
 
 ````text
 41D A person who contravenes or fails to comply with a construction and use requirement—
@@ -668,7 +668,7 @@ Search rank for this question: #2
 is guilty of an offence.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1994/22/section/29`, `ukpga/1988/53/section/75`, `ukpga/2003/39/schedule/5`, `ukpga/1988/53/section/54`, `sentencing/guidelines/dangerous-driving`, `sentencing/guidelines/use-of-mobile-telephone-while-driving`
+**Also returned by search (not listed as expected) (first 6 of 38; run search for the rest):** `ukpga/1994/22/section/29`, `ukpga/1988/53/section/75`, `ukpga/2003/39/schedule/5`, `ukpga/1988/53/section/54`, `sentencing/guidelines/dangerous-driving`, `sentencing/guidelines/use-of-mobile-telephone-while-driving`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -689,7 +689,7 @@ is guilty of an offence.
 ### Expected source `ukpga/1988/53/section/71`
 Registration of sums payable in default. | level: act | extent: E,W,S (stated) | as at 2009-04-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/53/section/71/data.xml
-Search rank for this question: #16
+Search rank for this question (includes linked units, not only search hits): #16
 
 ````text
 71 (1) Where, in England and Wales, the designated officer for a local justice area receives a registration certificate issued under section 70 of this Act in respect of any sum payable in default—
@@ -738,7 +738,7 @@ the fixed penalty clerk must register the sum payable in default for enforcement
 ### Expected source `uksi/2025/909/rule/29.4`
 Statutory declaration to avoid fine after fixed penalty notice | level: si | extent: E,W (stated) | as at 2026-02-23 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/uksi/2025/909/rule/29.4/data.xml
-Search rank for this question: #17
+Search rank for this question (includes linked units, not only search hits): #17
 
 ````text
 29.4 (1) This rule applies where—
@@ -767,7 +767,7 @@ Under rule 2.11 (Taking of statutory declarations by court officers) a court off
 ### Expected source `sentencing/supplementary-information/approach-to-fines`
 Sentencing Council: Approach to fines | level: guideline | extent: E,W (stated) | as at 2026-11-12 | unapplied changes: 0
 URL: https://www.sentencingcouncil.org.uk/supplementary-information/approach-to-fines/
-Search rank for this question: #7
+Search rank for this question (includes linked units, not only search hits): #7
 
 ````text
 Guideline users should be aware that the Equal Treatment Bench Book covers important aspects of fair treatment and disparity of outcomes for different groups in the criminal justice system. It provides guidance which sentencers are encouraged to take into account wherever applicable, to ensure that there is fairness for all involved in court proceedings.
@@ -836,7 +836,7 @@ Where:
 ### Expected source `uksi/2025/909/rule/30.5`
 Application to reduce a fine, vary payment terms or remit a courts charge | level: si | extent: E,W (stated) | as at 2026-04-06 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/uksi/2025/909/rule/30.5/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 30.5 (1) This rule applies where—
@@ -871,7 +871,7 @@ Under section 46 of the 2020 Act, a court must, at the times listed in sections 
 ### Expected source `govuk/pay-court-fine-online`
 Pay a court fine | level: guidance | extent: E,W (stated) | as at 2026-10-01 | unapplied changes: 0
 URL: https://www.gov.uk/api/content/pay-court-fine-online
-Search rank for this question: #12
+Search rank for this question (includes linked units, not only search hits): #12
 
 ````text
 The only service you can use to pay your court fine online, or by telephone using a credit or debit card.
@@ -920,7 +920,7 @@ Telephone: 0300 790 9901 (in England)
 Contact the Enforcement Office listed on the notice of fine to pay by direct debit, payment card or bank transfer.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/2003/39/schedule/5`, `ukpga/1988/53/section/73`, `ukpga/1980/43/section/85`, `ukpga/1980/43/section/75`, `ukpga/1988/53/section/72`, `sentencing/guidelines/speeding-revised-2017`
+**Also returned by search (not listed as expected) (first 6 of 26; run search for the rest):** `ukpga/2003/39/schedule/5`, `ukpga/1988/53/section/73`, `ukpga/1980/43/section/85`, `ukpga/1980/43/section/75`, `ukpga/1988/53/section/72`, `sentencing/guidelines/speeding-revised-2017`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -940,8 +940,9 @@ Contact the Enforcement Office listed on the notice of fine to pay by direct deb
 
 ### Expected source `wsi/2022/800/article/2`
 Lowering of the general speed limit for restricted roads | level: si | extent: W (assumed) | as at 2023-09-17 | unapplied changes: 0
+Extent is ASSUMED, not stated: inferred from the instrument type (made by that legislature); the XML has no territorial tag
 URL: https://www.legislation.gov.uk/wsi/2022/800/article/2/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 2 (1) The rate of speed fixed by section 81(1) of the Road Traffic Regulation Act 1984 (general speed limit for restricted roads) is reduced to 20 miles per hour.
@@ -952,7 +953,7 @@ Search rank for this question: #1
 ### Expected source `ukpga/1984/27/section/81`
 General speed limit for restricted roads. | level: act | extent: E,W,S (stated) | as at 2023-09-17 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1984/27/section/81/data.xml
-Search rank for this question: #14
+Search rank for this question (includes linked units, not only search hits): #14
 
 ````text
 81 (1) It shall not be lawful for a person to drive a motor vehicle on a restricted road at a speed exceeding 30 miles per hour.
@@ -969,7 +970,7 @@ Search rank for this question: #14
 (5) Before the Welsh Ministers or the Scottish Ministers make an order under subsection (2) they must consult with the Secretary of State.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1984/27/section/85`, `ukpga/1984/27/section/86`, `ukpga/1984/27/schedule/6`, `wsi/2022/800/article/1`, `ukpga/1984/27/section/84`, `sentencing/guidelines/fail-to-comply-with-traffic-sign-endorsable`
+**Also returned by search (not listed as expected) (first 6 of 27; run search for the rest):** `ukpga/1984/27/section/85`, `ukpga/1984/27/section/86`, `ukpga/1984/27/schedule/6`, `wsi/2022/800/article/1`, `ukpga/1984/27/section/84`, `sentencing/guidelines/fail-to-comply-with-traffic-sign-endorsable`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -990,7 +991,7 @@ Search rank for this question: #14
 ### Expected source `ukpga/1984/27/section/81`
 General speed limit for restricted roads. | level: act | extent: E,W,S (stated) | as at 2023-09-17 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1984/27/section/81/data.xml
-Search rank for this question: #6
+Search rank for this question (includes linked units, not only search hits): #6
 
 ````text
 81 (1) It shall not be lawful for a person to drive a motor vehicle on a restricted road at a speed exceeding 30 miles per hour.
@@ -1007,7 +1008,7 @@ Search rank for this question: #6
 (5) Before the Welsh Ministers or the Scottish Ministers make an order under subsection (2) they must consult with the Secretary of State.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1984/27/section/85`, `ukpga/1984/27/section/86`, `ukpga/1984/27/schedule/6`, `ukpga/1984/27/section/84`, `ukpga/1988/53/schedule/2`, `sentencing/guidelines/fail-to-comply-with-traffic-sign-endorsable`
+**Also returned by search (not listed as expected) (first 6 of 32; run search for the rest):** `ukpga/1984/27/section/85`, `ukpga/1984/27/section/86`, `ukpga/1984/27/schedule/6`, `ukpga/1984/27/section/84`, `ukpga/1988/53/schedule/2`, `sentencing/guidelines/fail-to-comply-with-traffic-sign-endorsable`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -1028,7 +1029,7 @@ Search rank for this question: #6
 ### Expected source `govuk/drug-driving-law`
 Drugs and driving: the law | level: guidance | extent: E,W,S (stated) | as at 2026-11-02 | unapplied changes: 0
 URL: https://www.gov.uk/api/content/drug-driving-law
-Search rank for this question: #9
+Search rank for this question (includes linked units, not only search hits): #9
 
 ````text
 It's illegal to drive if you're unfit to do so because you're on legal or illegal drugs, or you have certain levels of drugs or medicine in your blood
@@ -1094,7 +1095,7 @@ A conviction for drug driving also means:
 [... 2 more lines in data/govuk/drug-driving-law/current.md]
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/52/section/5A`, `ukpga/1988/52/section/3A`, `ukpga/1988/52/section/4`, `ukpga/1988/53/section/34`, `ukpga/1988/52/section/172`, `ukpga/1988/52/section/5`
+**Also returned by search (not listed as expected) (first 6 of 35; run search for the rest):** `ukpga/1988/52/section/5A`, `ukpga/1988/52/section/3A`, `ukpga/1988/52/section/4`, `ukpga/1988/53/section/34`, `ukpga/1988/52/section/172`, `ukpga/1988/52/section/5`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -1115,7 +1116,7 @@ A conviction for drug driving also means:
 ### Expected source `ukpga/1988/53/schedule/2`
 Schedule 2: Prosecution and Punishment of Offences | level: act | extent: E,W,S (stated) | as at 2026-04-29 | unapplied changes: 23
 URL: https://www.legislation.gov.uk/ukpga/1988/53/schedule/2/data.xml
-Search rank for this question: #3
+Search rank for this question (includes linked units, not only search hits): #3
 
 ````text
 ### Part I Offences under the Traffic Acts
@@ -1181,7 +1182,7 @@ Search rank for this question: #3
 [... 182 more lines in data/legislation/ukpga/1988/53/schedule-2/current.md]
 ````
 
-**Also returned by search (not listed as expected):** `uksi/2025/909/rule/29.4`, `ukpga/2003/39/schedule/5`, `ukpga/1988/53/section/29`, `uksi/2025/909/rule/44.2`, `ukpga/1988/53/section/54`, `sentencing/guidelines/speeding-revised-2017`
+**Also returned by search (not listed as expected) (first 6 of 44; run search for the rest):** `uksi/2025/909/rule/29.4`, `ukpga/2003/39/schedule/5`, `ukpga/1988/53/section/29`, `uksi/2025/909/rule/44.2`, `ukpga/1988/53/section/54`, `sentencing/guidelines/speeding-revised-2017`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -1202,7 +1203,7 @@ Search rank for this question: #3
 ### Expected source `ukpga/1988/52/section/143`
 Users of motor vehicles to be insured ... . | level: act | extent: E,W,S (stated) | as at 2019-11-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/52/section/143/data.xml
-Search rank for this question: #2
+Search rank for this question (includes linked units, not only search hits): #2
 
 ````text
 143 (1) Subject to the provisions of this Part of this Act—
@@ -1222,7 +1223,7 @@ Search rank for this question: #2
 ### Expected source `uksi/2000/2792/schedule`
 Schedule 1: FIXED PENALTIES | level: si | extent: E,W,S (stated) | as at 2019-10-31 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/uksi/2000/2792/schedule/data.xml
-Search rank for this question: #19
+Search rank for this question (includes linked units, not only search hits): #19
 
 ````text
 |  |  |  |
@@ -1288,7 +1289,7 @@ In this Schedule—
 [... 14 more lines in data/legislation/uksi/2000/2792/schedule/current.md]
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/52/section/165A`, `ukpga/1988/52/section/144A`, `ukpga/1988/52/section/3ZB`, `ukpga/2003/39/schedule/5`, `ukpga/1994/22/section/29`, `sentencing/guidelines/no-insurance-revised-2017`
+**Also returned by search (not listed as expected) (first 6 of 29; run search for the rest):** `ukpga/1988/52/section/165A`, `ukpga/1988/52/section/144A`, `ukpga/1988/52/section/3ZB`, `ukpga/2003/39/schedule/5`, `ukpga/1994/22/section/29`, `sentencing/guidelines/no-insurance-revised-2017`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -1309,7 +1310,7 @@ In this Schedule—
 ### Expected source `ukpga/1984/27/section/89`
 Speeding offences generally. | level: act | extent: E,W,S (stated) | as at 2019-04-17 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1984/27/section/89/data.xml
-Search rank for this question: #24
+Search rank for this question (includes linked units, not only search hits): #24
 
 ````text
 89 (1) A person who drives a motor vehicle on a road at a speed exceeding a limit imposed by or under any enactment to which this section applies shall be guilty of an offence.
@@ -1327,7 +1328,7 @@ Search rank for this question: #24
 ### Expected source `ukpga/1988/53/schedule/2`
 Schedule 2: Prosecution and Punishment of Offences | level: act | extent: E,W,S (stated) | as at 2026-04-29 | unapplied changes: 23
 URL: https://www.legislation.gov.uk/ukpga/1988/53/schedule/2/data.xml
-Search rank for this question: NOT RETURNED
+Search rank for this question (includes linked units, not only search hits): NOT RETURNED
 
 ````text
 ### Part I Offences under the Traffic Acts
@@ -1396,7 +1397,7 @@ Search rank for this question: NOT RETURNED
 ### Expected source `uksi/2000/2792/schedule`
 Schedule 1: FIXED PENALTIES | level: si | extent: E,W,S (stated) | as at 2019-10-31 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/uksi/2000/2792/schedule/data.xml
-Search rank for this question: NOT RETURNED
+Search rank for this question (includes linked units, not only search hits): NOT RETURNED
 
 ````text
 |  |  |  |
@@ -1462,7 +1463,7 @@ In this Schedule—
 [... 14 more lines in data/legislation/uksi/2000/2792/schedule/current.md]
 ````
 
-**Also returned by search (not listed as expected):** `wsi/2022/800/article/2`, `ukpga/1980/43/section/85`, `ukpga/1988/52/section/5`, `ukpga/1984/27/section/84`, `ukpga/1984/27/section/86`, `ukpga/1984/27/section/87`
+**Also returned by search (not listed as expected) (first 6 of 38; run search for the rest):** `wsi/2022/800/article/2`, `ukpga/1980/43/section/85`, `ukpga/1988/52/section/5`, `ukpga/1984/27/section/84`, `ukpga/1984/27/section/86`, `ukpga/1984/27/section/87`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -1483,7 +1484,7 @@ In this Schedule—
 ### Expected source `ukpga/1988/52/section/11`
 Interpretation of sections 4 to 10. | level: act | extent: E,W,S (stated) | as at 2018-03-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/52/section/11/data.xml
-Search rank for this question: #15
+Search rank for this question (includes linked units, not only search hits): #15
 
 ````text
 11 (1) The following provisions apply for the interpretation of sections 3A to 10 of this Act.
@@ -1538,7 +1539,7 @@ or such other proportion as may be prescribed by regulations ....
 ### Expected source `govuk/drink-drive-limit`
 The drink drive limit | level: guidance | extent: E,W,S,NI (stated) | as at 2026-11-02 | unapplied changes: 0
 URL: https://www.gov.uk/api/content/drink-drive-limit
-Search rank for this question: #12
+Search rank for this question (includes linked units, not only search hits): #12
 
 ````text
 The legal alcohol limits for drivers in the UK - microgrammes, milligrammes
@@ -1565,7 +1566,7 @@ The way alcohol affects you depends on:
 - your stress levels at the time
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/52/section/3A`, `ukpga/1988/52/section/4`, `ukpga/1988/53/section/34A`, `ukpga/1988/52/section/5`, `ukpga/1984/27/schedule/6`, `ukpga/1988/53/section/34`
+**Also returned by search (not listed as expected) (first 6 of 44; run search for the rest):** `ukpga/1988/52/section/3A`, `ukpga/1988/52/section/4`, `ukpga/1988/53/section/34A`, `ukpga/1988/52/section/5`, `ukpga/1984/27/schedule/6`, `ukpga/1988/53/section/34`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -1586,7 +1587,7 @@ The way alcohol affects you depends on:
 ### Expected source `ukpga/1988/52/section/103`
 Obtaining licence, or driving, while disqualified. | level: act | extent: E,W (stated) | as at 2019-04-17 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/52/section/103/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 103 (1) A person is guilty of an offence if, while disqualified for holding or obtaining a licence, he—
@@ -1611,7 +1612,7 @@ the references to disqualification for holding or obtaining a licence and drivin
 ### Expected source `sentencing/guidelines/drive-whilst-disqualified-revised-2017`
 Sentencing Council guideline: Drive whilst disqualified (Revised 2017) | level: guideline | extent: E,W (stated) | as at 2026-10-05 | unapplied changes: 0
 URL: https://www.sentencingcouncil.org.uk/guidelines/drive-whilst-disqualified-revised-2017/
-Search rank for this question: #9
+Search rank for this question (includes linked units, not only search hits): #9
 
 ````text
 Road Traffic Act 1988, s.103
@@ -1677,7 +1678,7 @@ The court should determine the offender’s culpability and the harm caused with
 [... 322 more lines in data/sentencing/guidelines/drive-whilst-disqualified-revised-2017/current.md]
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/52/section/3ZB`, `ukpga/1988/52/section/5`, `ukpga/1988/52/section/4`, `ukpga/1988/52/section/6`, `ukpga/1988/52/section/3A`, `sentencing/supplementary-information/road-traffic-offences-disqualification`
+**Also returned by search (not listed as expected) (first 6 of 36; run search for the rest):** `ukpga/1988/52/section/3ZB`, `ukpga/1988/52/section/5`, `ukpga/1988/52/section/4`, `ukpga/1988/52/section/6`, `ukpga/1988/52/section/3A`, `sentencing/supplementary-information/road-traffic-offences-disqualification`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -1698,7 +1699,7 @@ The court should determine the offender’s culpability and the harm caused with
 ### Expected source `ukpga/1988/52/section/14`
 Seat belts: adults. | level: act | extent: E,W,S (stated) | as at 2020-12-31 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/52/section/14/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 14 (1) The Secretary of State may make regulations requiring, subject to such exceptions as may be prescribed, persons who are driving or riding in motor vehicles on a road to wear seat belts of such description as may be prescribed.
@@ -1733,8 +1734,9 @@ Search rank for this question: #1
 
 ### Expected source `govuk/seat-belts-law`
 Seat belts: the law | level: guidance | extent: E,W (assumed) | as at 2026-11-02 | unapplied changes: 0
+Extent is ASSUMED, not stated: no evidence recorded
 URL: https://www.gov.uk/api/content/seat-belts-law
-Search rank for this question: #9
+Search rank for this question (includes linked units, not only search hits): #9
 
 ````text
 If your car or other vehicle has seat belts you must use them, with only a few exceptions
@@ -1797,7 +1799,7 @@ Children over 3 are only allowed to sit in the back seats.
 These rules only apply if your vehicle was originally made without seat belts.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/52/section/15`, `ukpga/1988/52/section/47`, `uksi/1986/1078/regulation/104`, `ukpga/1988/52/section/143`, `uksi/2000/2792/schedule`, `govuk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102`
+**Also returned by search (not listed as expected) (first 6 of 29; run search for the rest):** `ukpga/1988/52/section/15`, `ukpga/1988/52/section/47`, `uksi/1986/1078/regulation/104`, `ukpga/1988/52/section/143`, `uksi/2000/2792/schedule`, `govuk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -1818,7 +1820,7 @@ These rules only apply if your vehicle was originally made without seat belts.
 ### Expected source `ukpga/1988/52/section/47`
 Obligatory test certificates. | level: act | extent: E,W,S (stated) | as at 2019-04-17 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/52/section/47/data.xml
-Search rank for this question: #28
+Search rank for this question (includes linked units, not only search hits): #28
 
 ````text
 47 (1) A person who uses on a road at any time, or causes or permits to be so used, a motor vehicle to which this section applies, and as respects which no test certificate has been issued within the appropriate period before that time, is guilty of an offence.
@@ -1857,8 +1859,9 @@ An order under this subsection shall not have effect unless approved by resoluti
 
 ### Expected source `govuk/getting-an-mot`
 Getting an MOT | level: guidance | extent: E,W (assumed) | as at 2026-11-09 | unapplied changes: 0
+Extent is ASSUMED, not stated: no evidence recorded
 URL: https://www.gov.uk/api/content/getting-an-mot
-Search rank for this question: #11
+Search rank for this question (includes linked units, not only search hits): #11
 
 ````text
 When you need an MOT for your vehicle, what it costs and what happens if your vehicle fails.
@@ -1924,7 +1927,7 @@ You must use an approved MOT test centre to get your MOT.
 [... 246 more lines in data/govuk/getting-an-mot/current.md]
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/52/section/15`, `ukpga/1988/52/section/3`, `ukpga/1988/52/section/165A`, `ukpga/1988/52/section/41D`, `ukpga/1984/27/schedule/6`, `uksi/1986/1078/regulation/110`
+**Also returned by search (not listed as expected) (first 6 of 36; run search for the rest):** `ukpga/1988/52/section/15`, `ukpga/1988/52/section/3`, `ukpga/1988/52/section/165A`, `ukpga/1988/52/section/41D`, `ukpga/1984/27/schedule/6`, `uksi/1986/1078/regulation/110`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -1945,7 +1948,7 @@ You must use an approved MOT test centre to get your MOT.
 ### Expected source `ukpga/1980/43/section/108`
 Right of appeal to the Crown Court. | level: act | extent: E,W (stated) | as at 2023-12-20 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1980/43/section/108/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 108 (1) A person convicted by a magistrates’ court may appeal to the Crown Court—
@@ -1973,8 +1976,9 @@ and also includes a declaration of relevance, within the meaning of section 23 o
 
 ### Expected source `govuk/appeal-magistrates-court-decision`
 Appeal a magistrates’ court decision | level: guidance | extent: E,W (assumed) | as at 2026-10-01 | unapplied changes: 0
+Extent is ASSUMED, not stated: no evidence recorded
 URL: https://www.gov.uk/api/content/appeal-magistrates-court-decision
-Search rank for this question: #10
+Search rank for this question (includes linked units, not only search hits): #10
 
 ````text
 How to challenge a decision by a magistrates' court. Including how to get a fine reviewed, if you did not know about your case, how to appeal to the Crown Court.
@@ -2040,7 +2044,7 @@ You might be able to ask the court to reopen your case if someone gave your name
 [... 182 more lines in data/govuk/appeal-magistrates-court-decision/current.md]
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1980/43/section/142`, `ukpga/2003/39/schedule/5`, `uksi/2025/909/rule/44.3`, `uksi/2025/909/rule/24.9`, `uksi/2025/909/rule/24.8`, `sentencing/guidelines/fail-to-comply-with-traffic-sign-endorsable`
+**Also returned by search (not listed as expected) (first 6 of 20; run search for the rest):** `ukpga/1980/43/section/142`, `ukpga/2003/39/schedule/5`, `uksi/2025/909/rule/44.3`, `uksi/2025/909/rule/24.9`, `uksi/2025/909/rule/24.8`, `sentencing/guidelines/fail-to-comply-with-traffic-sign-endorsable`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2061,7 +2065,7 @@ You might be able to ask the court to reopen your case if someone gave your name
 ### Expected source `ukpga/1988/53/section/42`
 Removal of disqualification. | level: act | extent: E,W,S (stated) | as at 2026-06-24 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/53/section/42/data.xml
-Search rank for this question: #18
+Search rank for this question (includes linked units, not only search hits): #18
 
 ````text
 42 (1) Subject to the provisions of this section, a person who by an order of a court is disqualified may apply to the court by which the order was made to remove the disqualification.
@@ -2107,7 +2111,7 @@ and in determining the expiration of the period after which under this subsectio
 ### Expected source `ukpga/1988/53/section/34A`
 Reduced disqualification period for attendance on courses. | level: act | extent: E,W,S (stated) | as at 2015-04-13 | unapplied changes: 4
 URL: https://www.legislation.gov.uk/ukpga/1988/53/section/34A/data.xml
-Search rank for this question: #15
+Search rank for this question (includes linked units, not only search hits): #15
 
 ````text
 34A (1) This section applies where—
@@ -2156,7 +2160,7 @@ Search rank for this question: #15
   (d) the offender has agreed that the order should be made.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/53/section/34`, `ukpga/1988/53/section/36`, `sentencing/supplementary-information/road-traffic-offences-disqualification`, `sentencing/guidelines/driving-disqualification`, `sentencing/guidelines/fail-to-provide-specimen-for-analysis-driveattempt-to-drive-revised-2017`, `govuk/guidance/the-highway-code/annex-8-safety-code-for-new-drivers`
+**Also returned by search (not listed as expected) (first 6 of 36; run search for the rest):** `ukpga/1988/53/section/34`, `ukpga/1988/53/section/36`, `sentencing/supplementary-information/road-traffic-offences-disqualification`, `sentencing/guidelines/driving-disqualification`, `sentencing/guidelines/fail-to-provide-specimen-for-analysis-driveattempt-to-drive-revised-2017`, `govuk/guidance/the-highway-code/annex-8-safety-code-for-new-drivers`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2177,7 +2181,7 @@ Search rank for this question: #15
 ### Expected source `ukpga/1994/22/section/29`
 Penalty for using or keeping unlicensed vehicle. | level: act | extent: E,W,S,NI (stated) | as at 2017-03-10 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1994/22/section/29/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 29 (1) If a person uses, or keeps, a vehicle which is unlicensed he is guilty of an offence.
@@ -2221,7 +2225,7 @@ subsection (3) applies as if the reference in paragraph (a) to level 3 were a re
 (8) In the case of a conviction for a continuing offence, the offence is to be taken for the purposes of subsections (6) and (7) to have been committed on the date or latest date to which the conviction relates.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/52/section/3`, `ukpga/1988/52/section/15`, `ukpga/1984/27/schedule/6`, `ukpga/1988/53/section/51`, `ukpga/1988/52/section/165A`, `sentencing/guidelines/drive-otherwise-than-in-accordance-with-licence`
+**Also returned by search (not listed as expected) (first 6 of 35; run search for the rest):** `ukpga/1988/52/section/3`, `ukpga/1988/52/section/15`, `ukpga/1984/27/schedule/6`, `ukpga/1988/53/section/51`, `ukpga/1988/52/section/165A`, `sentencing/guidelines/drive-otherwise-than-in-accordance-with-licence`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2242,7 +2246,7 @@ subsection (3) applies as if the reference in paragraph (a) to level 3 were a re
 ### Expected source `uksi/2014/2868/regulation/2`
 Specified controlled drugs and specified limits for the purposes of section 5A of the Road Traffic Act 1988 | level: si | extent: E,W (stated) | as at 2015-04-14 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/uksi/2014/2868/regulation/2/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 2 The table below specifies the controlled drugs and, in each case, the limit in blood for the purposes of the offence in section 5A of the Road Traffic Act 1988.
@@ -2271,7 +2275,7 @@ Search rank for this question: #1
 ### Expected source `ukpga/1988/52/section/5A`
 Driving or being in charge of a motor vehicle with concentration of specified controlled drug above specified limit | level: act | extent: E,W,S,NI (stated) | as at 2018-03-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1988/52/section/5A/data.xml
-Search rank for this question: #2
+Search rank for this question (includes linked units, not only search hits): #2
 
 ````text
 5A (1) This section applies where a person (“D”)—
@@ -2304,7 +2308,7 @@ and there is in D's body a specified controlled drug.
 (9) A limit specified under subsection (2) may be zero.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/52/section/3A`, `ukpga/1988/53/section/34`, `ukpga/1988/52/section/5`, `ukpga/1988/52/section/11`, `sentencing/guidelines/driving-or-attempting-to-drive-with-a-specified-drug-above-the-specified-limit`, `sentencing/supplementary-information/road-traffic-offences-disqualification`
+**Also returned by search (not listed as expected) (first 6 of 41; run search for the rest):** `ukpga/1988/52/section/3A`, `ukpga/1988/53/section/34`, `ukpga/1988/52/section/5`, `ukpga/1988/52/section/11`, `sentencing/guidelines/driving-or-attempting-to-drive-with-a-specified-drug-above-the-specified-limit`, `sentencing/supplementary-information/road-traffic-offences-disqualification`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2325,7 +2329,7 @@ and there is in D's body a specified controlled drug.
 ### Expected source `ukpga/1980/43/section/142`
 Power of magistrates’ court to re-open cases to rectify mistakes etc. | level: act | extent: E,W (stated) | as at 1996-01-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1980/43/section/142/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 142 (1) A magistrates’ court may vary or rescind a sentence or other order imposed or made by it when dealing with an offender if it appears to the court to be in the interests of justice to do so; and it is hereby declared that this power extends to replacing a sentence or order which for any reason appears to be invalid by another which the court has power to impose or make.
@@ -2354,7 +2358,7 @@ Search rank for this question: #1
 (5) Where a sentence or order is varied under subsection (1) above, the sentence or other order, as so varied, shall take effect from the beginning of the day on which it was originally imposed or made, unless the court otherwise directs.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/2003/39/schedule/5`, `uksi/2025/909/rule/44.3`, `ukpga/1980/43/section/75`, `ukpga/1980/43/section/108`, `ukpga/1980/43/section/85`, `sentencing/guidelines/excess-alcohol-driveattempt-to-drive-revised-2017`
+**Also returned by search (not listed as expected) (first 6 of 32; run search for the rest):** `ukpga/2003/39/schedule/5`, `uksi/2025/909/rule/44.3`, `ukpga/1980/43/section/75`, `ukpga/1980/43/section/108`, `ukpga/1980/43/section/85`, `sentencing/guidelines/excess-alcohol-driveattempt-to-drive-revised-2017`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2375,7 +2379,7 @@ Search rank for this question: #1
 ### Expected source `nisi/1995/2994/article/13`
 Interpretation of Articles 14 to 21 | level: si | extent: NI (stated) | as at 2016-11-25 | unapplied changes: 1
 URL: https://www.legislation.gov.uk/nisi/1995/2994/article/13/data.xml
-Search rank for this question: #9
+Search rank for this question (includes linked units, not only search hits): #9
 
 ````text
 13 (1) The following provisions apply for the interpretation of Articles 14 to 21.
@@ -2424,7 +2428,7 @@ or such other proportion as may be prescribed by regulations made by the Departm
 ### Expected source `nisi/1995/2994/article/16`
 Driving, or being in charge of, a motor vehicle with alcohol concentration above prescribed limit | level: si | extent: NI (stated) | as at 2006-01-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/nisi/1995/2994/article/16/data.xml
-Search rank for this question: #2
+Search rank for this question (includes linked units, not only search hits): #2
 
 ````text
 16 (1) If a person—
@@ -2438,7 +2442,7 @@ after consuming so much alcohol that the proportion of it in his breath, blood o
 (3) The court may, in determining whether there was such a likelihood as is mentioned in paragraph (2), disregard any injury to him and any damage to the vehicle.
 ````
 
-**Also returned by search (not listed as expected):** `nisi/1995/2994/article/15`, `ukpga/1988/52/section/5`, `nisi/1995/2994/article/14`, `nisi/1996/1320/article/36`, `nisi/1997/276/article/36`, `govuk/drink-drive-limit`
+**Also returned by search (not listed as expected) (first 6 of 14; run search for the rest):** `nisi/1995/2994/article/15`, `ukpga/1988/52/section/5`, `nisi/1995/2994/article/14`, `nisi/1996/1320/article/36`, `nisi/1997/276/article/36`, `govuk/drink-drive-limit`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2459,7 +2463,7 @@ after consuming so much alcohol that the proportion of it in his breath, blood o
 ### Expected source `nisi/1981/154/article/168A`
 Applying for or obtaining a driving licence, or driving, while disqualified | level: si | extent: NI (stated) | as at 2007-11-15 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/nisi/1981/154/article/168A/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 168A (1) Subject to paragraphs (3) and (4), a person is guilty of an offence if, while disqualified for holding or obtaining a driving licence, he–
@@ -2480,7 +2484,7 @@ Search rank for this question: #1
 the references to disqualification for holding or obtaining a licence, applying for a licence and driving motor vehicles are references to disqualification for holding or obtaining a licence to drive, applying for a licence for and driving motor vehicles of that class.
 ````
 
-**Also returned by search (not listed as expected):** `nisi/1995/2994/article/12B`, `ukpga/1988/52/section/5`, `nisi/1995/2994/article/16`, `nisi/1995/2994/article/15`, `nisi/1981/154/article/167`, `govuk/drink-drive-limit`
+**Also returned by search (not listed as expected) (first 6 of 10; run search for the rest):** `nisi/1995/2994/article/12B`, `ukpga/1988/52/section/5`, `nisi/1995/2994/article/16`, `nisi/1995/2994/article/15`, `nisi/1981/154/article/167`, `govuk/drink-drive-limit`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2501,7 +2505,7 @@ the references to disqualification for holding or obtaining a licence, applying 
 ### Expected source `nisi/1996/1320/article/40`
 Disqualification for repeated offences | level: si | extent: NI (stated) | as at 2006-01-01 | unapplied changes: 1
 URL: https://www.legislation.gov.uk/nisi/1996/1320/article/40/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 40 (1) Where—
@@ -2537,7 +2541,7 @@ and a previous disqualification imposed on an offender is to be taken into accou
 (8) This Article is subject to Article 53.
 ````
 
-**Also returned by search (not listed as expected):** `nisi/1996/1320/article/31`, `nisi/1996/1320/article/35`, `nisi/1996/1320/article/30`, `govuk/drink-drive-limit`, `nisi/1996/1320/article/41`, `nisi/1996/1320/article/80`
+**Also returned by search (not listed as expected) (first 6 of 9; run search for the rest):** `nisi/1996/1320/article/31`, `nisi/1996/1320/article/35`, `nisi/1996/1320/article/30`, `govuk/drink-drive-limit`, `nisi/1996/1320/article/41`, `nisi/1996/1320/article/80`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2558,7 +2562,7 @@ and a previous disqualification imposed on an offender is to be taken into accou
 ### Expected source `nisi/1981/154/article/90`
 Users of motor vehicles to be insured or secured against third-party risks | level: si | extent: NI (stated) | as at 2009-04-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/nisi/1981/154/article/90/data.xml
-Search rank for this question: #3
+Search rank for this question (includes linked units, not only search hits): #3
 
 ````text
 90 (1) Subject to the provisions of this Part, it shall not be lawful for any person to use, or to cause or permit any other person to use, a motor vehicle on a road or other public place unless there is in force in relation to the user of the vehicle by that person or that other person, as the case may be, such a policy of insurance or such a security in respect of third-party risks as complies with the requirements of this Part.
@@ -2581,7 +2585,7 @@ at a time when the vehicle is being driven by a servant of the owner in the cour
 (4) Any person who contravenes paragraph (1) shall be guilty of an offence under this Order.
 ````
 
-**Also returned by search (not listed as expected):** `nisi/1981/154/article/91A`, `nisi/1981/154/article/180B`, `nisi/1995/2994/article/12`, `nisi/1995/2994/article/14`, `nisi/1995/2994/article/12B`, `nisi/1981/154/article/180`
+**Also returned by search (not listed as expected) (first 6 of 10; run search for the rest):** `nisi/1981/154/article/91A`, `nisi/1981/154/article/180B`, `nisi/1995/2994/article/12`, `nisi/1995/2994/article/14`, `nisi/1995/2994/article/12B`, `nisi/1981/154/article/180`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2602,7 +2606,7 @@ at a time when the vehicle is being driven by a servant of the owner in the cour
 ### Expected source `nisi/1981/1675/article/140`
 Appeals against conviction or sentence, etc. | level: si | extent: NI (stated) | as at 2023-12-20 | unapplied changes: 1
 URL: https://www.legislation.gov.uk/nisi/1981/1675/article/140/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 140 (1) Subject to this Article, a person convicted by a magistrates' court may appeal to a county court,—
@@ -2632,7 +2636,7 @@ Search rank for this question: #1
 (4) A person ordered under Article 7(1) of the Criminal Justice (Northern Ireland) Order 1996 to give good security for the good behaviour of an offender may appeal to the county court.
 ````
 
-**Also returned by search (not listed as expected):** `nisi/1981/1675/article/158A`, `ukpga/2003/39/schedule/5`, `nisi/1996/1320/article/47`, `nisi/1996/1320/article/13`, `nisi/1981/1675/article/91`, `nisi/1996/1320/article/41`
+**Also returned by search (not listed as expected) (first 6 of 8; run search for the rest):** `nisi/1981/1675/article/158A`, `ukpga/2003/39/schedule/5`, `nisi/1996/1320/article/47`, `nisi/1996/1320/article/13`, `nisi/1981/1675/article/91`, `nisi/1996/1320/article/41`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2653,7 +2657,7 @@ Search rank for this question: #1
 ### Expected source `nisi/1996/1320/article/59`
 Amount of fixed penalty | level: si | extent: NI (stated) | as at 2016-12-08 | unapplied changes: 2
 URL: https://www.legislation.gov.uk/nisi/1996/1320/article/59/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 59 (1) The fixed penalty for an offence is—
@@ -2677,7 +2681,7 @@ whichever is the less.
 the fixed penalty is increased by the amount of the offender levy determined under section 6 of the Justice Act (Northern Ireland) 2011.
 ````
 
-**Also returned by search (not listed as expected):** `nisi/1996/1320/article/58`, `nisi/1996/1320/article/57`, `nisi/1998/1074/article/4`, `nisi/1996/1320/article/30`, `nisi/1996/1320/article/80`, `nisi/1998/1074/article/5`
+**Also returned by search (not listed as expected) (first 6 of 9; run search for the rest):** `nisi/1996/1320/article/58`, `nisi/1996/1320/article/57`, `nisi/1998/1074/article/4`, `nisi/1996/1320/article/30`, `nisi/1996/1320/article/80`, `nisi/1998/1074/article/5`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2698,7 +2702,7 @@ the fixed penalty is increased by the amount of the offender levy determined und
 ### Expected source `nisi/1997/276/article/36`
 General speed limit on restricted roads | level: si | extent: NI (stated) | as at 2006-01-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/nisi/1997/276/article/36/data.xml
-Search rank for this question: #2
+Search rank for this question (includes linked units, not only search hits): #2
 
 ````text
 36 (1) Subject to the provisions of this Part, it shall not be lawful for any person to drive a motor vehicle on a restricted road at a speed exceeding 30 miles per hour.
@@ -2733,7 +2737,7 @@ Search rank for this question: #2
 ### Expected source `ssi/2014/328/regulation/2`
 Prescription of proportion of alcohol | level: si | extent: S (stated) | as at 2014-12-05 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ssi/2014/328/regulation/2/data.xml
-Search rank for this question: #5
+Search rank for this question (includes linked units, not only search hits): #5
 
 ````text
 2 For the purpose of the definition of “the prescribed limit” in section 11(2) of The Road Traffic Act 1988, the prescribed proportion in relation to driving or attempting to drive, or being in charge of a vehicle, in Scotland, is—
@@ -2742,7 +2746,7 @@ Search rank for this question: #5
   (c) 67 milligrammes of alcohol in 100 millilitres of urine.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/52/section/3A`, `ukpga/1988/52/section/4`, `ukpga/1988/53/section/34A`, `ukpga/1988/52/section/5`, `ukpga/1984/27/schedule/6`, `govuk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102`
+**Also returned by search (not listed as expected) (first 6 of 32; run search for the rest):** `ukpga/1988/52/section/3A`, `ukpga/1988/52/section/4`, `ukpga/1988/53/section/34A`, `ukpga/1988/52/section/5`, `ukpga/1984/27/schedule/6`, `govuk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2763,7 +2767,7 @@ Search rank for this question: #5
 ### Expected source `ukpga/1995/46/section/214`
 Fines: time for payment and payment by instalments. | level: act | extent: S (stated) | as at 1996-04-01 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1995/46/section/214/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 214 (1) Where a court has imposed a fine on an offender or ordered him to find caution the court shall, subject to subsection (2) below, allow him at least seven days to pay the fine or the first instalment thereof or, as the case may be, to find caution; and any reference in this section and section 216 of this Act to a failure to pay a fine or other like expression shall include a reference to a failure to find caution.
@@ -2795,7 +2799,7 @@ the court may refuse him time to pay the fine and, if the offender fails to pay,
 and the powers conferred by this subsection shall be exercisable without requiring the attendance of the accused.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1995/46/section/215`, `ukpga/1995/46/section/219`, `ukpga/1995/46/section/226C`, `ukpga/1995/46/section/211`, `ukpga/1988/53/section/71`, `ukpga/1995/46/section/213`
+**Also returned by search (not listed as expected) (first 6 of 11; run search for the rest):** `ukpga/1995/46/section/215`, `ukpga/1995/46/section/219`, `ukpga/1995/46/section/226C`, `ukpga/1995/46/section/211`, `ukpga/1988/53/section/71`, `ukpga/1995/46/section/213`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2816,7 +2820,7 @@ and the powers conferred by this subsection shall be exercisable without requiri
 ### Expected source `ukpga/1995/46/section/176`
 Stated case: manner and time of appeal. | level: act | extent: S (stated) | as at 2015-09-22 | unapplied changes: 0
 URL: https://www.legislation.gov.uk/ukpga/1995/46/section/176/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 176 (1) An appeal under section 175(2)(a) or (d) or (3) of this Act shall be by application for a stated case, which application shall—
@@ -2835,7 +2839,7 @@ and a copy of the application shall, within the period mentioned in paragraph (a
 (5) The record of the procedure in the inferior court in an appeal mentioned in subsection (1) above shall be as nearly as may be in the form prescribed by Act of Adjournal.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/53/section/71`, `ukpga/1995/46/section/211`, `ukpga/1984/27/section/85`, `ukpga/1988/53/section/44`, `ukpga/1984/27/section/86`, `ukpga/1988/53/section/54`
+**Also returned by search (not listed as expected) (first 6 of 12; run search for the rest):** `ukpga/1988/53/section/71`, `ukpga/1995/46/section/211`, `ukpga/1984/27/section/85`, `ukpga/1988/53/section/44`, `ukpga/1984/27/section/86`, `ukpga/1988/53/section/54`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
@@ -2856,7 +2860,7 @@ and a copy of the application shall, within the period mentioned in paragraph (a
 ### Expected source `ukpga/1995/46/section/136`
 Time limit for certain offences. | level: act | extent: S (stated) | as at 2026-10-15 | unapplied changes: 1
 URL: https://www.legislation.gov.uk/ukpga/1995/46/section/136/data.xml
-Search rank for this question: #1
+Search rank for this question (includes linked units, not only search hits): #1
 
 ````text
 136 (1) Proceedings under this Part of this Act in respect of any offence to which this section applies shall be commenced—
@@ -2870,7 +2874,7 @@ and it shall be competent in a prosecution of a contravention mentioned in parag
 (3) For the purposes of this section proceedings shall be deemed to be commenced on the date on which a warrant to apprehend or to cite the accused is granted, if the warrant is executed without undue delay.
 ````
 
-**Also returned by search (not listed as expected):** `ukpga/1988/53/section/1`, `ukpga/1984/27/section/89`, `ukpga/1988/53/schedule/2`, `ukpga/1988/53/section/34`, `ukpga/1988/53/section/34A`, `govuk/guidance/the-highway-code/using-the-road-159-to-203`
+**Also returned by search (not listed as expected) (first 6 of 36; run search for the rest):** `ukpga/1988/53/section/1`, `ukpga/1984/27/section/89`, `ukpga/1988/53/schedule/2`, `ukpga/1988/53/section/34`, `ukpga/1988/53/section/34A`, `govuk/guidance/the-highway-code/using-the-road-159-to-203`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):
 - [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)
