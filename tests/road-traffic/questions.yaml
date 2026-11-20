@@ -68,8 +68,8 @@
   question: "Is it illegal to drive with drugs in my body?"
   nation: Scotland
   # Draft: GOV.UK states the drug-driving law covers England, Scotland and Wales.
-  expected_answer: "Yes. Driving or attempting to drive while unfit through drink or drugs is an offence (RTA s.4). Driving with a specified controlled drug above the specified limit is also an offence (s.5A); for Scotland the limits are those specified by the Scottish Ministers, which this knowledge base does not hold. GOV.UK says the law covers England, Scotland and Wales and not Northern Ireland"
-  expected_sources: [govuk/drug-driving-law, ukpga/1988/52/section/4, ukpga/1988/52/section/5A]
+  expected_answer: "Yes. Driving or attempting to drive while unfit through drink or drugs is an offence (RTA s.4). Driving with a specified controlled drug above the specified limit is also an offence (s.5A); for Scotland the limits are those specified by the Scottish Ministers in the Drug Driving (Specified Limits) (Scotland) Regulations 2019, regulation 2 (for example delta-9-tetrahydrocannabinol 2 microgrammes per litre of blood). GOV.UK says the law covers England, Scotland and Wales and not Northern Ireland"
+  expected_sources: [govuk/drug-driving-law, ukpga/1988/52/section/4, ukpga/1988/52/section/5A, ssi/2019/83/regulation/2]
   verified: false
 
 - id: rt-012
@@ -115,7 +115,7 @@
 - id: rt-017
   question: "Do I have to wear a seat belt?"
   expected_answer: "Yes, if one is fitted in the seat, with only a few exceptions; you can be fined up to £500"
-  expected_sources: [ukpga/1988/52/section/14, govuk/seat-belts-law, ukpga/1988/53/schedule/2, sentencing/supplementary-information/approach-to-fines]
+  expected_sources: [ukpga/1988/52/section/14, uksi/1993/176/regulation/5, govuk/seat-belts-law, ukpga/1988/53/schedule/2, sentencing/supplementary-information/approach-to-fines]
   verified: false
 
 - id: rt-018

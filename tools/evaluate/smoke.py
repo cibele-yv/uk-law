@@ -13,7 +13,7 @@ Checks on every answer
   C3  the reply gives an "as at" / in-force date
   C4  the reply says it is legal information, not advice, and points to a solicitor / advice service
   C5  every £ amount, number of points and number of days in the reply appears in the tool results
-plus the per-question checks in tests/smoke/questions.yaml.
+plus the per-question checks in tests/smoke/prompts.yaml.
 """
 import argparse
 import json
@@ -140,7 +140,7 @@ def main() -> int:
     if not (ROOT / "index" / "kb.sqlite").exists():
         print("index/kb.sqlite missing: run  python -m tools.index.build", file=sys.stderr)
         return 2
-    qs = yaml.safe_load((ROOT / "tests/smoke/questions.yaml").read_text(encoding="utf-8"))
+    qs = yaml.safe_load((ROOT / "tests/smoke/prompts.yaml").read_text(encoding="utf-8"))
     if args.only:
         wanted = set(args.only.split(","))
         qs = [q for q in qs if q["id"] in wanted]
