@@ -51,6 +51,27 @@ Search rank for this question: #2
 (7) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 ````
 
+### Expected source `ukpga/1995/13/section/1`
+Probationary period for newly qualified drivers. | level: act | extent: E,W,S (stated) | as at 2020-12-31 | unapplied changes: 0
+URL: https://www.legislation.gov.uk/ukpga/1995/13/section/1/data.xml
+Search rank for this question: NOT RETURNED
+
+````text
+1 (1) For the purposes of this Act, a person’s probationary period is, subject to section 7, the period of two years beginning with the day on which he becomes a qualified driver.
+
+(2) For the purposes of this Act, a person becomes a qualified driver on the first occasion on which he passes—
+  (a) any test of competence to drive mentioned in paragraph (a) or (c) of section 89(1) of the Road Traffic Act 1988;
+  (b) any test of competence to drive conducted under the law of
+    (i) an EEA State,
+  (ii) the Isle of Man,
+  (iii) any of the Channel Islands, or
+  (iv) Gibraltar.
+
+(3) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+(4) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+````
+
 **Also returned by search (not listed as expected):** `ukpga/1988/52/section/164`, `ukpga/1988/53/section/29`, `sentencing/guidelines/driving-disqualification`, `sentencing/supplementary-information/road-traffic-offences-disqualification`, `sentencing/guidelines/careless-driving-drive-without-due-care-and-attention`, `govuk/guidance/the-highway-code/annex-8-safety-code-for-new-drivers`
 
 **Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):

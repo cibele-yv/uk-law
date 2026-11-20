@@ -16,7 +16,7 @@ For EVERY question in `docs/VERIFY-road-traffic.md` (all 34), decide from the qu
 1. Does the text support every part of the expected answer (numbers, time limits, amounts, points, ban lengths)? Quote the words that do. Where the text is cut at 60 lines, open the `data/` file named under the quote.
 2. Is anything in the expected answer NOT in the listed sources (i.e. from memory)? Flag it.
 3. Are the expected sources right: anything essential missing, anything irrelevant listed? Check the "also returned" list and use `get_provision` / `get_related` (uk-law MCP) or search `data/` if a better unit exists. Example to check first: rt-001 says "6 points within 2 years of passing the test" but cites only `ukpga/1995/13/section/2`; the 2-year period may be defined in another unit.
-4. Does each source apply in the question's nation (`extent`, `extent_basis`) and is it in force (`valid_from`, `unapplied_changes`)? Scotland and Northern Ireland questions (rt-011, rt-024 to rt-034): never accept England and Wales law as the basis.
+4. Does each source apply in the question's nation (`extent`, `extent_basis`) and is it in force (`valid_from`, `unapplied_changes`)? If `unapplied_changes` > 0, say whether the pending changes could affect the answer; if you cannot tell from `data/`, the verdict is `UNSURE`. Scotland and Northern Ireland questions (rt-011, rt-024 to rt-034): never accept England and Wales law as the basis.
 5. Do any sources contradict each other (e.g. guidance vs legislation)? Legislation wins.
 
 Give each question one verdict: `OK`, `FIX ANSWER`, `FIX SOURCES`, `UNSURE`. For every non-OK verdict propose the exact corrected `expected_answer` / `expected_sources`.

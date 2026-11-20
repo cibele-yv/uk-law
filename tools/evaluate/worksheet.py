@@ -50,22 +50,22 @@ def render(q: dict, index: Index, k: int) -> str:
     out += [f"- **Nation:** {nation or 'not given (England and Wales assumed)'}",
             f"- **Draft expected answer:** {q['expected_answer']}",
             f"- **Currently marked verified:** {q.get('verified', False)}", ""]
-    for sid in q["expected_sources"]:
+    for sid in q.get("expected_sources") or []:
         path = find_current(sid)
         out.append(f"### Expected source `{sid}`")
         if not path:
             out += ["**NOT IN DATA.** Either the id is wrong or the unit was never fetched.", ""]
             continue
         meta, body = split_front_matter(path.read_text(encoding="utf-8"))
-        v = meta.get("version", {})
-        out.append(f"{meta.get('title')} | level: {meta.get('level')} | extent: {','.join(meta.get('extent', []))} "
+        v = meta.get("version") or {}
+        out.append(f"{meta.get('title')} | level: {meta.get('level')} | extent: {','.join(meta.get('extent') or [])} "
                    f"({meta.get('extent_basis')}) | as at {v.get('valid_from')} | unapplied changes: {meta.get('unapplied_changes')}")
-        out.append(f"URL: {meta.get('source', {}).get('url')}")
+        out.append(f"URL: {(meta.get('source') or {}).get('url')}")
         out.append(f"Search rank for this question: {('#%d' % ranks[sid]) if sid in ranks else 'NOT RETURNED'}")
         lines = body.splitlines()
         shown = "\n".join(lines[:MAX_LINES]) + (f"\n[... {len(lines) - MAX_LINES} more lines in {path.as_posix()}]" if len(lines) > MAX_LINES else "")
         out += ["", "````text", shown, "````", ""]
-    extra = [h.id for h in hits if h.id not in q["expected_sources"]][:6]
+    extra = [h.id for h in hits if h.id not in (q.get("expected_sources") or [])][:6]
     out += [f"**Also returned by search (not listed as expected):** {', '.join(f'`{e}`' for e in extra) or 'none'}", "",
             "**Checklist** (a person ticks these, then sets `verified: true` in questions.yaml):",
             "- [ ] The quoted text above really supports every part of the expected answer (numbers, time limits, amounts)",
@@ -81,10 +81,11 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--area", default="road-traffic")
     ap.add_argument("--ids", help="comma-separated question ids (default: all unverified)")
-    ap.add_argument("--out", type=Path, default=Path("docs/VERIFY-road-traffic.md"))
+    ap.add_argument("--out", type=Path, help="default: docs/VERIFY-<area>.md")
     ap.add_argument("-k", type=int, default=6)
     args = ap.parse_args()
 
+    args.out = args.out or Path(f"docs/VERIFY-{args.area}.md")
     wanted = set(args.ids.split(",")) if args.ids else None
     qs = [q for _, q in load_questions(args.area) if (q["id"] in wanted if wanted else not q.get("verified"))]
     index = Index()
