@@ -116,6 +116,14 @@ class Index:
         order = np.argsort(-sims, kind="stable")[:CANDIDATES]
         return [self.chunk_ids[i] for i in order]
 
+    def _scores(self, question: str) -> dict[int, float]:
+        """Reciprocal rank fusion of the keyword and meaning rankings, per chunk."""
+        scores: dict[int, float] = {}
+        for ranking in (self._keyword(question), self._meaning(question)):
+            for rank, rowid in enumerate(ranking):
+                scores[rowid] = scores.get(rowid, 0.0) + 1.0 / (RRF_K + rank + 1)
+        return scores
+
     # --- public API -------------------------------------------------------
     def search(self, question: str, k: int = 8, levels: frozenset[str] | None = None,
                codes: frozenset[str] | None = None) -> list[Hit]:
@@ -124,10 +132,7 @@ class Index:
         `levels` keeps only units of those levels (see LAW, GUIDELINES, CODE, GUIDANCE);
         `codes` only units that apply in one of those places (see nation_codes). None keeps all.
         """
-        scores: dict[int, float] = {}
-        for ranking in (self._keyword(question), self._meaning(question)):
-            for rank, rowid in enumerate(ranking):
-                scores[rowid] = scores.get(rowid, 0.0) + 1.0 / (RRF_K + rank + 1)
+        scores = self._scores(question)
         best: dict[str, tuple[float, int]] = {}
         for rowid, score in sorted(scores.items(), key=lambda kv: (-kv[1], kv[0])):
             doc = self.chunk_doc[rowid]
@@ -171,14 +176,24 @@ class Index:
             + self.search(question, k_guidance, GUIDANCE, codes)
         )
         seen = {h.id for h in hits}
+        scores = None
         for h in list(hits):
             for other in self.related(h.id):
                 if other not in seen and self.applies(other, codes):
                     seen.add(other)
-                    hits.append(self._hit(other, 0.0, None, via=f"linked from {h.id}"))
+                    if scores is None:
+                        scores = self._scores(question)
+                    # show the part of a long linked unit (e.g. a Schedule table) that answers the question
+                    rowid = self._best_chunk(other, scores)
+                    hits.append(self._hit(other, 0.0, rowid, via=f"linked from {h.id}"))
         return hits
 
     # --- helpers ----------------------------------------------------------
+    def _best_chunk(self, doc_id: str, scores: dict[int, float]) -> int | None:
+        """The chunk of this unit that ranks best for the question, or None if none ranked."""
+        ranked = [(s, r) for r, s in scores.items() if self.chunk_doc[r] == doc_id]
+        return max(ranked, key=lambda x: (x[0], -x[1]))[1] if ranked else None
+
     def _hit(self, doc_id: str, score: float, rowid: int | None, via: str = "search") -> Hit:
         d = self.get(doc_id)
         if rowid is not None:
