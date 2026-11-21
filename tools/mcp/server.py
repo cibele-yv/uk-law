@@ -77,7 +77,7 @@ PARTIAL = {
     "S": (
         "SCOTLAND IS ONLY PARTLY COVERED. Included: the Great Britain road traffic Acts (offences, penalty "
         "points, disqualification, fixed penalties), the Criminal Procedure (Scotland) Act 1995 provisions on "
-        "time limits, fines and appeals, and the Scottish drink drive limit. Not included: Scottish sentencing "
+        "time limits, fines and appeals, and the Scottish drink and drug drive limits. Not included: Scottish sentencing "
         "guidance (so no usual fine amounts), Scottish court rules, and plain-English Scottish guidance."
     ),
     "NI": (

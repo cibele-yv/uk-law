@@ -283,3 +283,14 @@ units:
   # ssi/2014/328
   - id: ssi/2014/328/regulation/2                  # Prescription of proportion of alcohol
   - id: ssi/2014/328/regulation/3                  # Proportion of alcohol for replacement of breath specimen
+
+  # Seat belts: the rule rt-017 relies on (the Act, s.14, only gives the power to make regulations)
+  - id: uksi/1993/176/regulation/4                 # General
+  - id: uksi/1993/176/regulation/5                 # Requirement for adults to wear adult belts
+  - id: uksi/1993/176/regulation/6                 # Exemptions
+  - id: uksi/1993/176/regulation/7                 # General (children in the rear)
+  - id: uksi/1993/176/regulation/8                 # Description of seat belts to be worn by children
+  - id: uksi/1993/176/regulation/10                # Exemptions (children)
+
+  # Scottish drug driving limits (made by the Scottish Ministers under RTA 1988 s.5A)
+  - id: ssi/2019/83/regulation/2                   # Specified controlled drugs and specified limits
