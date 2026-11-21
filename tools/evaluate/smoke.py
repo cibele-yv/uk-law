@@ -13,6 +13,7 @@ Checks on every answer
   C3  the reply gives an "as at" / in-force date
   C4  the reply says it is legal information, not advice, and points to a solicitor / advice service
   C5  every £ amount, number of points and number of days in the reply appears in the tool results
+      (an amount the reply gives as its own worked example, "someone earning £400 a week", is skipped)
 plus the per-question checks in tests/smoke/prompts.yaml.
 """
 import argparse
@@ -96,6 +97,17 @@ def figures(text: str) -> set[str]:
     return {re.sub(r"£\s", "£", f) for f in out}
 
 
+HYPOTHETICAL = re.compile(r"(earn|earning|income of|salary of|for example|for instance|e\.g\.|say |suppose|imagine)[^.\n]{0,60}$", re.I)
+
+
+def worked_example(reply: str) -> str:
+    """Drop £ amounts the reply introduces as its own illustration ("someone earning £400 a week"):
+    they are not claims about the law, so they need not appear in the tool results."""
+    def keep(m: re.Match) -> str:
+        return " " if HYPOTHETICAL.search(reply[max(0, m.start() - 80):m.start()]) else m.group(0)
+    return re.sub(r"£\s?\d[\d,]*(?:\.\d+)?", keep, reply)
+
+
 def check(q: dict, r: dict) -> list[tuple[str, bool, str]]:
     if "error" in r:
         return [("RUN", False, r["error"])]
@@ -114,7 +126,7 @@ def check(q: dict, r: dict) -> list[tuple[str, bool, str]]:
 
     def sourced(f: str) -> bool:  # amounts must match exactly; points and days may sit in a range ("3-6")
         return f in known or (not f.startswith("£") and f.split()[0] in nums)
-    bad = sorted(f for f in figures(reply) if not sourced(f))
+    bad = sorted(f for f in figures(worked_example(reply)) if not sourced(f))
     out.append(("C5 figures come from sources", not bad, ("not in tool results: " + ", ".join(bad)) if bad else ""))
     if q.get("warning_first"):
         out.append(("warning first", bool(re.search(r"only partly|partly|only in part|in part|partial|limited coverage", flat[:600], re.I)), flat[:120]))
