@@ -14,14 +14,14 @@ Verified, versioned UK law for AI retrieval. Every unit is verbatim text from an
 
 ## Scope
 
-Only the **road traffic** area exists so far (`areas/road-traffic.yaml`, 230 units), but the design is not tied to one area or one nation: every unit records where it applies (`extent`: E, W, S, NI) and how we know (`extent_basis`: `stated` by the source, or `assumed`). Without a nation, England and Wales is assumed and the answer says so.
+Only the **road traffic** area exists so far (`areas/road-traffic.yaml`, 236 units), but the design is not tied to one area or one nation: every unit records where it applies (`extent`: E, W, S, NI) and how we know (`extent_basis`: `stated` by the source, or `assumed`). Without a nation, England and Wales is assumed and the answer says so.
 
 | Nation | Units that apply | What is there | What is missing |
 |---|---|---|---|
 | England | most of them | Everything | Topic gaps only |
 | Wales | all of England's, plus the 20 mph order | Same as England | Topic gaps only |
-| Scotland | the Great Britain Acts, plus 15 Scottish units | Offences, points, disqualification, fixed penalties, Highway Code, time limits, fines and appeals (Criminal Procedure (Scotland) Act 1995), the Scottish drink and drug drive limits | Scottish sentencing guidance, court rules, plain-English guidance |
-| Northern Ireland | 67 units from its own Orders | Offences, points, disqualification, fixed penalties, speed limits, insurance, new drivers, fines and appeals (Magistrates' Courts (Northern Ireland) Order 1981) | Sentencing guidance, court rules, a Northern Ireland Highway Code, plain-English guidance |
+| Scotland | the Great Britain Acts, plus 16 Scottish units | Offences, points, disqualification, fixed penalties, Highway Code, time limits, fines, the standard scale and appeals (Criminal Procedure (Scotland) Act 1995), the Scottish drink and drug drive limits | Scottish sentencing guidance, court rules, plain-English guidance |
+| Northern Ireland | 72 units from its own Orders | Offences, points, disqualification, fixed penalties, speed limits, insurance, new drivers, fixed penalty amounts (Road Traffic (Fixed Penalty) Order (Northern Ireland) 2007), the standard scale, and appeals (Magistrates' Courts (Northern Ireland) Order 1981) | Sentencing guidance, court rules, a Northern Ireland Highway Code, plain-English guidance |
 
 The extent fields and the nation filter keep each nation's law apart: a Northern Irish Order is never returned to a question about England, and the reverse.
 

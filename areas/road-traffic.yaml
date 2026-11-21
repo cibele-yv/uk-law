@@ -294,3 +294,11 @@ units:
 
   # Scottish drug driving limits (made by the Scottish Ministers under RTA 1988 s.5A)
   - id: ssi/2019/83/regulation/2                   # Specified controlled drugs and specified limits
+
+  # Legal basis for fine amounts in Scotland and Northern Ireland (spike option 4, docs/SPIKE-scotland-ni-sentencing.md)
+  - id: ukpga/1995/46/section/225                  # Scotland: the standard scale of fines (levels 1 to 5)
+  - id: nisi/1984/703/article/5                    # Northern Ireland: the standard scale of fines
+  - id: nisr/2007/319/article/2                    # NI: amount of fixed penalty (made under Article 59 of the 1996 Order)
+  - id: nisr/2007/319/schedule/1                   # NI: fixed penalties by offence (£30 to £300; item 54: endorsable offences £60)
+  - id: nisr/1997/369/article/2                    # NI: offences specified as fixed penalty offences
+  - id: nisr/1997/369/schedule/1                   # NI: the list, including Article 43 (contravening speed limit)

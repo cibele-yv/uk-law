@@ -1,0 +1,46 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/nisr/1997/369" IdURI="http://www.legislation.gov.uk/id/nisr/1997/369" NumberOfProvisions="3" Status="Prospective" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="1.0" RestrictExtent="N.I."><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/nisr/1997/369/article/2</dc:identifier><dc:title>Road Traffic (Fixed Penalty) (Offences) Order (Northern Ireland) 1997</dc:title><dc:subject>Vehicles</dc:subject><dc:subject>Road traffic offences</dc:subject><dc:subject>Taxi and minicab licences</dc:subject><dc:subject>Traffic management</dc:subject><dc:subject>Speed limits</dc:subject><dc:subject scheme="SIheading">ROAD TRAFFIC AND VEHICLES</dc:subject><dc:modified>2026-05-07</dc:modified><dc:publisher>Statute Law Database</dc:publisher><dct:valid>1997-08-14</dct:valid>
+					<dc:description>This Order specifies the offences committed in respect of a vehicle under the various statutory provisions detailed in the Order, which are fixed penalty offences for the purposes of Part IV of the Road Traffic Offenders (Northern Ireland) Order 1996. Any liability to conviction of these offences may be discharged by the payment of a fixed penalty which at the coming into operation of this Order is—£20 for a fixed penalty offence which does not involve obligatory endorsement; and£40 for a fixed penalty offence involving obligatory endorsement,</dc:description>
+					<atom:link rel="self" href="http://www.legislation.gov.uk/nisr/1997/369/article/2/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/nisr/1997/369/resources" title="More Resources"/>
+					
+					
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/nisr/1997/369" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/nisr/1997/369/introduction" title="introduction"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/signature" href="http://www.legislation.gov.uk/nisr/1997/369/signature" title="signature"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/note" href="http://www.legislation.gov.uk/nisr/1997/369/note" title="note"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/nisr/1997/369/body" title="body"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/schedules" href="http://www.legislation.gov.uk/nisr/1997/369/schedules" title="schedules"/>
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/nisr/1997/369/article/2/data.rdf" title="RDF/XML"/><atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/nisr/1997/369/article/2/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/nisr/1997/369/article/2/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/nisr/1997/369/article/2/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/nisr/1997/369/article/2/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/nisr/1997/369/article/2/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/nisr/1997/369/article/2/data.html" title="HTML5 snippet"/>
+
+					
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/nisr/1997/369/contents" title="Table of Contents"/>
+					
+					<atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/nisr/1997/369/article/2/made" title="made"/>
+					
+					<atom:link rel="up" href="http://www.legislation.gov.uk/nisr/1997/369" title="Entire legislation"/><atom:link rel="prev" href="http://www.legislation.gov.uk/nisr/1997/369/article/1" title="Provision; Article 1"/><atom:link rel="next" href="http://www.legislation.gov.uk/nisr/1997/369/article/3" title="Provision; Article 3"/>
+					<ukm:SecondaryMetadata><ukm:DocumentClassification><ukm:DocumentCategory Value="secondary"/><ukm:DocumentMainType Value="NorthernIrelandStatutoryRule"/><ukm:DocumentStatus Value="revised"/><ukm:DocumentMinorType Value="order"/></ukm:DocumentClassification><ukm:Year Value="1997"/><ukm:Number Value="369"/><ukm:Made Date="1997-08-14"/><ukm:ComingIntoForce>
+<ukm:DateTime Date="1997-10-01"/>
+</ukm:ComingIntoForce><ukm:ISBN Value="0337929696"/><ukm:UnappliedEffects><ukm:UnappliedEffect Type="coming into force" AffectedURI="http://www.legislation.gov.uk/id/nisr/1997/369" EffectId="key-392d2ca62c5ff4f0f3da54adcc9f29ac" AffectingProvisions="art. 1" AffectedNumber="369" AffectingNumber="369" URI="http://www.legislation.gov.uk/id/effect/key-392d2ca62c5ff4f0f3da54adcc9f29ac" AffectedClass="NorthernIrelandStatutoryRule" AffectedYear="1997" AffectedProvisions="art. 2" AffectingURI="http://www.legislation.gov.uk/id/nisr/1997/369" RequiresApplied="true" AffectingYear="1997" AffectingClass="NorthernIrelandStatutoryRule" Created="2026-05-08T11:07:00Z" Row="2" AffectedExtent="N.I."><ukm:AffectedTitle>Road Traffic (Fixed Penalty) (Offences) Order (Northern Ireland) 1997</ukm:AffectedTitle><ukm:AffectedProvisions><ukm:Section Ref="article-2" URI="http://www.legislation.gov.uk/id/nisr/1997/369/article/2">art. 2</ukm:Section></ukm:AffectedProvisions><ukm:AffectingTitle>Road Traffic (Fixed Penalty) (Offences) Order (Northern Ireland) 1997</ukm:AffectingTitle><ukm:AffectingProvisions><ukm:Section Ref="article-1" URI="http://www.legislation.gov.uk/id/nisr/1997/369/article/1">art. 1</ukm:Section></ukm:AffectingProvisions><ukm:InForceDates><ukm:InForce Applied="false" Date="1997-10-01" Qualification="wholly in force"/></ukm:InForceDates></ukm:UnappliedEffect></ukm:UnappliedEffects></ukm:SecondaryMetadata>
+					
+
+                    
+									 
+					
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="3"/>
+									<ukm:BodyParagraphs Value="3"/>
+									<ukm:ScheduleParagraphs Value="0"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="0"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Secondary><Body DocumentURI="http://www.legislation.gov.uk/nisr/1997/369/body" IdURI="http://www.legislation.gov.uk/id/nisr/1997/369/body" NumberOfProvisions="3" Match="false" Status="Prospective" NumberFormat="default" RestrictExtent="N.I."><P1group Match="false" Status="Prospective" RestrictExtent="N.I."><Title>Specified Offences</Title><P1 DocumentURI="http://www.legislation.gov.uk/nisr/1997/369/article/2" IdURI="http://www.legislation.gov.uk/id/nisr/1997/369/article/2" id="article-2">
+<Pnumber><CommentaryRef Ref="key-392d2ca62c5ff4f0f3da54adcc9f29ac"/>2</Pnumber>
+<P1para>
+<Text>Any offence in respect of a vehicle, being an offence created under a statutory provision specified in column 2 of Schedule 1 (the general nature of which is described in column 3 thereof) is a fixed penalty offence for the purposes of Part IV of the Road Traffic Offenders (Northern Ireland) Order 1996.</Text>
+</P1para>
+</P1></P1group></Body></Secondary><Commentaries><Commentary Type="I" id="key-392d2ca62c5ff4f0f3da54adcc9f29ac"><Para><Text>Art. 2  in operation at 1.10.1997, see <CitationSubRef id="n4147cf7505288d18" SectionRef="article-1" URI="http://www.legislation.gov.uk/id/nisr/1997/369/article/1" Operative="true">art. 1</CitationSubRef></Text></Para></Commentary></Commentaries></Legislation>

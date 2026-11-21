@@ -233,3 +233,32 @@
   expected_answer: "Proceedings for offences to which section 136 applies must start within six months after the contravention, unless the enactment fixes a different time limit"
   expected_sources: [ukpga/1995/46/section/136]
   verified: false
+
+# --- Fine amounts for Scotland and Northern Ireland (from the Orders, not guidance), November 2026. Drafts; all unverified. ---
+- id: rt-035
+  question: "What is the fixed penalty for speeding?"
+  nation: Northern Ireland
+  expected_answer: "£60: Schedule 1 item 54 sets £60 for any other fixed penalty offence involving obligatory endorsement, and the 1997 Offences Order lists Article 43 (contravening speed limit) as a fixed penalty offence"
+  expected_sources: [nisr/2007/319/schedule/1, nisr/1997/369/schedule/1]
+  verified: false
+
+- id: rt-036
+  question: "What is the fixed penalty for careless driving?"
+  nation: Northern Ireland
+  expected_answer: "£100 (Schedule 1 item 25A: Article 12 of the Road Traffic (Northern Ireland) Order 1995)"
+  expected_sources: [nisr/2007/319/schedule/1]
+  verified: false
+
+- id: rt-037
+  question: "How much is a level 3 fine?"
+  nation: Northern Ireland
+  expected_answer: "£1,000 on the standard scale (Article 5 of the Fines and Penalties (Northern Ireland) Order 1984); the text has 2 unapplied changes"
+  expected_sources: [nisi/1984/703/article/5]
+  verified: false
+
+- id: rt-038
+  question: "How much is a level 3 fine?"
+  nation: Scotland
+  expected_answer: "£1,000 on the standard scale (section 225 of the Criminal Procedure (Scotland) Act 1995)"
+  expected_sources: [ukpga/1995/46/section/225]
+  verified: false

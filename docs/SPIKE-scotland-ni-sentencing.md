@@ -15,7 +15,7 @@ Question: is there an official, fetchable source for "what is the usual fine" in
 
 ## What is already in the knowledge base
 - Scotland: 15 units (Criminal Procedure (Scotland) Act 1995 ss.77, 136, 136B, 176, 211-215, 219, 226A, 226C; SSI 2014/328 regs 2-3; SSI 2019/83 reg 2, new in this branch).
-- Northern Ireland: 67 units from its own Orders. `nisi/1996/1320/article/59` says the fixed penalty is "such amount as the Department may by order prescribe" or half the maximum fine; the Order that prescribes it is not held, so the NI fixed penalty amount cannot be answered from law.
+- Northern Ireland: 67 units from its own Orders (72 after option 4, below). `nisi/1996/1320/article/59` says the fixed penalty is "such amount as the Department may by order prescribe" or half the maximum fine; the Order that prescribes it was not held when this spike was written; it is now (see Update).
 
 ## Why it matters
 Nothing in Scotland or Northern Ireland should be answered with the England and Wales figure. The NI speeding conditional offer is reported as £60, not £100, so applying GB amounts to NI would be wrong. The partial-coverage warning and `answer_check` already tell the model to say the usual fine cannot be given; this spike says whether that can change.
@@ -45,3 +45,14 @@ Do #4 first (cheap, uses the existing fetcher, gives the legal basis), then #2 a
 - nidirect: https://nidirect.gov.uk/articles/fixed-penalties-motoring-offences , https://www.nidirect.gov.uk/articles/speed-limits-and-penalties-breaking-them , https://nidirect.gov.uk/content/crown-copyright
 - Scotland: https://www.mygov.scot/parking-bus-lane-fine/fixed-penalty-notice , https://scotcourts.gov.uk/taking-action/paying-a-fine/police-scotland-fixed-penalty-notices/
 - legislation.gov.uk: https://www.legislation.gov.uk/ssi/2019/83/made , https://www.legislation.gov.uk/uksi/1993/176/data.htm
+
+## Update: option 4 done (2026-11-21)
+
+Added from legislation.gov.uk with the existing fetcher (6 units, test questions rt-035 to rt-038):
+- `nisr/2007/319` article 2 and Schedule 1: the Road Traffic (Fixed Penalty) Order (Northern Ireland) 2007, as amended (text as at 2023-05-15, no unapplied changes). **The NI £60 and £100 figures are confirmed in law:** item 54 "Any other fixed penalty offence involving obligatory endorsement | £60"; item 25A (Article 12 of the 1995 Order, careless driving) "£100".
+- `nisr/1997/369` article 2 and Schedule 1: the Road Traffic (Fixed Penalty) (Offences) Order (Northern Ireland) 1997 (as made, 1997-08-14), which lists "Article 43 ... Contravening speed limit" as a fixed penalty offence. Together with item 54 this makes £60 the NI speeding fixed penalty. The 1997 text is as made: amendments are not shown.
+- `nisi/1984/703` article 5: the NI standard scale (level 3 £1,000). It has 2 unapplied changes.
+- `ukpga/1995/46` section 225: the Scottish standard scale (level 3 £1,000).
+
+Still open: the nidirect and mygov.scot pages (options 2 and 3), the Scottish death-by-driving guideline (option 1), and the GB-wide fixed penalty Order is `uksi/2000/2792` (already held). The Schedule 2 graduated fixed penalties (drivers' hours, goods vehicles) of the 2007 Order were not fetched. The partial-coverage warning stays: neither nation has court sentencing guidance for the common offences.
+
