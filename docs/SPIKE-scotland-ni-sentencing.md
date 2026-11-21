@@ -56,3 +56,18 @@ Added from legislation.gov.uk with the existing fetcher (6 units, test questions
 
 Still open: the nidirect and mygov.scot pages (options 2 and 3), the Scottish death-by-driving guideline (option 1), and the GB-wide fixed penalty Order is `uksi/2000/2792` (already held). The Schedule 2 graduated fixed penalties (drivers' hours, goods vehicles) of the 2007 Order were not fetched. The partial-coverage warning stays: neither nation has court sentencing guidance for the common offences.
 
+
+## Licences checked at source (2026-11-21)
+
+Each licence page was read directly (not from search snippets). All three allow reuse under the Open Government Licence, excluding logos. Nothing has been fetched yet.
+
+| Site | Page read | What it says | Notes |
+|---|---|---|---|
+| nidirect | https://www.nidirect.gov.uk/articles/crown-copyright | "You may use and re-use the information featured on this website (not including logos) free of charge in any format or medium, under the terms of the Open Government Licence" | Conditions: acknowledge the source and link to the licence where possible; do not suggest official status or endorsement; do not mislead. Exempt: personal data, third-party rights, logos, and Ordnance Survey of Northern Ireland (OSNI) / Land & Property Services mapping. The page cites the Data Protection Act 1998, so its wording is dated |
+| mygov.scot | https://www.mygov.scot/about-mygovscot ("Last updated 2 Sept 2025") | "Most of the content on mygov.scot (except for logos) is covered by Crown Copyrights and can be reused, free of charge under the terms of the Open Government Licence" | "Most", so each page is to be checked, and re-used third-party content (for example from the Information Commissioner) is flagged on its own page. `https://www.mygov.scot/copyright` is general advice on copyright for businesses and is not the site licence |
+| Scottish Courts and Tribunals Service | https://www.scotcourts.gov.uk/meta/crown-copyright | "You may use and re-use the information featured on this website (excluding logos and photographs) free of charge in any format or medium, under the terms of the Open Government Licence" | Third-party material is not covered. Court recordings are a separate matter and are not to be reused |
+
+The OGL needs attribution, so each fetched unit must record the publisher, URL and licence (the schema already has `source.licence`), and the answer cites the URL. Add the OGL version (the pages link only to "the Open Government Licence" without a version) when the fetcher is written, after reading what each page links to.
+
+Pages to fetch (not yet read for content): nidirect `articles/fixed-penalties-motoring-offences` and `articles/speed-limits-and-penalties-breaking-them`; mygov.scot `parking-bus-lane-fine/fixed-penalty-notice` is a parking page and is probably the wrong one, so find the speeding and motoring fixed penalty page; scotcourts `taking-action/paying-a-fine/police-scotland-fixed-penalty-notices/`. The 21 vs 28 day conflict must be kept as written.
+
